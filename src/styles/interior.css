@@ -103,7 +103,8 @@
 [data-source-page="/review/"] .interior-content { max-width: 850px; }
 [data-source-page="/review/"] .interior-content img { width: 120px; margin-block: 28px 8px; }
 [data-source-page="/review/"] a[aria-label="Leave A Facebook Review"] { display: inline-block; margin-top: 28px; font-size: 23px; }
-[data-source-page="/about/specials/"] .interior-content img { max-width: 700px; margin-inline: auto; }
+/* Keep the entire portrait flyer visible instead of applying the shared photo crop. */
+[data-source-page="/about/specials/"] .interior-content img { max-width: 700px; height: auto; max-height: none; object-fit: contain; margin-inline: auto; }
 [data-source-page="/smileclub/"] .source-widget { margin-block: 20px; }
 .source-quote { font-size: 22px; margin-block: 30px 16px; }
 .source-author { font-weight: 500; margin-bottom: 25px; }
