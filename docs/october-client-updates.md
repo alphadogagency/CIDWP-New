@@ -56,4 +56,12 @@ The remaining internal-review requests concern association/award logos and the p
 - Browser review: desktop and 390px mobile layouts, current team and doctor pages, gallery open/close and Escape, mobile navigation, and new outbound link destinations.
 - No horizontal overflow on the affected mobile pages; browser console checks returned no errors or warnings.
 
-Bryan approved publication on October 20, 2026. The existing Cloudflare Pages Git integration publishes `main` to https://cidwp-new.pages.dev/.
+Bryan approved publication on October 20, 2026. Source commit `92684e1` was pushed to `main` and published to https://cidwp-new.pages.dev/ through the existing `cidwp-new` Cloudflare Pages production project.
+
+The Git push did not start a Cloudflare deployment. GitHub reported that the repository had moved to `alphadogagency/CIDWP-New`. Publication used the existing authenticated Wrangler connection instead:
+
+```sh
+CLOUDFLARE_ACCOUNT_ID=ea6886430ff777f0b690f6805628cecd npx wrangler pages deploy dist --project-name cidwp-new --branch main
+```
+
+Deployment: https://52d03cf3.cidwp-new.pages.dev/. The upload included the Pages Functions bundle and redirects. Live checks confirmed the updated homepage, team and doctor pages, surgeon links, and the existing Google reviews API (HTTP 200, five reviews). The automatic Git deployment connection should be checked before relying on a future push to publish.
