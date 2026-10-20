@@ -106,7 +106,7 @@ p { margin-bottom: 22px; }
 .hero-media, .hero-shade { position: absolute; inset: 0; overflow: hidden; }
 .hero-media img, .hero-video { width: 100%; height: 100%; object-fit: cover; object-position: 50% 34%; }
 .hero-video { position: absolute; inset: 0; }
-.hero-shade { background: linear-gradient(180deg, rgb(4 19 23 / .47) 0%, rgb(4 19 23 / .03) 40%, rgb(4 19 23 / .76) 100%); }
+.hero-shade { background: linear-gradient(180deg, rgb(4 19 23 / .65) 0%, rgb(4 19 23 / .18) 40%, rgb(4 19 23 / .78) 100%); }
 .hero-content { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-end; gap: 45px; padding-block: 220px 65px; }
 .hero-copy { max-width: 680px; }
 .hero-location { font-size: clamp(18px, 1.65vw, 25px); font-weight: 300; margin-bottom: 22px; }
@@ -120,7 +120,6 @@ p { margin-bottom: 22px; }
 .doctor-portraits { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .doctor-portraits figure { min-width: 0; }
 .doctor-portraits img { width: 100%; aspect-ratio: .78; object-fit: cover; object-position: 44% center; }
-.doctor-portraits .hunter-photo { object-position: 36% center; }
 .doctor-portraits figcaption { padding-top: 18px; font-size: 14px; line-height: 1.5; }
 .doctor-portraits figcaption strong { font-weight: 500; display: block; }
 .doctor-portraits figcaption span { display: block; color: var(--color-muted); font-size: 12px; margin-top: 4px; }
@@ -153,6 +152,7 @@ p { margin-bottom: 22px; }
 .service-tile-reverse { background: white; }
 .service-photo { min-width: 0; }
 .service-photo img { width: 100%; height: 100%; min-height: 550px; object-fit: cover; }
+#cosmetic-care .service-photo img { object-position: 50% 25%; }
 .service-copy { align-self: center; padding: 74px max(var(--gutter), calc((100vw - 1300px) / 2)) 74px 76px; }
 .service-copy h3 { font-size: clamp(40px, 4.5vw, 65px); font-weight: 500; margin-bottom: 24px; }
 .service-copy > p:not(.service-label) { color: var(--color-muted); max-width: 540px; margin-bottom: 28px; }
@@ -190,6 +190,17 @@ p { margin-bottom: 22px; }
 .team-portraits figcaption { padding-top: 17px; font-size: 14px; line-height: 1.4; }
 .team-portraits figcaption strong { display: block; font-weight: 500; }
 .team-portraits figcaption span { display: block; font-size: 12px; color: var(--color-muted); margin-top: 5px; }
+.team-portraits figure { min-width: 0; }
+.team-portraits .provider-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 10px; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; color: #08657c; }
+.provider-link .icon { width: 15px; height: 15px; }
+.onsite-care { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 52px; }
+.onsite-care article { padding: clamp(28px, 3.5vw, 48px); background: var(--color-pale); border-top: 2px solid var(--color-brand); }
+.onsite-care h3 { font-size: clamp(30px, 3.2vw, 44px); margin-bottom: 22px; }
+.onsite-care p:not(.service-label) { color: var(--color-muted); max-width: 490px; }
+.onsite-care .text-link { font-size: 15px; }
+@media (max-width: 700px) {
+  .onsite-care { grid-template-columns: 1fr; }
+}
 .photo-dialog { max-width: 92vw; max-height: 92dvh; width: min(1100px, 92vw); padding: 20px; background: white; border: none; margin: auto; color: var(--color-ink); }
 .photo-dialog::backdrop { background: rgb(8 22 27 / .83); }
 .photo-dialog img { height: auto; max-height: 75dvh; width: 100%; object-fit: contain; }

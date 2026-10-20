@@ -14,6 +14,14 @@ const issues = [];
 let copyChecks = 0, linkChecks = 0, assetChecks = 0, pageChecks = 0;
 const fail = (route, kind, value) => issues.push({route, kind, value});
 const assetOwners = new Map();
+// Approved October 19–20 roster changes. Keep the dated captures immutable;
+// compare retained content and the specifically authorized replacements.
+const teamRoute = '/about/meet-the-team/';
+const teamPhotoUpdates = {
+  'https://cosmeticimplantdentistrywp.com/wp-content/uploads/2026/01/Untitled-1-3.png': '/_astro/konner.',
+  'https://cosmeticimplantdentistrywp.com/wp-content/uploads/2026/08/Chrissy-2-scaled-e1786033077119.jpg': '/_astro/chrissy.',
+  'https://cosmeticimplantdentistrywp.com/wp-content/uploads/2026/08/Rachel-matched-to-Chrissy-e1786033122817.jpg': '/_astro/rachel-converse.',
+};
 for (const [url, file] of Object.entries(assets)) {
   if (assetOwners.has(file)) fail(file, 'Colliding Asset Filenames', [assetOwners.get(file), url]);
   assetOwners.set(file, url);
@@ -40,9 +48,11 @@ for (const source of snapshots) {
   const sourceDoc = parse(source.html);
   // These are replaced integrations, executable theme assets, or repeated carousel controls.
   sourceDoc.querySelectorAll('script,style,noscript,form,.gform_wrapper,.swiper-slide-duplicate,.fmr-slider-controls,.elementor-swiper-button,.swiper-pagination').forEach(node => node.remove());
+  if (route === teamRoute) sourceDoc.querySelector('[aria-controls="e1149-e8-modal"]')?.remove();
   const actual = normalize(`${heading.textContent} ${imported.textContent}`);
   const expectedRoots = [sourceDoc.body];
   for (const modal of source.modals || []) {
+    if (route === teamRoute && modal.id === 'e1149-e8-modal') continue;
     const doc = parse(modal.html);
     expectedRoots.push(...doc.querySelectorAll('.x-content'));
   }
@@ -63,7 +73,8 @@ for (const source of snapshots) {
       if (src.startsWith('data:') || src === 'about:blank' || node.closest('.x-bg')) continue;
       assetChecks++;
       const expected = assets[src] || src;
-      if (![...imported.querySelectorAll('[src]')].some(el => el.getAttribute('src') === expected)) fail(route, 'Missing Source Media', src);
+      const replacement = route === teamRoute && teamPhotoUpdates[src];
+      if (![...imported.querySelectorAll('[src]')].some(el => replacement ? el.getAttribute('src').startsWith(replacement) : el.getAttribute('src') === expected)) fail(route, 'Missing Source Media', src);
     }
   }
   if (built.title !== source.title) fail(route, 'Changed Page Title', {expected:source.title, actual:built.title});
@@ -73,6 +84,18 @@ for (const source of snapshots) {
 
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(item => item.isDirectory() ? files(path.join(dir,item.name)) : [path.join(dir,item.name)]); }
 const documents = new Map(files('dist').filter(file => file.endsWith('.html')).map(file => [file, parseHTML(fs.readFileSync(file,'utf8')).document]));
+for (const route of ['/', teamRoute, '/about/meet-the-doctors/']) {
+  const doc = documents.get(`dist${route}index.html`);
+  if (!doc) continue;
+  const people = route === '/about/meet-the-doctors/' ? ['Dr. Owen Lonergan', 'Dr. Patrick Lucaci'] : ['Konner Lawson', 'Nichole', 'Chrissy', 'Rachel Converse', 'Jen', 'Dr. Owen Lonergan', 'Dr. Patrick Lucaci'];
+  const names = [...doc.querySelectorAll('.team-portraits figcaption strong')].map(el => el.textContent);
+  for (const name of people) if (!names.includes(name)) fail(route, 'Missing Current Team Member', name);
+  if (/RiAnne/.test(doc.querySelector('main')?.textContent || '')) fail(route, 'Removed Team Member Still Present', 'RiAnne');
+  for (const name of ['Dr. Owen Lonergan', 'Dr. Patrick Lucaci']) {
+    const portrait = [...doc.querySelectorAll('.team-portraits figure')].find(el => el.querySelector('strong')?.textContent === name);
+    if (portrait?.querySelector('a')?.getAttribute('href') !== 'https://oralsurgerykc.com/about-us/') fail(route, 'Missing Surgeon Profile Link', name);
+  }
+}
 for (const [file, doc] of documents) {
   const route = file.slice(4).replace(/index\.html$/, '');
   for (const link of doc.querySelectorAll('a[href]')) {
@@ -89,7 +112,7 @@ for (const [file, doc] of documents) {
     if (src?.startsWith('/') && !fs.existsSync(`dist${src.split('?')[0]}`)) fail(route, 'Missing Local Asset', src);
   }
 }
-const report = {date:'2026-10-06',pageChecks,copyChecks,linkChecks,assetChecks,issues};
+const report = {date:'2026-10-20',sourceCaptureDate:'2026-10-06',approvedUpdates:'docs/october-client-updates.md',pageChecks,copyChecks,linkChecks,assetChecks,issues};
 fs.writeFileSync('docs/migration/verification.json', JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));
 if (issues.length) process.exitCode = 1;

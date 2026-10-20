@@ -1,8 +1,10 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-20",
+  "sourceCaptureDate": "2026-10-06",
+  "approvedUpdates": "docs/october-client-updates.md",
   "pageChecks": 43,
-  "copyChecks": 1391,
+  "copyChecks": 1388,
   "linkChecks": 185,
-  "assetChecks": 92,
+  "assetChecks": 91,
   "issues": []
 }

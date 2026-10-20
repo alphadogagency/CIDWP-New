@@ -45,6 +45,16 @@
 .source-profile { display: grid; grid-template-columns: minmax(220px, 360px) 1fr; gap: 65px; align-items: center; }
 .source-profile > img { width: 100%; height: auto; aspect-ratio: .9; object-fit: cover; }
 .source-profile h2 { margin-bottom: 12px; }
+.team-portraits-interior { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 0; gap: 48px 28px; }
+.team-portraits-interior:has(> figure:last-child:nth-child(2)) { grid-template-columns: repeat(2, minmax(0, 360px)); }
+.team-portraits-interior figcaption { font-size: 20px; }
+.team-portraits-interior figcaption span { font-size: 15px; }
+.onsite-surgeons { margin-top: 80px; padding-top: 55px; border-top: 1px solid #c7dddf; }
+@media (max-width: 760px) {
+  .team-portraits-interior, .team-portraits-interior:has(> figure:last-child:nth-child(2)) { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+  .team-portraits-interior figcaption { font-size: 16px; }
+  .team-portraits-interior figcaption span { font-size: 13px; }
+}
 .source-eyebrow { display: block; font-size: 15px; line-height: 1.5; color: #08657c; margin-bottom: 22px; font-weight: 500; letter-spacing: 0; }
 .source-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-block: 38px; }
 .source-card { padding: 30px; background: var(--color-pale); }

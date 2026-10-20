@@ -1,0 +1,18 @@
+---
+import { site } from "../lib/site";
+import Icon from "./Icon.astro";
+---
+<div class="onsite-care" aria-label="More Care At Our Westport Location">
+  <article>
+    <p class="service-label">816 Med Spa</p>
+    <h3>Visit Our<br /><strong>Onsite Medspa.</strong></h3>
+    <p>Explore aesthetic and wellness services at 816 Med Spa, right here at our Westport location.</p>
+    <a class="text-link" href={site.medspaUrl}>Visit 816 Med Spa <Icon /></a>
+  </article>
+  <article>
+    <p class="service-label">Oral Surgery & Implant Institute</p>
+    <h3>We Offer<br /><strong>Oral Surgery Onsite.</strong></h3>
+    <p>Meet Dr. Owen Lonergan and Dr. Patrick Lucaci, the oral surgeons who provide care at our shared location.</p>
+    <a class="text-link" href={site.oralSurgeryUrl}>Explore Oral Surgery <Icon /></a>
+  </article>
+</div>

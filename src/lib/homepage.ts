@@ -1,13 +1,18 @@
 import type { ImageMetadata } from "astro";
-import hero from "../assets/hero-care.jpg";
-import team from "../assets/team-member.jpg";
+import hero from "../assets/oct2026/osii-lobby.webp";
+import osiiFrontDesk from "../assets/oct2026/osii-front-desk.webp";
+import cidwpFrontDesk from "../assets/oct2026/cidwp-front-desk.webp";
+import consult from "../assets/oct2026/consult.webp";
+import implantDenture from "../assets/oct2026/implant-denture.webp";
+import cbct from "../assets/oct2026/cbct.webp";
+import printing from "../assets/oct2026/3d-print.webp";
+import nightguard from "../assets/oct2026/nightguard.webp";
+import lab from "../assets/oct2026/lab2.webp";
+import smile from "../assets/oct2026/smile.webp";
+import frontDesk from "../assets/oct2026/front-desk2.webp";
+import parking from "../assets/oct2026/parking-lot2.webp";
 import office from "../assets/practice-interior.jpg";
 import clinical from "../assets/round2/clinical-care.jpg";
-import hunter from "../assets/round2/hunter-mcareavy.png";
-import rianne from "../assets/round2/rianne-chisum.png";
-import rachel from "../assets/round2/rachel-converse.jpg";
-import chrissy from "../assets/round2/chrissy.jpg";
-import konner from "../assets/round2/konner-lawson.png";
 import veneers from "../assets/expertise/veneers.png";
 import implants from "../assets/expertise/implants.png";
 import crowns from "../assets/expertise/crowns.png";
@@ -17,26 +22,20 @@ import restoration from "../assets/expertise/restoration.png";
 import emergency from "../assets/expertise/emergency.png";
 import { serviceLinks, site } from "./site";
 
-export const photos = { hero, team, office, clinical, hunter };
-export const teamPortraits = [
-  { image: rianne, name: "RiAnne Chisum", role: "Office Manager" },
-  { image: konner, name: "Konner Lawson", role: "Patient Care Coordinator" },
-  { image: chrissy, name: "Chrissy", role: "Dental Assistant" },
-  { image: rachel, name: "Rachel Converse", role: "Registered Dental Hygienist" },
-];
+export const photos = { hero, osiiFrontDesk, cidwpFrontDesk, office, consult, implantDenture };
 
-// Technology types are listed on the official Smile Club site. Equipment photos
-// are still requested; the cards currently use existing practice photography.
+// Pam's October 19 placement notes. Printing copy avoids claims about specific
+// appliances or turnaround times that the practice has not supplied.
 export const technology = [
-  { title: "A Clearer View With Digital X-Rays", description: "Digital X-rays help us look beyond what we can see during an exam. We use that information to talk through your dental health and the care you may need.", image: office, alt: "A treatment room at our Westport practice", source: site.smileClubUrl },
+  { title: "A Clearer View With Digital X-Rays & 3D Imaging", description: "Digital X-rays and cone beam CT help us look beyond what we can see during an exam. Three-dimensional images provide another perspective as we talk through your dental health and the care you may need.", image: cbct, alt: "CBCT imaging equipment at the Westport practice", source: site.smileClubUrl },
   { title: "See What We See With Intraoral Cameras", description: "Small cameras let us take a closer look inside your mouth. Images can help make conversations about your teeth and treatment easier to follow.", image: clinical, alt: "A member of the dental team caring for a patient", source: site.smileClubUrl },
-  { title: "Another Perspective With 3D Imaging", description: "Cone beam CT provides three-dimensional images for a more detailed view. Our team can explain when this kind of imaging is appropriate for your care.", image: team, alt: "The Westport dental team together in the office", source: site.smileClubUrl },
+  { title: "Another Dimension With 3D Printing", description: "Our practice also uses 3D printing. Ask our team how this technology fits into the care we provide and what it could mean for your treatment.", image: printing, alt: "3D printing equipment at the Westport practice" },
 ];
 
 export const services = [
-  { id: "general-care", title: "Keep Your Smile Healthy", label: "Routine Dental Care", description: "From regular checkups and cleanings to fillings and mouth guards, we help you look after your teeth through every stage of life.", image: clinical, alt: "A clinician providing dental care at the practice", href: serviceLinks.general, cta: "Explore General Dentistry" },
-  { id: "restorative-care", title: "Get Back To Smiling Comfortably", label: "Restorative Dentistry", description: "Missing or damaged teeth can make everyday life harder. Explore implants, crowns, bridges, and full-mouth restoration with a plan built around your needs.", image: office, alt: "A bright treatment room ready for an appointment", href: serviceLinks.restoration, cta: "Explore Restorative Care" },
-  { id: "cosmetic-care", title: "Make Your Smile Feel More Like You", label: "Cosmetic Dentistry", description: "Tell us what you’d like to change about your smile. We’ll walk through options such as veneers and whitening, with your preferences and goals in mind.", image: team, alt: "Our Westport dental team sharing a lighthearted moment", href: serviceLinks.veneers, cta: "Explore Cosmetic Care" },
+  { id: "general-care", title: "Keep Your Smile Healthy", label: "Routine Dental Care", description: "From regular checkups and cleanings to fillings and mouth guards, we help you look after your teeth through every stage of life.", image: nightguard, alt: "A nightguard made to fit a patient's teeth", href: serviceLinks.general, cta: "Explore General Dentistry" },
+  { id: "restorative-care", title: "Get Back To Smiling Comfortably", label: "Restorative Dentistry", description: "Missing or damaged teeth can make everyday life harder. Explore implants, crowns, bridges, and full-mouth restoration with a plan built around your needs.", image: lab, alt: "Dental restorations being worked on in the lab", href: serviceLinks.restoration, cta: "Explore Restorative Care" },
+  { id: "cosmetic-care", title: "Make Your Smile Feel More Like You", label: "Cosmetic Dentistry", description: "Tell us what you’d like to change about your smile. We’ll walk through options such as veneers and whitening, with your preferences and goals in mind.", image: smile, alt: "A woman smiling at our Westport practice", href: serviceLinks.veneers, cta: "Explore Cosmetic Care" },
 ];
 
 // Original illustrative service imagery plus two existing practice photos.
@@ -55,9 +54,9 @@ export const expertise: { label: string; href: string; image: ImageMetadata; pos
 
 export const gallery = [
   { image: office, alt: "Large windows and natural light in a Westport treatment room" },
-  { image: team, alt: "Our team together at the practice" },
-  { image: clinical, alt: "Personal attention during a dental visit" },
-  { image: hero, alt: "The Cosmetic & Implant Dentistry Westport team" },
+  { image: hero, alt: "The Oral Surgery and Implant Institute lobby" },
+  { image: frontDesk, alt: "The front desk at our Westport location" },
+  { image: parking, alt: "Parking at our Westport location" },
 ];
 
 export interface TrustBadge { name: string; image: ImageMetadata; href?: string }
@@ -65,9 +64,6 @@ export interface TrustBadge { name: string; image: ImageMetadata; href?: string 
 export const trustBadges: TrustBadge[] = [];
 
 export const reviewNeeds = [
-  { section: "doctors", title: "Current Doctor Roster + Headshots", detail: "The current doctors page identifies Dr. Hunter McAreavy. Please confirm which doctors should appear and supply their current professional headshots. The preview uses Dr. Hunter’s published photo and a clearly identified team photo." },
-  { section: "technology", title: "3D Printer + Equipment Photos", detail: "Pam’s equipment photos are pending. Please include the 3D printer photo, its intended card placement, and a brief description of how the practice uses it. One current technology card will be replaced when those details arrive; the cards still use general practice photography." },
-  { section: "comfort", title: "Office + Team Photography", detail: "Pam’s photo batch and placement notes are pending. Replace repeated images across the homepage and fill the comfort gallery to roughly ten distinct photos. Four existing gallery photos remain for now. After the batch arrives, send KO one consolidated list of any remaining photo placeholders." },
   { section: "credentials", title: "Association + Award Logos", detail: "Please confirm the memberships and awards CIDWP may display and provide the approved logo files. No associations have been assumed." },
   { section: "contact", title: "Hours, Texting + Policy Links", detail: "The homepage and Smile Club list Mon–Thu 9–4; the contact page also lists Friday. Please confirm Friday hours, whether the phone accepts texts, and the HIPAA notice URL. Privacy and accessibility links come from the current site." },
 ];
