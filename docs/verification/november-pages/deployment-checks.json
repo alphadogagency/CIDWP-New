@@ -1,0 +1,238 @@
+{
+  "verifiedAt": "2026-11-03T22:07:09.847Z",
+  "base": "https://cidwp-new.pages.dev",
+  "applicationCommit": "ab45988bf5b5fc0f594330c5879b88e5b325c7e8",
+  "deployment": "https://80628050.cidwp-new.pages.dev",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/payment-plans/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/general-dentistry/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/emergency-dentist/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/teeth-cleaning/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/fillings/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/mouth-guards/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/dental-implants/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/crowns-bridges/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/veneers/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/teeth-whitening/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/sleep-apnea/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/tmj-tmd/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/services/braces/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/full-mouth-restoration/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/sedation/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/missing-teeth/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/toothache/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/broken-tooth/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/lost-crown-or-filling/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/damaged-teeth/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/loose-dentures/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/stained-teeth/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/uneven-teeth/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/crooked-teeth/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/dental-anxiety/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/snoring/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/jaw-pain/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/concerns/teeth-grinding/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/about/specials/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/smile-club/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/review/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/about/meet-the-doctors/",
+      "status": 200,
+      "issues": []
+    },
+    {
+      "path": "/about/meet-the-team/",
+      "status": 200,
+      "issues": []
+    }
+  ],
+  "utility": [
+    {
+      "path": "/services/emergency-dentistry/",
+      "status": 301,
+      "location": "/services/emergency-dentist/",
+      "issues": []
+    },
+    {
+      "path": "/services/clear-braces/",
+      "status": 301,
+      "location": "/services/braces/",
+      "issues": []
+    },
+    {
+      "path": "/not-a-real-cidwp-page/",
+      "status": 404,
+      "location": null,
+      "issues": []
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "location": null,
+      "issues": []
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "status": 200,
+      "location": null,
+      "issues": []
+    },
+    {
+      "path": "/sitemap-0.xml",
+      "status": 200,
+      "location": null,
+      "issues": []
+    }
+  ],
+  "api": {
+    "status": 200,
+    "cache": "no-store",
+    "selectedReviews": 5,
+    "allSelectedFiveStar": true,
+    "hasValidAggregate": true
+  }
+}

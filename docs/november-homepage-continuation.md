@@ -6,6 +6,8 @@ Bryan chose **Follow William's new brief** (sentence case), reviewed the local h
 
 Active assignment: `2026-11-03/cidwp/remaining-package-after-bryan-approval`, received from ADA Daily Work. ADA item `f442c64a-e5e4-4794-833b-b677f421ab95` remains coordinator-owned.
 
+**Current result:** approved code is committed, pushed to `main`, and published at **https://cidwp-new.pages.dev/**. Application commit `ab45988bf5b5fc0f594330c5879b88e5b325c7e8`; Cloudflare production deployment `80628050-ae95-4a6b-825c-8f218d1fc6bf`. Public verification, including real Google aggregate rating/count, passed. Earlier local-only status notes below describe the pre-publication checkpoints. See the publication record at the end for current evidence.
+
 Source clarification: Bryan reported that William confirmed in person that the entire delivered MD/assets folder should contain everything needed to finish. Treat its page copy, structured data, selected layouts, and assets as the current build source. Reconcile all relevant files, cross-references, existing source material and prior answers before raising a specific material gap. Older open-question bullets are not automatically blockers; use explicit newer answers. This does not establish clinical review or unknown business facts.
 
 ## Sources
@@ -57,7 +59,7 @@ Screenshots are in `docs/verification/november-homepage/`: `desktop-home.jpg`, `
 
 Main changes: `src/styles/global.css`, new `src/styles/homepage.css`, `src/styles/interior.css`; existing homepage/shared Astro components plus new `ReviewStrip.astro`; `src/lib/homepage.ts`, `site.ts`, `theme.config.ts`; review carousel client code, Layout metadata/font loading and development proxy. Supplied/cropped assets live in `src/assets/nov2026/`; font files/licenses in `public/fonts/`. Eleven existing migrated service SVGs have only their teal fill changed to charcoal. `src/data/pages.json` is unchanged.
 
-## Known constraints
+## Local-stage constraints (before publication)
 
 The existing Google reviews API supplies selected individual reviews, not an aggregate rating/count. Do not invent these. Preserve current hours and financing destinations; do not assert free parking or medical review approval without evidence.
 
@@ -135,13 +137,13 @@ Last source reconciliation: November 3. Full delivered folder and copy/data were
 | Smile Club form | Actual current hosted form and Framer-managed submission flow inspected | Accepted hosted signup fallback works; no missing-form request |
 | Google aggregate fields | Existing endpoint has individual reviews only; new code/tests complete locally | Verify actual new fields during the separately authorized deployment stage; internal task, not a client-material ask |
 
-### Draft to William — not sent
+### Draft to William — updated after publication, not sent
 
 Subject: CIDWP website update + payment plans question
 
 Hey William,
 
-I've finished building out the remaining CIDWP pages using your copy and assets, and checked the layouts on desktop and mobile. The updates are ready for local review and haven't been published yet.
+I've finished building out the remaining CIDWP pages using your copy and assets, and checked the layouts on desktop and mobile. The updates are now available here: https://cidwp-new.pages.dev/
 
 One detail to confirm: the navigation links to Eve, while the Payment Plans page uses Cherry. Should we use Eve or Cherry throughout, or keep both? I've left the current links in place for now.
 
@@ -149,3 +151,20 @@ Thanks!
 Bryan
 
 This is Bryan's requested draft for William, not a sent message or a client-approval record. No new missing-file questions were added. ADA Daily Work retains ownership of coordination and any later launch review.
+
+## Publication record — November 3, 2026
+
+Bryan explicitly approved the complete November work and requested commit, push to main and deployment, with the financing question left pending. This supersedes the previous local-only hold without changing external domains, stakeholder messaging, or ADA ownership.
+
+- Application commit: `ab45988bf5b5fc0f594330c5879b88e5b325c7e8` — **Apply approved November design and complete CIDWP page package**.
+- Pushed successfully to `main`. GitHub confirmed the repository moved to `alphadogagency/CIDWP-New`; the existing origin redirect handled the push. No force push or unrelated branch changes.
+- Published using the existing authenticated Wrangler connection and `cidwp-new` Cloudflare Pages production project, branch `main`. Existing account, bindings and routing retained. The build uploaded 173 changed assets, reused 142 assets, and included the Functions bundle and redirects.
+- Stable URL: https://cidwp-new.pages.dev/ . Immutable deployment URL: https://80628050.cidwp-new.pages.dev/ . Cloudflare deployment list confirmed production/main/source `ab45988`.
+- Build: 61 pages successful; Pages Function compilation successful. Prior type, endpoint and copy/schema checks remain valid for the unchanged application source. Staged whitespace check passed, including the bundled font licenses.
+- Public HTTP verification: all 34 new package routes plus homepage, services directory and Payment Plans returned 200 and matched built headings, canonicals and stylesheet assets. Both checked aliases returned the intended 301, the custom missing-page route returned 404, and robots/XML sitemaps returned 200. Report: `docs/verification/november-pages/deployment-checks.json`.
+- Google reviews endpoint returned HTTP 200, `Cache-Control: no-store`, five selected five-star reviews and valid actual aggregate rating/count. The homepage and Review page displayed the matching aggregate in live state. The former aggregate-deployment deferral is resolved. No raw Google review response or credentials were saved.
+- Public browser verification: desktop homepage, mobile concerns menu (13 links) → Toothache, no page overflow/broken loaded images, and Review carousel live state with Next advancing to **2 of 5**. No console warnings/errors observed. Temporary viewport override reset; public homepage left open as the deliverable.
+- Published evidence: `published-desktop-home.jpg`, `published-mobile-concern.jpg`, and `published-mobile-reviews.jpg` in `docs/verification/november-pages/`.
+- These publication notes and evidence are a documentation-only follow-up to the deployed application commit; they do not alter the built website or Function.
+
+Financing remains exactly as Bryan requested: Eve in the navigation and Cherry on Payment Plans, pending William's answer. Existing hosted Smile Club signup and CareStack booking remain in place. This publishes the existing Pages site; no custom-domain cutover, external Smile Club retirement, stakeholder email or calendar changes were performed.
