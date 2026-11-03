@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
 import { site } from "../lib/site";
-import socialImage from "../assets/hero-care.jpg";
+import socialImage from "../assets/round2/clinical-care.jpg";
+import pageData from '../data/november-pages.json';
 
 interface Props {
   title?: string;
@@ -13,6 +14,7 @@ interface Props {
 const { title = site.title, description = site.description, noindex = false, robots = '' } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const socialImageUrl = new URL(socialImage.src, site.url).href;
+const practiceSchema = { '@context': 'https://schema.org', '@type': 'Dentist', '@id': site.url + '#practice', name: site.name, url: site.url, telephone: site.phone, hasMap: site.directionsUrl, address: { '@type': 'PostalAddress', streetAddress: site.address, addressLocality: 'Kansas City', addressRegion: 'MO', postalCode: '64111', addressCountry: 'US' }, ...(Astro.url.pathname === '/about/' ? { employee: pageData.doctors.map(doctor => ({ '@type': 'Person', '@id': site.url + 'about/meet-the-doctors/#dr-' + doctor.k, name: doctor.full, jobTitle: doctor.role })) } : {}) };
 ---
 
 <!doctype html>
@@ -21,6 +23,8 @@ const socialImageUrl = new URL(socialImage.src, site.url).href;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(practiceSchema)} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     {(noindex || robots) && <meta name="robots" content={noindex ? 'noindex, nofollow' : robots} />}
 
@@ -35,15 +39,15 @@ const socialImageUrl = new URL(socialImage.src, site.url).href;
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content={socialImageUrl} />
-    <meta property="og:image:alt" content="The Cosmetic & Implant Dentistry Westport team" />
+    <meta property="og:image:alt" content="Patient care at Cosmetic & Implant Dentistry Westport" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageUrl} />
 
-    <link rel="preload" href="/fonts/work-sans-400.ttf" as="font" type="font/ttf" crossorigin />
-    <link rel="preload" href="/fonts/work-sans-600.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <a

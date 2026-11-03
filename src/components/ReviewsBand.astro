@@ -26,15 +26,16 @@ const slides = reviews.map(review => {
 ---
 <section class="reviews-section" id={id} aria-labelledby={titleId} data-section="reviews" data-review-state="fallback" data-reviews-endpoint="/api/google-reviews">
   <div class:list={["shell reviews-grid", { "reviews-empty": !slides.length }]}>
+    <div class="reviews-intro"><p class="eyebrow">Patient experiences</p><h2 id={titleId}>Hear from our patients.</h2><p>Choosing a dentist is personal. Read what patients have shared about their experience with our Westport team.</p><a href={site.reviewsUrl} target="_blank" rel="noopener noreferrer" class="text-link">Read our Google reviews <Icon /></a></div>
     <div class="review-carousel" role="region" aria-roledescription="carousel" aria-label="Patient reviews" tabindex="0" data-carousel hidden={!slides.length}>
       <div class="review-slides" id={slidesId}>{slides.map((review, index) => (
-        <article class="review-slide" data-slide role="group" aria-roledescription="slide" aria-label={(index + 1) + " of " + slides.length} aria-hidden={index !== 0} inert={index !== 0}>
+        <article class="review-slide" data-slide role="group" aria-roledescription="slide" aria-label={(index + 1) + " of " + slides.length}>
           <Icon name="quote" />
           <p class="review-rating" role="img" aria-label={`${review.rating} out of 5 stars`}><span aria-hidden="true">{"★".repeat(review.rating)}{"☆".repeat(5 - review.rating)}</span></p>
           <blockquote cite={review.sourceUrl}>{review.text}</blockquote>
           <p class="review-author">{review.name}</p>
           <div class="review-meta">
-            <a href={review.sourceUrl} target="_blank" rel="noopener noreferrer" class="review-source" aria-label={`Read ${review.name}’s full review on Google`}>{review.isExcerpt ? "Google Review Excerpt" : "Google Review"} <Icon /></a>
+            <a href={review.sourceUrl} target="_blank" rel="noopener noreferrer" class="review-source" aria-label={`Read ${review.name}’s full review on Google`}>{review.isExcerpt ? "Google review excerpt" : "Google review"} <Icon /></a>
             {review.dateLabel && <time datetime={review.dateTime}>{review.dateLabel}</time>}
           </div>
         </article>
@@ -51,20 +52,20 @@ const slides = reviews.map(review => {
       </div>
       <p class="review-selection-note" data-fallback-note>Selected five-star Google review excerpts.</p>
     </div>
-    <div class="reviews-intro"><h2 id={titleId}>Hear From<br /><strong>Our Patients.</strong></h2><p>Choosing a dentist is personal. Read what patients have shared about their experience with our Westport team.</p><a href={site.reviewsUrl} target="_blank" rel="noopener noreferrer" class="text-link">Read Our Google Reviews <Icon /></a></div>
+
   </div>
   <template data-live-review>
     <article class="review-slide review-slide-live" data-slide role="group" aria-roledescription="slide">
       <Icon name="quote" />
       <p class="review-rating" role="img"><span aria-hidden="true"></span></p>
       <blockquote><span class="review-text is-collapsed" data-review-text dir="auto"></span></blockquote>
-      <button class="review-expand" type="button" data-expand aria-expanded="false" hidden>Read More</button>
+      <button class="review-expand" type="button" data-expand aria-expanded="false" hidden>Read more</button>
       <div class="review-author-row">
         <img data-avatar class="review-avatar" width="40" height="40" alt="" loading="lazy" referrerpolicy="no-referrer" hidden />
         <p class="review-author" data-author></p>
       </div>
       <div class="review-meta">
-        <a target="_blank" rel="noopener noreferrer" class="review-source" data-source>Read On Google Maps <Icon /></a>
+        <a target="_blank" rel="noopener noreferrer" class="review-source" data-source>Read on Google Maps <Icon /></a>
         <time hidden></time>
       </div>
     </article>

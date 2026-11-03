@@ -1,0 +1,7 @@
+---
+import type { Link } from '../lib/page-package';
+import { site } from '../lib/site';
+interface Props { links: Link[]; practice?: boolean; eyebrow?: string }
+const { links, practice = false, eyebrow } = Astro.props;
+---
+<section class="page-section page-related"><div class="shell page-related-grid"><div><p class="eyebrow">{eyebrow || (practice ? 'Keep exploring' : 'Related treatments')}</p><h2>{practice ? 'Get to know your Westport office.' : 'Explore more care.'}</h2><div class="page-chips">{links.map(([label, href]) => href && <a href={href}>{label} <span aria-hidden="true">→</span></a>)}</div></div><div class="page-location"><h3>{site.name}</h3><address>{site.address}<br />{site.city}</address><a href={site.phoneUrl}>{site.phone}</a><p>{site.hours}</p><p>Private parking on site</p><a href={site.directionsUrl}>Get directions <span aria-hidden="true">→</span></a></div></div></section>

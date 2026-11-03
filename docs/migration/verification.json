@@ -1,10 +1,14 @@
 {
-  "date": "2026-10-20",
+  "date": "2026-11-03",
   "sourceCaptureDate": "2026-10-06",
-  "approvedUpdates": "docs/october-client-updates.md",
-  "pageChecks": 43,
-  "copyChecks": 1388,
-  "linkChecks": 185,
-  "assetChecks": 91,
+  "approvedUpdates": [
+    "docs/october-client-updates.md",
+    "docs/november-homepage-continuation.md"
+  ],
+  "pageChecks": 20,
+  "approvedReplacementChecks": 23,
+  "copyChecks": 928,
+  "linkChecks": 86,
+  "assetChecks": 41,
   "issues": []
 }

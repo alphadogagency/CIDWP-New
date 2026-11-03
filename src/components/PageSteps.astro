@@ -1,0 +1,6 @@
+---
+import type { Pair } from '../lib/page-package';
+interface Props { title: string; steps: Pair[] }
+const { title, steps } = Astro.props;
+---
+<section class="page-section"><div class="shell"><p class="eyebrow">Your visit</p><h2>{title}</h2><ol class="page-steps page-swipe" tabindex="0" aria-label="Visit steps; scroll to explore">{steps.map(([name, detail], i) => <li><span class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><h3>{name}</h3><p>{detail}</p></li>)}</ol></div></section>

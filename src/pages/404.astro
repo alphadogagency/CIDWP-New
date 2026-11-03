@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../lib/site';
+---
+<Layout title="Page Not Found | Cosmetic & Implant Dentistry Westport" description="Find your way back to the Westport dental care you need." noindex><Header interior /><main id="main" tabindex="-1" class="not-found"><div class="shell"><p class="eyebrow">404 · Page not found</p><h1>Let’s get you to the right place.</h1><p>This page may have moved, or the address may be incorrect.</p><div class="page-actions"><a class="button button-brand" href="/">Back to the homepage →</a><a class="button button-outline" href="/services/">Explore treatments</a><a class="button button-outline" href={site.phoneUrl}>Call {site.phone}</a></div></div></main><Footer /></Layout>
+<style>.not-found{padding:210px 0 120px;min-height:75vh;background:var(--beige)}.not-found h1{max-width:850px}.page-actions{display:flex;gap:14px;flex-wrap:wrap}@media(max-width:700px){.not-found{padding:145px 0 80px}}</style>

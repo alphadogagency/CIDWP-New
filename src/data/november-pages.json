@@ -1,0 +1,5194 @@
+{
+  "_readme": "Content and settings for every page in the CIDWP redesign, taken from the preview (cidwp-full-preview.js). Build each page type as one Astro component fed by these entries. Photo fields hold the alt text of an image that already exists on the site; match by alt. Copy is final unless listed in Open questions in cidwp-homepage-feedback-for-bryan.md.",
+  "tokens": {
+    "colors": {
+      "charcoal": "#2B2E33",
+      "charcoalDeep": "#1E2023",
+      "gold": "#C6A767",
+      "goldHover": "#D4B97E",
+      "goldInk": "#8A6D33",
+      "teal": "#1990AD",
+      "beige": "#F7F5F1",
+      "white": "#FFFFFF",
+      "line": "#E5E6E8",
+      "goldTint": "rgba(198,167,103,.2)",
+      "mobileCrumbCurrent": "#DCC28A"
+    },
+    "fonts": {
+      "headings": "Cormorant Garamond 500/600",
+      "body": "Manrope 300-700"
+    },
+    "radius": {
+      "card": "24px",
+      "innerPhoto": "16px",
+      "pill": "999px"
+    },
+    "type": {
+      "sectionH2": "clamp(34px,3.6vw,52px)/1.06 Cormorant 500",
+      "eyebrow": "Manrope 600 13px uppercase .12em teal",
+      "body": "Manrope 400 17px/1.7 at 82% charcoal",
+      "label": "Manrope 700 11px (12px on mobile) uppercase .14em gold-ink"
+    },
+    "layout": {
+      "wrap": "min(1300px, 100% - 2*48px)",
+      "sectionPadding": "clamp(64px,8vw,112px)",
+      "mobileBreakpoint": "900px",
+      "sectionRhythm": "white / beige alternating automatically; dark photo/team band keeps its own background"
+    }
+  },
+  "choices": {
+    "nav": "Mega menu (option A)",
+    "resultsLayout": {
+      "rule": "Pages with 1 or 2 before/after cases: Split by default; Video (YouTube Short + photos) on implant pages. Pages with the video and 3 cases keep the full layout.",
+      "video": [
+        "/services/dental-implants/",
+        "/concerns/missing-teeth/",
+        "/concerns/loose-dentures/"
+      ],
+      "full": [
+        "/full-mouth-restoration/",
+        "/concerns/damaged-teeth/"
+      ]
+    },
+    "/about/specials/": "Coupon card",
+    "/smile-club/": "Plan cards",
+    "/review/": "Google first (QR hidden on mobile)",
+    "/about/": "Doctors grid + office mosaic",
+    "/contact/": "Info + map",
+    "/about/meet-the-doctors/": "Stacked profiles",
+    "/about/meet-the-team/": "Filter grid, Everyone default, gold 10th tile"
+  },
+  "services": {
+    "/services/general-dentistry/": {
+      "seoTitle": "General Dentist in Westport, Kansas City | Checkups & Cleanings",
+      "metaDesc": "Checkups, cleanings, fillings and preventive care for the whole family at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "General dentistry",
+      "h1": "General dentistry in Westport, Kansas City",
+      "lede": "Checkups, cleanings and everyday care for the whole family, with a team that takes the time to explain your options.",
+      "heroPhoto": [
+        "A consultation at our Westport office",
+        "35% 40%"
+      ],
+      "answerH2": "Everyday care that keeps your smile healthy.",
+      "answer": "General dentistry is the everyday care that keeps your teeth and gums healthy: regular exams, professional cleanings, X-rays, fillings and early treatment before small problems turn into big ones. At Cosmetic & Implant Dentistry Westport, Dr. Hunter McAreavy and our team see patients of every age at our office at 638 W 39th St in Kansas City.",
+      "facts": [
+        [
+          "Every 6 months",
+          "Recommended checkup and cleaning schedule"
+        ],
+        [
+          "All ages",
+          "Care for every member of the family"
+        ],
+        [
+          "Sedation on select days",
+          "Options for patients who feel anxious"
+        ],
+        [
+          "No insurance?",
+          "Smile Club membership plans"
+        ]
+      ],
+      "inclPhoto": "A member of the dental team caring for a patient",
+      "inclEyebrow": "What’s included",
+      "inclH2": "Everything your regular visits cover.",
+      "included": [
+        [
+          "Exam",
+          "A full check of your teeth, gums and bite, looking for early signs of decay or gum disease.",
+          null
+        ],
+        [
+          "Professional cleaning",
+          "Your hygienist removes the plaque and tartar that brushing and flossing miss.",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "X-rays",
+          "Taken when needed, so we can see what an exam alone can’t.",
+          null
+        ],
+        [
+          "Oral cancer screening",
+          "A quick check of your mouth, tongue and throat, with a referral to a specialist if anything needs a closer look.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "fillings",
+          "/services/fillings/"
+        ],
+        [
+          "mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "same-day emergency care",
+          "/services/emergency-dentist/"
+        ]
+      ],
+      "alsoLead": "Need more than a checkup? We also offer",
+      "stepsH2": "What to expect at a checkup.",
+      "steps": [
+        [
+          "Check in",
+          "We go over your health history, any concerns and what you’d like to get out of the visit."
+        ],
+        [
+          "Exam & X-rays",
+          "Your dentist checks your teeth, gums and bite, and takes X-rays when needed."
+        ],
+        [
+          "Cleaning",
+          "Your hygienist removes plaque and tartar and polishes your teeth."
+        ],
+        [
+          "Your plan",
+          "We walk you through what we found, answer questions and book your next visit."
+        ]
+      ],
+      "faq": [
+        [
+          "How often should I see the dentist?",
+          "Most people should come in for a checkup and cleaning every six months. If you have gum disease or a higher risk of cavities, your dentist may recommend visits more often."
+        ],
+        [
+          "What happens at a dental checkup?",
+          "We review your health history, examine your teeth and gums, take X-rays when needed, screen for oral cancer and clean your teeth. Then we go over what we found and any next steps."
+        ],
+        [
+          "Do you see kids and families?",
+          "Yes. We care for every member of the family, so you can book checkups for the whole household at our Westport office."
+        ],
+        [
+          "Can I come in without dental insurance?",
+          "Yes. Our Smile Club membership covers preventive care and gives savings on other treatments, and we also offer payment plans."
+        ],
+        [
+          "What if I feel nervous about the dentist?",
+          "Let us know when you book. We’ll explain each step before we start and can talk through sedation options that may be right for you."
+        ]
+      ],
+      "related": [
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Fillings",
+          "/services/fillings/"
+        ],
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ]
+    },
+    "/services/emergency-dentist/": {
+      "seoTitle": "Emergency Dentist in Westport, Kansas City | Same-Day Care",
+      "metaDesc": "Tooth pain, a broken tooth or a lost crown? Same-day emergency dental care, including root canals and extractions, at 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Emergency dentistry",
+      "h1": "Emergency dentist in Westport, Kansas City",
+      "lede": "Same-day care for tooth pain, broken teeth and other urgent problems. Call us and we’ll get you in as soon as we can.",
+      "heroPhoto": [
+        "A member of the dental team caring for a patient",
+        "55% 40%"
+      ],
+      "answerH2": "Fast help when a tooth can’t wait.",
+      "answer": "An emergency dentist treats urgent problems like severe tooth pain, a broken or knocked-out tooth, or a lost crown as soon as possible. Cosmetic & Implant Dentistry Westport offers same-day care, including root canals and extractions, at our office at 638 W 39th St in Kansas City.",
+      "facts": [
+        [
+          "Same-day care",
+          "For urgent dental problems"
+        ],
+        [
+          "Root canals",
+          "And extractions when a tooth can’t be saved"
+        ],
+        [
+          "Call first",
+          "(816) 388-0985 so we can fit you in"
+        ],
+        [
+          "Mon to Thu",
+          "9:00 AM to 4:00 PM"
+        ]
+      ],
+      "inclPhoto": "CBCT imaging equipment at the Westport practice",
+      "inclEyebrow": "What we treat",
+      "inclH2": "Common dental emergencies.",
+      "included": [
+        [
+          "Severe tooth pain",
+          "A toothache that won’t go away, or pain from advancing decay.",
+          null
+        ],
+        [
+          "Broken, chipped or cracked teeth",
+          "Including damage from a fall or a sports injury.",
+          null
+        ],
+        [
+          "Loose or knocked-out teeth",
+          "Call right away. The sooner we see you, the better the chance of saving the tooth.",
+          null
+        ],
+        [
+          "Lost crowns, bridges or implants",
+          "We’ll protect the tooth and repair or replace the restoration.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Gum pain or bleeding",
+          "Sore, swollen, receding or bleeding gums.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "mouth guards to protect your teeth during sports",
+          "/services/mouth-guards/"
+        ]
+      ],
+      "stepsH2": "What happens when you call.",
+      "steps": [
+        [
+          "Call us",
+          "Tell us what happened and we’ll find the soonest time to see you."
+        ],
+        [
+          "Exam & X-rays",
+          "We find the cause of the problem and check the teeth around it."
+        ],
+        [
+          "Relief first",
+          "We take care of pain and protect the tooth right away."
+        ],
+        [
+          "Your plan",
+          "If you need more treatment, we explain your options before we start."
+        ]
+      ],
+      "faq": [
+        [
+          "What counts as a dental emergency?",
+          "Severe or lasting tooth pain, a broken, cracked, loose or knocked-out tooth, a lost crown, bridge or implant, and sore or bleeding gums are all reasons to call us right away."
+        ],
+        [
+          "Can I be seen the same day?",
+          "We offer same-day care for urgent problems. Call (816) 388-0985 as early as you can so we can fit you in."
+        ],
+        [
+          "What should I do if a tooth gets knocked out?",
+          "For a knocked-out permanent tooth, hold it by the crown, not the root. Rinse it gently if dirty, keep it moist in milk and seek urgent dental care. Do not put a baby tooth back in its socket."
+        ],
+        [
+          "Do you do root canals and extractions?",
+          "Yes. Our emergency care includes root canals and extractions, along with repairs for broken teeth and lost crowns or bridges."
+        ],
+        [
+          "What if I’m nervous about the dentist?",
+          "Tell us when you call. We’ll walk you through each step, and sedation is available on select days each month with Dr. Shaley Baker."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ]
+    },
+    "/services/teeth-cleaning/": {
+      "seoTitle": "Teeth Cleaning in Westport, Kansas City | Cleanings & Checkups",
+      "metaDesc": "Professional teeth cleanings and checkups for adults and kids at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Teeth cleaning",
+      "h1": "Teeth cleaning in Westport, Kansas City",
+      "lede": "Professional cleanings and checkups that keep your teeth and gums healthy, for individuals and families.",
+      "heroPhoto": [
+        "Large windows and natural light in a Westport treatment room",
+        "50% 50%"
+      ],
+      "answerH2": "The cleaning your toothbrush can’t do.",
+      "answer": "A professional teeth cleaning removes the plaque and tartar that build up in spots your brush and floss can’t reach. Your dentist recommends a schedule based on your oral health needs. At Cosmetic & Implant Dentistry Westport, every cleaning comes with a checkup so we can spot problems early.",
+      "facts": [
+        [
+          "Regular visits",
+          "A schedule based on your oral health needs"
+        ],
+        [
+          "Cleaning + exam",
+          "Done in the same visit"
+        ],
+        [
+          "Families welcome",
+          "Care for individuals and families"
+        ],
+        [
+          "Insurance & financing",
+          "A wide range of plans accepted"
+        ]
+      ],
+      "inclPhoto": "A member of the dental team caring for a patient",
+      "inclEyebrow": "What’s included",
+      "inclH2": "What happens at a cleaning.",
+      "included": [
+        [
+          "Plaque & tartar removal",
+          "Your hygienist clears buildup from between your teeth and along the gumline.",
+          null
+        ],
+        [
+          "Polishing",
+          "A final polish that leaves your teeth smooth and clean.",
+          null
+        ],
+        [
+          "Exam",
+          "Your dentist checks your teeth and gums for signs of decay or gum disease.",
+          "/services/general-dentistry/"
+        ],
+        [
+          "X-rays when needed",
+          "So we can see what an exam alone can’t.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "fillings",
+          "/services/fillings/"
+        ],
+        [
+          "mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "teeth whitening",
+          "/services/teeth-whitening/"
+        ]
+      ],
+      "alsoLead": "Need more than a cleaning? We also offer",
+      "stepsH2": "Your cleaning, step by step.",
+      "steps": [
+        [
+          "Check in",
+          "We review your health history and ask about any concerns since your last visit."
+        ],
+        [
+          "Cleaning",
+          "Your hygienist removes plaque and tartar and polishes your teeth."
+        ],
+        [
+          "Exam",
+          "Your dentist checks your teeth and gums and compares them with your last visit."
+        ],
+        [
+          "Next visit",
+          "We go over anything we found and book your next cleaning."
+        ]
+      ],
+      "faq": [
+        [
+          "How often should I get my teeth cleaned?",
+          "Your dentist will recommend a schedule based on your oral health. Many patients come in every six months; some need more frequent care."
+        ],
+        [
+          "I brush and floss every day. Do I still need a cleaning?",
+          "Yes. Plaque and tartar hide in small cracks and spaces that brushes and floss can’t reach. A professional cleaning removes that buildup and lets your dentist check for early problems."
+        ],
+        [
+          "Does a cleaning hurt?",
+          "Most people find a cleaning comfortable. If your teeth or gums are sensitive, tell your hygienist and they can go slower and take breaks."
+        ],
+        [
+          "Do you take insurance?",
+          "We accept a wide range of insurance plans and offer flexible financing. Call us with your plan details and we’ll check your coverage."
+        ],
+        [
+          "Can I bring my kids?",
+          "Yes. We provide cleanings for individuals and families, so you can book the whole household."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Fillings",
+          "/services/fillings/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ]
+      ]
+    },
+    "/services/fillings/": {
+      "seoTitle": "Tooth-Colored Fillings in Westport, Kansas City | Cavity Treatment",
+      "metaDesc": "Tooth-colored composite fillings that repair cavities and stop decay, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Fillings",
+      "h1": "Tooth-colored fillings in Westport, Kansas City",
+      "lede": "Composite fillings that repair cavities, stop decay from spreading and blend in with your smile.",
+      "heroPhoto": [
+        "A member of the dental team caring for a patient",
+        "55% 40%"
+      ],
+      "answerH2": "Fix the cavity before it grows.",
+      "answer": "A filling repairs a tooth damaged by a cavity. We remove the decay, then fill the space with a tooth-colored composite so you can chew and speak comfortably again. Left untreated, a cavity can grow and lead to infection or tooth loss, so it’s best to fix it early.",
+      "facts": [
+        [
+          "Tooth-colored",
+          "Composite that blends with your teeth"
+        ],
+        [
+          "Adults & kids",
+          "Cavities are common at every age"
+        ],
+        [
+          "Exam first",
+          "We check the tooth and explain your options"
+        ],
+        [
+          "No insurance?",
+          "Smile Club membership plans"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Signs you may need one",
+      "inclH2": "When a filling can help.",
+      "included": [
+        [
+          "Tooth pain or sensitivity",
+          "Lasting or sharp pain in a tooth can be a sign of a cavity.",
+          null
+        ],
+        [
+          "A cavity found at your checkup",
+          "Your dentist may spot decay during an exam or on X-rays.",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Pain when you chew",
+          "Damage from decay can make eating uncomfortable.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "crowns for teeth with larger damage",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "same-day emergency care",
+          "/services/emergency-dentist/"
+        ]
+      ],
+      "stepsH2": "How a filling works.",
+      "steps": [
+        [
+          "Exam",
+          "We check the tooth, see how big the cavity is and explain your options."
+        ],
+        [
+          "Remove the decay",
+          "We carefully clean out all of the decay and bacteria."
+        ],
+        [
+          "Fill & shape",
+          "We fill the space with composite and shape it to fit your tooth."
+        ],
+        [
+          "Check your bite",
+          "We make sure everything feels right when you bite down."
+        ]
+      ],
+      "faq": [
+        [
+          "What is a composite filling?",
+          "Composite is a tooth-colored material that bonds to your tooth. It repairs the cavity and blends in with the rest of your smile."
+        ],
+        [
+          "Why fix a small cavity?",
+          "Cavities don’t go away on their own. Left alone, they can grow and lead to infection, tooth loss and damage to the tooth’s structure."
+        ],
+        [
+          "Do you do fillings for kids?",
+          "Yes. Cavities are common in both adults and children, and we treat patients of every age."
+        ],
+        [
+          "Will my insurance cover a filling?",
+          "Many plans include fillings. Call us with your plan details and we’ll check your coverage before your visit."
+        ],
+        [
+          "What if I’m nervous?",
+          "Let us know when you book. We’ll explain each step before we start. Sedation is available on select days each month with Dr. Shaley Baker."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ]
+      ]
+    },
+    "/services/mouth-guards/": {
+      "seoTitle": "Custom Mouth Guards in Westport, Kansas City | Sports & Night Guards",
+      "metaDesc": "Custom-fit mouth guards for sports, nighttime grinding and snoring at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Mouth guards",
+      "h1": "Custom mouth guards in Westport, Kansas City",
+      "lede": "Guards made to fit your mouth, for sports, nighttime grinding or snoring, so they’re comfortable enough to actually wear.",
+      "heroPhoto": [
+        "A nightguard made to fit a patient's teeth",
+        "50% 50%"
+      ],
+      "answerH2": "Protection made to fit you.",
+      "answer": "A custom mouth guard is shaped to fit your teeth, so it’s more comfortable and protective than a store-bought guard. At Cosmetic & Implant Dentistry Westport we make guards for sports, nighttime clenching and grinding, and snoring, and we’ll recommend the right one based on your activities and dental health.",
+      "facts": [
+        [
+          "Custom-fit",
+          "Shaped to your teeth"
+        ],
+        [
+          "Sports & sleep",
+          "Guards for both"
+        ],
+        [
+          "Made for you",
+          "Designed for your mouth only"
+        ],
+        [
+          "Saves on repairs",
+          "Helps prevent costly damage"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "What a guard helps with",
+      "inclH2": "One guard, a few jobs.",
+      "included": [
+        [
+          "Sports",
+          "Protects against knocked-out, broken or chipped teeth and softens blows to the face.",
+          null
+        ],
+        [
+          "Clenching & grinding",
+          "Reduces jaw tightness and grinding at night.",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Snoring",
+          "Can reduce heavy breathing and snoring during sleep.",
+          "/services/sleep-apnea/"
+        ]
+      ],
+      "also": [
+        [
+          "same-day emergency care if a tooth is damaged",
+          "/services/emergency-dentist/"
+        ]
+      ],
+      "stepsH2": "Getting your guard.",
+      "steps": [
+        [
+          "Talk it through",
+          "We ask about your sports, sleep and any jaw pain to choose the right guard."
+        ],
+        [
+          "Fit your teeth",
+          "We capture the shape of your teeth so the guard fits only you."
+        ],
+        [
+          "Your guard",
+          "Your custom guard is made for your mouth’s size and shape."
+        ],
+        [
+          "Check the fit",
+          "We make sure it fits comfortably and show you how to care for it."
+        ]
+      ],
+      "faq": [
+        [
+          "Why choose a custom guard over a store-bought one?",
+          "A custom guard is shaped to your mouth, so it fits better, feels more comfortable and stays in place. That makes it more likely you’ll wear it."
+        ],
+        [
+          "Who should wear a mouth guard?",
+          "Anyone who plays contact sports, clenches or grinds their teeth, or snores can benefit. We’ll recommend the right type for you."
+        ],
+        [
+          "Can a mouth guard help with snoring?",
+          "Yes. A guard worn at night can reduce heavy breathing and snoring. If you think you have sleep apnea, see our sleep apnea treatment."
+        ],
+        [
+          "Can a guard help with jaw pain?",
+          "A night guard can ease clenching and grinding, which are common causes of jaw tightness and TMJ pain."
+        ],
+        [
+          "Is a mouth guard worth the cost?",
+          "A guard helps prevent damage that could need a bigger repair later, which can save you time and money."
+        ]
+      ],
+      "related": [
+        [
+          "TMJ / TMD",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Sleep apnea",
+          "/services/sleep-apnea/"
+        ],
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ]
+      ]
+    },
+    "/services/dental-implants/": {
+      "seoTitle": "Dental Implants in Westport, Kansas City | On-Site Oral Surgeons",
+      "metaDesc": "Replace one tooth or a full arch with dental implants placed by on-site oral surgeons at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Dental implants",
+      "h1": "Dental implants in Westport, Kansas City",
+      "lede": "Replace one tooth or a full set with implants that look, feel and work like natural teeth, placed by oral surgeons on site.",
+      "heroPhoto": [
+        "An implant-supported denture",
+        "50% 50%"
+      ],
+      "procType": "SurgicalProcedure",
+      "answerH2": "A permanent way to replace missing teeth.",
+      "answer": "A dental implant is a titanium post placed in the jawbone, where it fuses with the bone to support a crown, bridge or denture. Implants fill gaps from missing teeth, stop nearby teeth from shifting and help keep your jaw strong. At our Westport location, implants are placed by our on-site oral surgeons, Dr. Owen Lonergan and Dr. Patrick Lucaci.",
+      "facts": [
+        [
+          "On-site surgeons",
+          "Dr. Owen Lonergan and Dr. Patrick Lucaci"
+        ],
+        [
+          "3D imaging",
+          "CBCT scans to plan your implant"
+        ],
+        [
+          "Built to last",
+          "Implants can last a lifetime with good care"
+        ],
+        [
+          "Payment plans",
+          "Spread the cost into monthly payments"
+        ]
+      ],
+      "inclPhoto": "CBCT imaging equipment at the Westport practice",
+      "inclEyebrow": "Implant options",
+      "inclH2": "From one tooth to a full smile.",
+      "included": [
+        [
+          "Single tooth implant",
+          "One implant with a custom crown to replace a single missing tooth.",
+          null
+        ],
+        [
+          "Implant-supported bridge",
+          "A bridge anchored to implants to replace several teeth in a row.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Implant-supported dentures",
+          "Dentures that lock onto implants for more stability than a traditional denture.",
+          null
+        ],
+        [
+          "All-on-X full arch",
+          "A full arch of teeth supported by four to six implants.",
+          "/full-mouth-restoration/"
+        ]
+      ],
+      "results": [
+        [
+          "Single implant before and after",
+          "Single implant"
+        ],
+        [
+          "Full arch restoration before and after",
+          "Full arch restoration"
+        ]
+      ],
+      "stepsH2": "How the implant process works.",
+      "steps": [
+        [
+          "Consultation",
+          "An exam and 3D imaging so we can plan where your implant goes."
+        ],
+        [
+          "Placement",
+          "One of our oral surgeons places the implant in the jawbone."
+        ],
+        [
+          "Healing",
+          "Over time, the implant fuses with the bone to create a strong base."
+        ],
+        [
+          "Your new tooth",
+          "We attach your custom crown, bridge or denture."
+        ]
+      ],
+      "faq": [
+        [
+          "What is a dental implant?",
+          "A titanium post placed in the jawbone that fuses with the bone and holds a crown, bridge or denture. It looks, feels and works like a natural tooth."
+        ],
+        [
+          "Who places the implants?",
+          "Our on-site oral surgeons, Dr. Owen Lonergan and Dr. Patrick Lucaci, place implants at our Westport location, so your surgery happens in the same place as the rest of your care."
+        ],
+        [
+          "How long do implants last?",
+          "With good oral hygiene and regular checkups, dental implants can last a lifetime."
+        ],
+        [
+          "Can implants replace all of my teeth?",
+          "Yes. With All-on-X, four to six implants can support a full arch of teeth. Many patients can get a set of temporary teeth the same day."
+        ],
+        [
+          "Does getting an implant hurt?",
+          "We use local anesthesia during the procedure, and sedation is available for patients with dental anxiety. Most patients report minimal discomfort afterward."
+        ]
+      ],
+      "related": [
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ]
+      ]
+    },
+    "/services/crowns-bridges/": {
+      "seoTitle": "Dental Crowns & Bridges in Westport, Kansas City",
+      "metaDesc": "Custom dental crowns for damaged teeth and bridges to replace missing teeth at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Crowns & bridges",
+      "h1": "Dental crowns & bridges in Westport, Kansas City",
+      "lede": "Crowns that protect damaged teeth and bridges that fill gaps, custom-made to match your smile.",
+      "heroPhoto": [
+        "Dental restorations being worked on in the lab",
+        "50% 55%"
+      ],
+      "answerH2": "Repair a tooth or fill a gap.",
+      "answer": "A crown is a custom cap that covers a cracked, chipped or badly damaged tooth. A bridge replaces one or more missing teeth by anchoring new teeth to the teeth or implants next to the gap. At Cosmetic & Implant Dentistry Westport, we’ll look at your teeth and recommend the option that fits you best.",
+      "facts": [
+        [
+          "Custom-made",
+          "Matched to your natural teeth"
+        ],
+        [
+          "Temporary first",
+          "You’re covered while yours is made"
+        ],
+        [
+          "On teeth or implants",
+          "Bridges can anchor to either"
+        ],
+        [
+          "Payment plans",
+          "Spread the cost into monthly payments"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Crowns vs. bridges",
+      "inclH2": "Which one do you need?",
+      "included": [
+        [
+          "Crown",
+          "Covers and protects a tooth that’s cracked, chipped or badly damaged, and matches the look of your other teeth.",
+          null
+        ],
+        [
+          "Bridge",
+          "Replaces one or more missing teeth and takes pressure off your jaw.",
+          null
+        ],
+        [
+          "Implant-supported bridge",
+          "A bridge anchored to dental implants instead of natural teeth.",
+          "/services/dental-implants/"
+        ]
+      ],
+      "also": [
+        [
+          "tooth-colored fillings for smaller cavities",
+          "/services/fillings/"
+        ],
+        [
+          "veneers for cosmetic changes",
+          "/services/veneers/"
+        ]
+      ],
+      "stepsH2": "Getting your crown or bridge.",
+      "steps": [
+        [
+          "Exam & plan",
+          "We check your teeth and decide whether a crown or bridge is right."
+        ],
+        [
+          "Prepare the teeth",
+          "We prepare the tooth or teeth, with local anesthesia if you need it."
+        ],
+        [
+          "Temporary",
+          "You wear a temporary crown or bridge while your permanent one is made."
+        ],
+        [
+          "Final fit",
+          "We remove the temporary and place your permanent crown or bridge."
+        ]
+      ],
+      "faq": [
+        [
+          "What’s the difference between a crown and a bridge?",
+          "A crown covers a single damaged tooth. A bridge replaces one or more missing teeth by attaching to the teeth or implants on either side of the gap."
+        ],
+        [
+          "Will my crown look natural?",
+          "Yes. Crowns and bridges are custom-made to match the shape and color of your natural teeth."
+        ],
+        [
+          "How many visits does it take?",
+          "Usually two. At the first visit we prepare your teeth and place a temporary. When your permanent crown or bridge is ready, we swap it in."
+        ],
+        [
+          "Can a bridge be supported by implants?",
+          "Yes. An implant-supported bridge anchors to dental implants instead of natural teeth, which is a good option when several teeth in a row are missing."
+        ],
+        [
+          "Does it hurt?",
+          "We use local anesthesia when needed or requested, so you stay comfortable while we prepare your teeth."
+        ]
+      ],
+      "related": [
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Fillings",
+          "/services/fillings/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ]
+      ]
+    },
+    "/services/veneers/": {
+      "seoTitle": "Porcelain Veneers in Westport, Kansas City | Cosmetic Dentistry",
+      "metaDesc": "Porcelain veneers that cover chips, cracks, stains and gaps for a natural-looking smile, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Veneers",
+      "h1": "Porcelain veneers in Westport, Kansas City",
+      "lede": "Thin porcelain shells that cover chips, stains and gaps for a brighter, even smile that still looks like you.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerH2": "A natural-looking smile makeover.",
+      "answer": "Veneers are thin shells of porcelain bonded to the front of your teeth. They can cover chips, cracks, stains, gaps and minor misalignment, and they’re custom-made to look and feel like your natural teeth. At Cosmetic & Implant Dentistry Westport, we start by checking your oral health to make sure veneers are the right fit.",
+      "facts": [
+        [
+          "Porcelain",
+          "Thin, strong and natural-looking"
+        ],
+        [
+          "Custom-made",
+          "Shaped and shaded for your smile"
+        ],
+        [
+          "Easy care",
+          "Brush and floss like normal"
+        ],
+        [
+          "Payment plans",
+          "Spread the cost into monthly payments"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "What veneers can fix",
+      "inclH2": "Small changes, big difference.",
+      "included": [
+        [
+          "Stains & discoloration",
+          "Cover teeth that don’t whiten with regular whitening.",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Chips & cracks",
+          "Hide damage from wear or dental trauma.",
+          null
+        ],
+        [
+          "Gaps & minor misalignment",
+          "Even out spacing and shape for a uniform smile.",
+          null
+        ]
+      ],
+      "results": [
+        [
+          "Veneers before and after",
+          "Veneers"
+        ]
+      ],
+      "stepsH2": "How veneers are made.",
+      "steps": [
+        [
+          "Consultation",
+          "We check your oral health and talk through the smile you want."
+        ],
+        [
+          "Prepare the teeth",
+          "We remove a thin layer of enamel so the veneers sit naturally."
+        ],
+        [
+          "Design",
+          "We use imaging and a mold to shape veneers to your teeth."
+        ],
+        [
+          "Bond",
+          "Your veneers are bonded in place and ready to show off."
+        ]
+      ],
+      "faq": [
+        [
+          "What are veneers made of?",
+          "Our veneers are thin shells of porcelain, custom-shaped and shaded to match the look of natural teeth."
+        ],
+        [
+          "How long do veneers last?",
+          "With good care, veneers last many years. We’ll check on them at your regular dental visits."
+        ],
+        [
+          "How do I take care of veneers?",
+          "Brush and floss them just like your natural teeth, and keep up with your regular checkups."
+        ],
+        [
+          "Am I a good candidate for veneers?",
+          "Veneers work best on healthy teeth and gums. We’ll check your oral health first and recommend the right option for your goals."
+        ],
+        [
+          "Veneers or whitening?",
+          "Whitening brightens your natural teeth. Veneers can also change shape and cover chips or gaps. We can help you decide which fits your goals."
+        ]
+      ],
+      "related": [
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Clear braces",
+          "/services/braces/"
+        ]
+      ]
+    },
+    "/services/teeth-whitening/": {
+      "seoTitle": "Professional Teeth Whitening in Westport, Kansas City | Opalescence",
+      "metaDesc": "In-office and take-home Opalescence teeth whitening from our dental team at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Teeth whitening",
+      "h1": "Professional teeth whitening in Westport, Kansas City",
+      "lede": "In-office and take-home Opalescence whitening, done by our dental team, for results store-bought kits can’t match.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerH2": "A brighter smile, your way.",
+      "answer": "Professional teeth whitening lightens yellowed or darkened teeth with stronger, dentist-supervised treatments. At Cosmetic & Implant Dentistry Westport, we offer Opalescence whitening in the office or at home, and our dentists and hygienists will help you pick the option that fits your goals and schedule.",
+      "facts": [
+        [
+          "About an hour",
+          "In-office Opalescence Boost"
+        ],
+        [
+          "At home",
+          "Custom trays or ready-to-use trays"
+        ],
+        [
+          "Done by pros",
+          "Our dentists and hygienists"
+        ],
+        [
+          "No insurance?",
+          "Smile Club membership plans"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Whitening options",
+      "inclH2": "Three ways to whiten.",
+      "included": [
+        [
+          "Opalescence Boost (in office)",
+          "A fast-acting gel applied in our office, with results in about an hour.",
+          null
+        ],
+        [
+          "Opalescence PF (at home)",
+          "Custom trays made to fit your teeth, with gels you use on your own schedule.",
+          null
+        ],
+        [
+          "Opalescence Go (at home or in office)",
+          "Flexible, ready-to-use trays that shape to your teeth.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "veneers for stains that don’t respond to whitening",
+          "/services/veneers/"
+        ]
+      ],
+      "stepsH2": "How whitening works.",
+      "steps": [
+        [
+          "Consultation",
+          "We look at your teeth and talk about the shade you want."
+        ],
+        [
+          "Choose your option",
+          "In office for fast results, or at home on your schedule."
+        ],
+        [
+          "Whiten",
+          "We apply the gel in office, or send you home with trays and gels."
+        ],
+        [
+          "Keep it bright",
+          "We share tips to help your new shade last."
+        ]
+      ],
+      "faq": [
+        [
+          "How long does in-office whitening take?",
+          "Opalescence Boost is done in our office in about an hour."
+        ],
+        [
+          "In office or at home: which is better?",
+          "In-office whitening gives fast results in one visit. At-home trays let you whiten on your own schedule. We’ll help you choose based on your goals."
+        ],
+        [
+          "Is professional whitening better than store-bought?",
+          "Professional whitening is stronger and supervised by our team, so it works well when store-bought whiteners aren’t enough."
+        ],
+        [
+          "Will whitening work on crowns or veneers?",
+          "Whitening works on natural teeth. Crowns, veneers and fillings won’t change color, so let us know if you have them and we’ll plan around it."
+        ],
+        [
+          "Does whitening cause sensitivity?",
+          "Some people notice temporary sensitivity. Tell us if your teeth are sensitive and we’ll recommend the best option for you."
+        ]
+      ],
+      "related": [
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Clear braces",
+          "/services/braces/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ]
+      ]
+    },
+    "/services/sleep-apnea/": {
+      "seoTitle": "Sleep Apnea Treatment in Westport, Kansas City | Oral Appliances",
+      "metaDesc": "Custom oral appliances that reduce snoring and help you breathe better at night, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Sleep apnea treatment",
+      "h1": "Sleep apnea treatment in Westport, Kansas City",
+      "lede": "Custom oral appliances that reduce snoring and help you breathe better at night. Many patients find them easier than a CPAP.",
+      "heroPhoto": [
+        "A nightguard made to fit a patient's teeth",
+        "50% 50%"
+      ],
+      "answerH2": "Quieter nights, better sleep.",
+      "answer": "Obstructive sleep apnea happens when tissues in the throat narrow and block your airway during sleep, which leads to loud snoring and trouble breathing. At Cosmetic & Implant Dentistry Westport, we make custom oral appliances that gently move your jaw forward to keep the airway open. If you need more care, we’ll refer you to a specialist such as an ENT.",
+      "facts": [
+        [
+          "CPAP alternative",
+          "Quiet, small and easy to wear"
+        ],
+        [
+          "Custom-fit",
+          "Made for your mouth"
+        ],
+        [
+          "Easy to use",
+          "Simple to put in and take out"
+        ],
+        [
+          "Specialist referrals",
+          "An ENT when you need one"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "How we help",
+      "inclH2": "Care from exam to appliance.",
+      "included": [
+        [
+          "Exam & X-rays",
+          "We examine your mouth and throat and talk about your symptoms.",
+          null
+        ],
+        [
+          "Custom oral appliance",
+          "A mouth guard that sets your jaw in a better position so your airway stays open.",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Referral when needed",
+          "We’ll connect you with specialists like ENTs if you need more care.",
+          null
+        ]
+      ],
+      "stepsH2": "Getting started.",
+      "steps": [
+        [
+          "Talk it through",
+          "Tell us about your snoring, sleep and breathing at night."
+        ],
+        [
+          "Exam & X-rays",
+          "We examine your throat and airway and go over the results."
+        ],
+        [
+          "Your appliance",
+          "We make a custom appliance that fits your mouth."
+        ],
+        [
+          "Referral if needed",
+          "If you need more care, we refer you to the right specialist."
+        ]
+      ],
+      "faq": [
+        [
+          "What are signs of sleep apnea?",
+          "Loud, chronic snoring and trouble breathing through the night are common signs. If you or your partner notice them, it’s worth getting checked."
+        ],
+        [
+          "How does an oral appliance help?",
+          "A custom oral appliance gently holds the lower jaw forward to help keep the airway open during sleep."
+        ],
+        [
+          "Is it an alternative to a CPAP?",
+          "An oral appliance may be an option for adults with obstructive sleep apnea who cannot tolerate CPAP or prefer an alternative. A sleep physician and dentist can help decide whether it is suitable for you."
+        ],
+        [
+          "Is sleep apnea dangerous?",
+          "It can be. That’s why we encourage anyone with chronic snoring to get examined and treated."
+        ],
+        [
+          "Do I need to see another doctor?",
+          "Sleep apnea is diagnosed by a physician. We can examine you and, if needed, refer you to a specialist such as an ENT."
+        ]
+      ],
+      "related": [
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "TMJ / TMD",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ]
+      ]
+    },
+    "/services/tmj-tmd/": {
+      "seoTitle": "TMJ / TMD Treatment in Westport, Kansas City | Jaw Pain Relief",
+      "metaDesc": "Relief for jaw pain, clicking and headaches with custom night guards for TMJ disorder, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "TMJ / TMD treatment",
+      "h1": "TMJ / TMD treatment in Westport, Kansas City",
+      "lede": "Custom night guards that ease jaw pain, clicking and headaches caused by TMJ disorder.",
+      "heroPhoto": [
+        "A nightguard made to fit a patient's teeth",
+        "50% 50%"
+      ],
+      "answerH2": "Relief for a sore, tight jaw.",
+      "answer": "TMJ disorder (TMD) affects the joint that connects your jaw to your skull. It can cause jaw pain and stiffness, popping or clicking, and headaches. At Cosmetic & Implant Dentistry Westport, we treat TMD with custom night guards that take pressure off your back teeth and help your jaw relax while you sleep.",
+      "facts": [
+        [
+          "Custom night guard",
+          "Made to fit your mouth"
+        ],
+        [
+          "Worn while you sleep",
+          "When clenching happens most"
+        ],
+        [
+          "Less pressure",
+          "On your jaw and back teeth"
+        ],
+        [
+          "Exam first",
+          "We check your jaw before we start"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Common signs",
+      "inclH2": "Could it be TMJ?",
+      "included": [
+        [
+          "Jaw pain or stiffness",
+          "Frequent or intense pain in the jaw.",
+          null
+        ],
+        [
+          "Popping or clicking",
+          "Sounds when you open or close your mouth.",
+          null
+        ],
+        [
+          "Headaches",
+          "Frequent headaches or migraines.",
+          null
+        ],
+        [
+          "Clenching or grinding",
+          "Often at night, when you can’t control it.",
+          "/services/mouth-guards/"
+        ]
+      ],
+      "stepsH2": "How we treat TMJ.",
+      "steps": [
+        [
+          "Talk it through",
+          "We ask about your pain, headaches and when they happen."
+        ],
+        [
+          "Jaw exam",
+          "We check your jaw and bite to find the best next steps."
+        ],
+        [
+          "Night guard",
+          "We make a custom guard to wear while you sleep."
+        ],
+        [
+          "Follow up",
+          "We check how you’re feeling and adjust if needed."
+        ]
+      ],
+      "faq": [
+        [
+          "What is TMJ disorder?",
+          "TMJ disorder, or TMD, is a problem with the joint that connects your jaw to your skull. It often causes pain, clicking and headaches."
+        ],
+        [
+          "How does a night guard help?",
+          "It realigns the jaw joint and takes pressure off your back teeth, so your jaw can relax and stop clenching while you sleep."
+        ],
+        [
+          "Why do I clench my jaw at night?",
+          "You have little control over your movements while you sleep, which is why nighttime clenching is one of the biggest reasons TMD continues and gets worse."
+        ],
+        [
+          "How soon will I feel better?",
+          "Many patients notice relief soon after they start wearing their guard. We’ll check in and adjust it if needed."
+        ],
+        [
+          "Can TMJ affect eating or speaking?",
+          "Yes. TMD can make chewing, swallowing and speaking harder, which is another reason to get it treated."
+        ]
+      ],
+      "related": [
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Sleep apnea",
+          "/services/sleep-apnea/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ]
+      ]
+    },
+    "/services/braces/": {
+      "seoTitle": "Clear Braces in Westport, Kansas City | Straighten Your Teeth",
+      "metaDesc": "Clear braces that straighten crowded teeth and correct bites while blending in with your smile, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Clear braces",
+      "h1": "Clear braces in Westport, Kansas City",
+      "lede": "Straighten your teeth with clear braces that blend in, so you can smile freely during treatment.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerH2": "Straighter teeth, without the metal look.",
+      "answer": "Clear braces straighten crooked or crowded teeth and correct overbites and underbites, using a thin, clear material that blends in with your natural teeth. At Cosmetic & Implant Dentistry Westport, we look at your teeth, talk about your goals and build a treatment plan around your smile.",
+      "facts": [
+        [
+          "Clear",
+          "Blends in with your teeth"
+        ],
+        [
+          "Custom plan",
+          "Made for your teeth and goals"
+        ],
+        [
+          "Crowding & bites",
+          "Overbites, underbites and gaps"
+        ],
+        [
+          "Payment plans",
+          "Spread the cost into monthly payments"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "What clear braces fix",
+      "inclH2": "Common reasons to straighten.",
+      "included": [
+        [
+          "Crowded teeth",
+          "Make room so teeth sit evenly.",
+          null
+        ],
+        [
+          "Overbites & underbites",
+          "Bring your bite into better alignment.",
+          null
+        ],
+        [
+          "Gaps",
+          "Close spaces between teeth.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "veneers for minor cosmetic changes",
+          "/services/veneers/"
+        ]
+      ],
+      "stepsH2": "How treatment works.",
+      "steps": [
+        [
+          "Consultation",
+          "We check your teeth and talk through your goals."
+        ],
+        [
+          "Your plan",
+          "We build a custom plan for your teeth."
+        ],
+        [
+          "Treatment",
+          "Your clear braces gradually move your teeth into place."
+        ],
+        [
+          "Your new smile",
+          "Straighter, more even teeth that are easier to keep clean."
+        ]
+      ],
+      "faq": [
+        [
+          "Will people notice my braces?",
+          "Clear braces are made from material that blends in with your teeth, so they’re much less noticeable than metal braces."
+        ],
+        [
+          "What can clear braces fix?",
+          "Crowded or crooked teeth, gaps, overbites and underbites."
+        ],
+        [
+          "Are clear braces right for me?",
+          "We’ll check your teeth and talk about your goals at a consultation, then recommend the best option."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer payment plans so you can spread the cost into monthly payments."
+        ]
+      ],
+      "related": [
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ]
+      ]
+    },
+    "/full-mouth-restoration/": {
+      "seoTitle": "Full Mouth Restoration in Westport, Kansas City | All-on-X & Implants",
+      "metaDesc": "Rebuild worn, damaged or missing teeth with a full mouth restoration plan, including implants and All-on-X, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Full mouth restoration",
+      "h1": "Full mouth restoration in Westport, Kansas City",
+      "lede": "One plan to rebuild worn, damaged or missing teeth, so you can eat, speak and smile with confidence again.",
+      "heroPhoto": [
+        "An implant-supported denture",
+        "50% 50%"
+      ],
+      "procType": "SurgicalProcedure",
+      "video": true,
+      "answerH2": "Rebuild your smile from the ground up.",
+      "answer": "Full mouth restoration, also called full mouth reconstruction, is a treatment plan that fixes several dental problems at once. It combines restorative and cosmetic treatments, like implants, crowns and veneers, to restore the structure, function and look of your whole mouth. Our on-site oral surgeons and dental team plan every step together.",
+      "facts": [
+        [
+          "A few months to 18",
+          "Depending on how complex your case is"
+        ],
+        [
+          "15 to 20 years",
+          "How long most restorations last with care"
+        ],
+        [
+          "On-site surgeons",
+          "Implants placed at our Westport location"
+        ],
+        [
+          "Payment plans",
+          "Plus most dental insurance accepted"
+        ]
+      ],
+      "inclPhoto": "Dental restorations being worked on in the lab",
+      "inclEyebrow": "What your plan may include",
+      "inclH2": "Treatments we combine.",
+      "included": [
+        [
+          "Dental implants",
+          "Titanium posts that replace missing teeth and support crowns, bridges or dentures.",
+          "/services/dental-implants/"
+        ],
+        [
+          "All-on-X",
+          "A full arch of teeth on four to six implants, often with temporary teeth the same day.",
+          null
+        ],
+        [
+          "Crowns & bridges",
+          "Restore damaged teeth and replace missing ones.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Porcelain veneers",
+          "Correct chips, stains, gaps and minor misalignment.",
+          "/services/veneers/"
+        ],
+        [
+          "Dentures & partials",
+          "Traditional removable or implant-supported options.",
+          null
+        ],
+        [
+          "Gum treatment",
+          "Deep cleaning, scaling and root planing so your gums are healthy first.",
+          null
+        ]
+      ],
+      "results": [
+        [
+          "Single implant before and after",
+          "Single implant"
+        ],
+        [
+          "Veneers before and after",
+          "Veneers"
+        ],
+        [
+          "Full arch restoration before and after",
+          "Full arch"
+        ]
+      ],
+      "stepsH2": "The restoration process.",
+      "steps": [
+        [
+          "Consultation",
+          "A full exam, X-rays and a talk about your goals and concerns."
+        ],
+        [
+          "Treatment plan",
+          "A custom plan with the procedures, timeline and cost."
+        ],
+        [
+          "Restoration",
+          "Treatment in phases that address each issue."
+        ],
+        [
+          "Maintenance",
+          "Ongoing care so your new smile lasts for years."
+        ]
+      ],
+      "faq": [
+        [
+          "How long does full mouth restoration take?",
+          "It depends on your case. Simpler restorations may take a few months, while cases with implants and bone grafting can take 12 to 18 months. We’ll give you a detailed timeline at your consultation."
+        ],
+        [
+          "Is full mouth restoration painful?",
+          "We use local anesthesia during procedures and offer sedation for patients with dental anxiety. Most patients report minimal discomfort, and soreness afterward can usually be managed with over-the-counter pain medication."
+        ],
+        [
+          "How much does it cost?",
+          "It depends on the treatments you need. We’ll give you a full plan with clear pricing, and we offer flexible payment plans and work with most dental insurance providers."
+        ],
+        [
+          "How long will my restoration last?",
+          "With good care and regular checkups, most restorations last 15 to 20 years or longer. Dental implants can last a lifetime."
+        ],
+        [
+          "Can I get it if I have gum disease?",
+          "Yes, but we treat the gum disease first. Healthy gums are essential for a lasting restoration, so it’s built into your plan."
+        ]
+      ],
+      "related": [
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ]
+    },
+    "/sedation/": {
+      "seoTitle": "Sedation Dentistry in Westport, Kansas City | Anxiety-Free Care",
+      "metaDesc": "Nitrous oxide, oral and IV sedation with a Missouri sedation-certified dentist, for calm, comfortable dental care at Cosmetic & Implant Dentistry Westport, Kansas City, MO.",
+      "name": "Sedation dentistry",
+      "h1": "Sedation dentistry in Westport, Kansas City",
+      "lede": "Calm, comfortable care for patients with dental anxiety or sensitivity, with a sedation-certified dentist.",
+      "heroPhoto": [
+        "Large windows and natural light in a Westport treatment room",
+        "50% 50%"
+      ],
+      "answerH2": "Relaxed, anxiety-free dental care.",
+      "answer": "Sedation dentistry uses medication to help you feel calm and relaxed during dental care. It’s a good fit if you have dental anxiety, heightened sensitivity or need a lot of work done. At our Westport office, sedation is provided by Dr. Shaley Baker, who holds a Missouri Sedation Certification and sees sedation patients about one to two days a month.",
+      "facts": [
+        [
+          "1 to 2 days a month",
+          "Sedation days, so book ahead"
+        ],
+        [
+          "3 options",
+          "Nitrous oxide, oral and IV sedation"
+        ],
+        [
+          "Certified",
+          "Missouri Sedation Certification"
+        ],
+        [
+          "Fewer visits",
+          "More work done in one appointment"
+        ]
+      ],
+      "inclPhoto": "Care At Our Westport Office",
+      "inclEyebrow": "Types of sedation",
+      "inclH2": "Find the level that’s right for you.",
+      "included": [
+        [
+          "Nitrous oxide (laughing gas)",
+          "A mild sedative you breathe through a mask. It wears off fast, so you can drive yourself home.",
+          null
+        ],
+        [
+          "Oral sedation",
+          "A prescribed medication taken before your visit. You’ll stay awake but deeply relaxed, and need a ride to and from your appointment.",
+          null
+        ],
+        [
+          "IV sedation",
+          "The deepest level we offer, for severe anxiety or longer procedures. You’ll be in a sleep-like state but still able to respond.",
+          null
+        ]
+      ],
+      "stepsH2": "Your sedation visit.",
+      "steps": [
+        [
+          "Consultation",
+          "We review your health history, anxiety level and the care you need."
+        ],
+        [
+          "Choose an option",
+          "Dr. Baker recommends the right level of sedation for you."
+        ],
+        [
+          "Your visit",
+          "You relax while we take care of your treatment, with monitoring throughout."
+        ],
+        [
+          "Going home",
+          "Nitrous wears off quickly. For oral or IV sedation, plan for a ride home."
+        ]
+      ],
+      "faq": [
+        [
+          "Is sedation dentistry safe?",
+          "Yes, when it’s given by a trained professional. Dr. Baker holds a Missouri Sedation Certification, reviews your medical history first and monitors you throughout your procedure."
+        ],
+        [
+          "Will I be unconscious?",
+          "With most sedation options you stay conscious but deeply relaxed. You may feel drowsy and remember little of the procedure, but you can still respond to instructions."
+        ],
+        [
+          "Which option is right for me?",
+          "At your consultation, Dr. Baker will talk about your anxiety level, medical history and the procedures you need, then recommend the best option."
+        ],
+        [
+          "How often is sedation available?",
+          "Dr. Baker provides sedation at our Westport location about one to two days a month. We recommend booking ahead to get a time that works for you."
+        ],
+        [
+          "Who is sedation good for?",
+          "Patients with dental anxiety, a strong gag reflex, trouble getting numb, a fear of needles, past bad experiences, or a lot of dental work to do in fewer visits."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ]
+      ]
+    },
+    "/services/emergency-dentistry/": {
+      "seoTitle": "Emergency Dentist in Westport, Kansas City | Same-Day Care",
+      "metaDesc": "Tooth pain, a broken tooth or a lost crown? Same-day emergency dental care, including root canals and extractions, at 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Emergency dentistry",
+      "h1": "Emergency dentist in Westport, Kansas City",
+      "lede": "Same-day care for tooth pain, broken teeth and other urgent problems. Call us and we’ll get you in as soon as we can.",
+      "heroPhoto": [
+        "A member of the dental team caring for a patient",
+        "55% 40%"
+      ],
+      "answerH2": "Fast help when a tooth can’t wait.",
+      "answer": "An emergency dentist treats urgent problems like severe tooth pain, a broken or knocked-out tooth, or a lost crown as soon as possible. Cosmetic & Implant Dentistry Westport offers same-day care, including root canals and extractions, at our office at 638 W 39th St in Kansas City.",
+      "facts": [
+        [
+          "Same-day care",
+          "For urgent dental problems"
+        ],
+        [
+          "Root canals",
+          "And extractions when a tooth can’t be saved"
+        ],
+        [
+          "Call first",
+          "(816) 388-0985 so we can fit you in"
+        ],
+        [
+          "Mon to Thu",
+          "9:00 AM to 4:00 PM"
+        ]
+      ],
+      "inclPhoto": "CBCT imaging equipment at the Westport practice",
+      "inclEyebrow": "What we treat",
+      "inclH2": "Common dental emergencies.",
+      "included": [
+        [
+          "Severe tooth pain",
+          "A toothache that won’t go away, or pain from advancing decay.",
+          null
+        ],
+        [
+          "Broken, chipped or cracked teeth",
+          "Including damage from a fall or a sports injury.",
+          null
+        ],
+        [
+          "Loose or knocked-out teeth",
+          "Call right away. The sooner we see you, the better the chance of saving the tooth.",
+          null
+        ],
+        [
+          "Lost crowns, bridges or implants",
+          "We’ll protect the tooth and repair or replace the restoration.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Gum pain or bleeding",
+          "Sore, swollen, receding or bleeding gums.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "mouth guards to protect your teeth during sports",
+          "/services/mouth-guards/"
+        ]
+      ],
+      "stepsH2": "What happens when you call.",
+      "steps": [
+        [
+          "Call us",
+          "Tell us what happened and we’ll find the soonest time to see you."
+        ],
+        [
+          "Exam & X-rays",
+          "We find the cause of the problem and check the teeth around it."
+        ],
+        [
+          "Relief first",
+          "We take care of pain and protect the tooth right away."
+        ],
+        [
+          "Your plan",
+          "If you need more treatment, we explain your options before we start."
+        ]
+      ],
+      "faq": [
+        [
+          "What counts as a dental emergency?",
+          "Severe or lasting tooth pain, a broken, cracked, loose or knocked-out tooth, a lost crown, bridge or implant, and sore or bleeding gums are all reasons to call us right away."
+        ],
+        [
+          "Can I be seen the same day?",
+          "We offer same-day care for urgent problems. Call (816) 388-0985 as early as you can so we can fit you in."
+        ],
+        [
+          "What should I do if a tooth gets knocked out?",
+          "Pick the tooth up by the top, not the root, rinse it gently and keep it moist, ideally in milk. Then call us right away. The sooner you’re seen, the better the chance of saving it."
+        ],
+        [
+          "Do you do root canals and extractions?",
+          "Yes. Our emergency care includes root canals and extractions, along with repairs for broken teeth and lost crowns or bridges."
+        ],
+        [
+          "What if I’m nervous about the dentist?",
+          "Tell us when you call. We’ll walk you through each step, and sedation is available on select days each month with Dr. Shaley Baker."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ]
+    },
+    "/services/clear-braces/": {
+      "seoTitle": "Clear Braces in Westport, Kansas City | Straighten Your Teeth",
+      "metaDesc": "Clear braces that straighten crowded teeth and correct bites while blending in with your smile, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO. Call (816) 388-0985.",
+      "name": "Clear braces",
+      "h1": "Clear braces in Westport, Kansas City",
+      "lede": "Straighten your teeth with clear braces that blend in, so you can smile freely during treatment.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerH2": "Straighter teeth, without the metal look.",
+      "answer": "Clear braces straighten crooked or crowded teeth and correct overbites and underbites, using a thin, clear material that blends in with your natural teeth. At Cosmetic & Implant Dentistry Westport, we look at your teeth, talk about your goals and build a treatment plan around your smile.",
+      "facts": [
+        [
+          "Clear",
+          "Blends in with your teeth"
+        ],
+        [
+          "Custom plan",
+          "Made for your teeth and goals"
+        ],
+        [
+          "Crowding & bites",
+          "Overbites, underbites and gaps"
+        ],
+        [
+          "Payment plans",
+          "Spread the cost into monthly payments"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "What clear braces fix",
+      "inclH2": "Common reasons to straighten.",
+      "included": [
+        [
+          "Crowded teeth",
+          "Make room so teeth sit evenly.",
+          null
+        ],
+        [
+          "Overbites & underbites",
+          "Bring your bite into better alignment.",
+          null
+        ],
+        [
+          "Gaps",
+          "Close spaces between teeth.",
+          null
+        ]
+      ],
+      "also": [
+        [
+          "veneers for minor cosmetic changes",
+          "/services/veneers/"
+        ]
+      ],
+      "stepsH2": "How treatment works.",
+      "steps": [
+        [
+          "Consultation",
+          "We check your teeth and talk through your goals."
+        ],
+        [
+          "Your plan",
+          "We build a custom plan for your teeth."
+        ],
+        [
+          "Treatment",
+          "Your clear braces gradually move your teeth into place."
+        ],
+        [
+          "Your new smile",
+          "Straighter, more even teeth that are easier to keep clean."
+        ]
+      ],
+      "faq": [
+        [
+          "Will people notice my braces?",
+          "Clear braces are made from material that blends in with your teeth, so they’re much less noticeable than metal braces."
+        ],
+        [
+          "What can clear braces fix?",
+          "Crowded or crooked teeth, gaps, overbites and underbites."
+        ],
+        [
+          "Are clear braces right for me?",
+          "We’ll check your teeth and talk about your goals at a consultation, then recommend the best option."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer payment plans so you can spread the cost into monthly payments."
+        ]
+      ],
+      "related": [
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ]
+      ]
+    }
+  },
+  "photoAlts": {
+    "consult": "A consultation at our Westport office",
+    "care": "A member of the dental team caring for a patient",
+    "room": "Large windows and natural light in a Westport treatment room",
+    "smile": "A woman smiling at our Westport practice",
+    "lab": "Dental restorations being worked on in the lab",
+    "denture": "An implant-supported denture",
+    "cbct": "CBCT imaging equipment at the Westport practice",
+    "guard": "A nightguard made to fit a patient's teeth",
+    "chair": "Care At Our Westport Office"
+  },
+  "concerns": {
+    "/concerns/missing-teeth/": {
+      "label": "Missing teeth",
+      "condition": "Tooth loss (missing teeth)",
+      "team": "surgical",
+      "seoTitle": "Missing Teeth Treatment in Westport, Kansas City | Implants, Bridges & Dentures",
+      "metaDesc": "Missing one tooth or many? Compare dental implants, bridges, dentures and All-on-X with on-site oral surgeons at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Missing teeth",
+      "h1": "Replace missing teeth in Westport, Kansas City",
+      "lede": "One tooth or a full arch, we’ll walk you through every option and help you choose the one that fits your mouth, goals and budget.",
+      "heroPhoto": [
+        "Care At Our Westport Office",
+        "55% 40%"
+      ],
+      "answerEyebrow": "Why replace a missing tooth?",
+      "answerH2": "A gap affects more than your smile.",
+      "answer": "When a tooth is lost, the teeth around it lose support and can start to shift, and the jawbone where the tooth used to be can weaken over time. That can make chewing and speaking harder and change how your smile looks. Replacing the tooth with an implant, a bridge or a denture protects the teeth you still have. At Cosmetic & Implant Dentistry Westport, implants are placed on site by our oral surgeons, Dr. Owen Lonergan and Dr. Patrick Lucaci.",
+      "facts": [
+        [
+          "Teeth shift",
+          "Nearby teeth drift into the gap"
+        ],
+        [
+          "Bone weakens",
+          "Without a tooth root to support it"
+        ],
+        [
+          "Harder to chew",
+          "And sometimes to speak clearly"
+        ],
+        [
+          "On-site surgeons",
+          "Implants placed at our Westport office"
+        ]
+      ],
+      "inclPhoto": "An implant-supported denture",
+      "inclEyebrow": "Your options",
+      "inclH2": "Ways to replace missing teeth.",
+      "included": [
+        [
+          "Dental implant",
+          "A titanium post in the jawbone with a custom crown on top. The closest thing to a natural tooth.",
+          "/services/dental-implants/"
+        ],
+        [
+          "Implant-supported bridge",
+          "Replaces several teeth in a row, anchored to implants instead of your natural teeth.",
+          "/services/dental-implants/"
+        ],
+        [
+          "Traditional bridge",
+          "New teeth attached to the healthy teeth on either side of the gap.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Implant-supported dentures",
+          "Dentures that lock onto implants for more stability than a traditional denture.",
+          "/concerns/loose-dentures/"
+        ],
+        [
+          "All-on-X",
+          "A full arch of teeth on four to six implants, often with temporary teeth the same day.",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Dentures & partials",
+          "Removable options to replace several or all of your teeth.",
+          "/full-mouth-restoration/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Which one fits you?",
+        "intro": "A quick side-by-side. At your consultation we’ll look at your teeth, gums and jawbone and recommend the best fit.",
+        "pill": 2,
+        "cols": [
+          "Option",
+          "Best for",
+          "Fixed or removable",
+          "Supported by"
+        ],
+        "rows": [
+          [
+            "Dental implant",
+            "One missing tooth",
+            "Fixed",
+            "An implant in the jawbone"
+          ],
+          [
+            "Implant-supported bridge",
+            "Several missing teeth in a row",
+            "Fixed",
+            "Implants"
+          ],
+          [
+            "Traditional bridge",
+            "One or more missing teeth in a row",
+            "Fixed",
+            "The teeth on either side"
+          ],
+          [
+            "Implant-supported dentures",
+            "Most or all teeth in an arch",
+            "Locks onto implants",
+            "Implants"
+          ],
+          [
+            "All-on-X",
+            "A full arch of teeth",
+            "Fixed",
+            "Four to six implants"
+          ],
+          [
+            "Dentures & partials",
+            "Several or all teeth",
+            "Removable",
+            "Your gums and remaining teeth"
+          ]
+        ]
+      },
+      "results": [
+        [
+          "Single implant before and after",
+          "Single implant"
+        ],
+        [
+          "Full arch restoration before and after",
+          "Full arch restoration"
+        ]
+      ],
+      "stepsH2": "From first visit to new smile.",
+      "steps": [
+        [
+          "Consultation",
+          "An exam, X-rays and 3D imaging, and a talk about your goals."
+        ],
+        [
+          "Your plan",
+          "We compare your options, timeline and cost so you can choose with confidence."
+        ],
+        [
+          "Treatment",
+          "Implants are placed by our on-site oral surgeons. Bridges and dentures are made to match your smile."
+        ],
+        [
+          "Follow-up",
+          "Checkups to make sure everything fits, feels right and lasts."
+        ]
+      ],
+      "faq": [
+        [
+          "What’s the best way to replace a missing tooth?",
+          "It depends on how many teeth are missing, the health of your jawbone and nearby teeth, and your budget. A dental implant is the most permanent option for a single tooth, and bridges and dentures are good options too. We’ll go over each one at your consultation."
+        ],
+        [
+          "What happens if I don’t replace a missing tooth?",
+          "The teeth around the gap can shift, and the jawbone can weaken without a tooth root to support it. Over time that can affect your bite, how you chew and speak, and the health of your remaining teeth."
+        ],
+        [
+          "How long do dental implants last?",
+          "With good oral hygiene and regular checkups, dental implants can last a lifetime."
+        ],
+        [
+          "Can you replace all of my teeth at once?",
+          "Yes. With All-on-X, four to six implants can support a full arch of teeth, and many patients can get a set of temporary teeth the same day."
+        ],
+        [
+          "Does getting an implant hurt?",
+          "We use local anesthesia during the procedure, and sedation is available for patients with dental anxiety. Most patients report minimal discomfort afterward."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Loose dentures",
+          "/concerns/loose-dentures/"
+        ]
+      ]
+    },
+    "/concerns/toothache/": {
+      "label": "Toothache",
+      "condition": "Toothache (tooth pain)",
+      "team": "general",
+      "seoTitle": "Toothache Relief in Westport, Kansas City | Same-Day Dental Care",
+      "metaDesc": "Tooth pain that won’t go away? Same-day care for toothaches, cavities and infections, including fillings, crowns, root canals and extractions, at 638 W 39th St, Kansas City, MO.",
+      "name": "Tooth pain",
+      "h1": "Toothache relief in Westport, Kansas City",
+      "lede": "Tooth pain is your mouth asking for help. We’ll find the cause, get you out of pain and fix the problem, often the same day.",
+      "heroPhoto": [
+        "A member of the dental team caring for a patient",
+        "55% 40%"
+      ],
+      "answerEyebrow": "What causes a toothache?",
+      "answerH2": "Pain that lingers needs a closer look.",
+      "answer": "Most toothaches come from a cavity, a cracked tooth, an infection or a problem with your gums. Pain that keeps coming back, wakes you up or gets worse usually means the problem is growing, and it rarely goes away on its own. At Cosmetic & Implant Dentistry Westport, we offer same-day care to find the cause and treat it, from a simple filling to a root canal.",
+      "facts": [
+        [
+          "Same-day care",
+          "For urgent tooth pain"
+        ],
+        [
+          "Find the cause",
+          "Exam and X-rays first"
+        ],
+        [
+          "Root canals",
+          "And extractions when needed"
+        ],
+        [
+          "Mon to Thu",
+          "9:00 AM to 4:00 PM"
+        ]
+      ],
+      "inclPhoto": "CBCT imaging equipment at the Westport practice",
+      "inclEyebrow": "Common causes",
+      "inclH2": "What might be behind the pain.",
+      "included": [
+        [
+          "A cavity",
+          "Decay that reaches deeper into the tooth can cause sharp or lasting pain.",
+          "/services/fillings/"
+        ],
+        [
+          "A cracked or broken tooth",
+          "Pain when you bite or chew can mean a crack you can’t see.",
+          "/concerns/broken-tooth/"
+        ],
+        [
+          "An infection",
+          "Throbbing pain or swelling can be a sign the tooth’s nerve is infected.",
+          "/services/emergency-dentist/"
+        ],
+        [
+          "Gum problems",
+          "Sore, swollen or bleeding gums can cause pain around a tooth.",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Clenching or grinding",
+          "Pressure at night can leave teeth and jaw sore in the morning.",
+          "/concerns/teeth-grinding/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "How we treat it",
+        "h2": "From the cause to the fix.",
+        "intro": "Once we know what’s causing the pain, the treatment is usually clear. We’ll explain it before we start.",
+        "cols": [
+          "Cause",
+          "What you might notice",
+          "How we treat it"
+        ],
+        "rows": [
+          [
+            "A cavity",
+            "Sensitivity or sharp pain",
+            "A tooth-colored filling"
+          ],
+          [
+            "A cracked tooth",
+            "Pain when you bite",
+            "A crown to protect the tooth"
+          ],
+          [
+            "An infection",
+            "Throbbing pain or swelling",
+            "A root canal, or an extraction if the tooth can’t be saved"
+          ],
+          [
+            "Clenching or grinding",
+            "Sore teeth or jaw in the morning",
+            "A custom night guard"
+          ]
+        ]
+      },
+      "stepsH2": "What happens when you call.",
+      "steps": [
+        [
+          "Call us",
+          "Tell us where it hurts and we’ll find the soonest time to see you."
+        ],
+        [
+          "Exam & X-rays",
+          "We find the cause of the pain and check the teeth around it."
+        ],
+        [
+          "Relief first",
+          "We take care of the pain and protect the tooth."
+        ],
+        [
+          "Your plan",
+          "If you need more treatment, we explain your options before we start."
+        ]
+      ],
+      "faq": [
+        [
+          "Will a toothache go away on its own?",
+          "Sometimes the pain fades, but the cause usually doesn’t. Decay and infections keep growing, so it’s best to get it checked before it becomes a bigger problem."
+        ],
+        [
+          "Can I be seen the same day?",
+          "We offer same-day care for urgent problems. Call (816) 388-0985 as early as you can so we can fit you in."
+        ],
+        [
+          "Do I need a root canal?",
+          "Not always. Many toothaches are fixed with a filling or a crown. If the nerve is infected, a root canal can save the tooth. We’ll know after an exam and X-rays."
+        ],
+        [
+          "Is it a dental emergency?",
+          "Severe or lasting pain, swelling, or pain after an injury are all reasons to call us right away."
+        ],
+        [
+          "What if I’m nervous?",
+          "Tell us when you book. We’ll explain every step before we start, and sedation is available on select days each month with Dr. Shaley Baker."
+        ]
+      ],
+      "related": [
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ],
+        [
+          "Fillings",
+          "/services/fillings/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Broken or chipped tooth",
+          "/concerns/broken-tooth/"
+        ]
+      ]
+    },
+    "/concerns/broken-tooth/": {
+      "label": "Broken or chipped tooth",
+      "condition": "Broken, chipped or cracked tooth",
+      "team": "general",
+      "seoTitle": "Broken or Chipped Tooth Repair in Westport, Kansas City | Same-Day Care",
+      "metaDesc": "Chipped, cracked or broken tooth? Same-day emergency care and repairs with fillings, crowns, veneers or implants at Cosmetic & Implant Dentistry Westport, Kansas City, MO.",
+      "name": "Broken or chipped teeth",
+      "h1": "Broken or chipped tooth repair in Westport, Kansas City",
+      "lede": "From a small chip to a broken tooth, we’ll protect it fast and repair it so it looks and works like it should.",
+      "heroPhoto": [
+        "A member of the dental team caring for a patient",
+        "55% 40%"
+      ],
+      "answerEyebrow": "What should you do?",
+      "answerH2": "Protect the tooth, then call us.",
+      "answer": "A chipped, cracked or broken tooth can happen from a fall, a sports injury or biting something hard. Even a small chip can leave the tooth weaker or sensitive, and a crack can spread if it isn’t treated. At Cosmetic & Implant Dentistry Westport, we offer same-day care for urgent problems and repair the tooth with a filling, crown, veneer or, if it can’t be saved, an implant.",
+      "facts": [
+        [
+          "Same-day care",
+          "For painful breaks"
+        ],
+        [
+          "Small chips",
+          "Often fixed in one visit"
+        ],
+        [
+          "Bigger breaks",
+          "Protected with a crown"
+        ],
+        [
+          "Can’t be saved?",
+          "Replaced with an implant"
+        ]
+      ],
+      "inclPhoto": "Dental restorations being worked on in the lab",
+      "inclEyebrow": "Your options",
+      "inclH2": "Ways we repair a damaged tooth.",
+      "included": [
+        [
+          "Tooth-colored filling",
+          "Repairs small chips and restores the shape of the tooth.",
+          "/services/fillings/"
+        ],
+        [
+          "Crown",
+          "A custom cap that covers and protects a cracked or badly broken tooth.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Veneer",
+          "A thin porcelain shell that covers a chipped front tooth.",
+          "/services/veneers/"
+        ],
+        [
+          "Dental implant",
+          "Replaces a tooth that’s broken beyond repair.",
+          "/services/dental-implants/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Which repair fits the damage?",
+        "intro": "It depends on how much of the tooth is damaged and where it is. We’ll check it and recommend the best repair.",
+        "cols": [
+          "Option",
+          "Best for",
+          "Visits"
+        ],
+        "rows": [
+          [
+            "Tooth-colored filling",
+            "Small chips",
+            "Usually one"
+          ],
+          [
+            "Crown",
+            "Cracks and bigger breaks",
+            "Usually two, with a temporary in between"
+          ],
+          [
+            "Veneer",
+            "Chipped front teeth",
+            "A few, after a consultation"
+          ],
+          [
+            "Dental implant",
+            "Teeth that can’t be saved",
+            "Several, over a few months"
+          ]
+        ]
+      },
+      "results": [
+        [
+          "Veneers before and after",
+          "Veneers"
+        ]
+      ],
+      "stepsH2": "What happens when you call.",
+      "steps": [
+        [
+          "Call us",
+          "Tell us what happened and we’ll find the soonest time to see you."
+        ],
+        [
+          "Exam & X-rays",
+          "We check how deep the damage goes and the teeth around it."
+        ],
+        [
+          "Protect the tooth",
+          "We ease any pain and protect the tooth right away."
+        ],
+        [
+          "Repair",
+          "We repair it with the option that fits the damage."
+        ]
+      ],
+      "faq": [
+        [
+          "What should I do right after I chip or break a tooth?",
+          "Rinse your mouth with warm water, save any pieces if you can, and call us. If a permanent tooth was knocked out, keep it moist in milk and seek urgent dental care. Do not put a baby tooth back in its socket."
+        ],
+        [
+          "Can I be seen the same day?",
+          "We offer same-day care for urgent problems. Call (816) 388-0985 as early as you can so we can fit you in."
+        ],
+        [
+          "Can a chipped tooth be fixed in one visit?",
+          "Small chips can often be repaired with a tooth-colored filling in one visit. Bigger breaks usually need a crown, which takes two visits."
+        ],
+        [
+          "Does a cracked tooth always hurt?",
+          "Not always. Some cracks only hurt when you bite or chew. It’s worth getting checked, because cracks can spread over time."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ]
+      ]
+    },
+    "/concerns/lost-crown-or-filling/": {
+      "label": "Lost crown or filling",
+      "condition": "Lost or broken dental crown or filling",
+      "team": "general",
+      "seoTitle": "Lost Crown or Filling Repair in Westport, Kansas City",
+      "metaDesc": "Crown, bridge or filling came out? We’ll protect the tooth and repair or replace it, with same-day care for urgent problems, at 638 W 39th St, Kansas City, MO.",
+      "name": "Lost crowns and fillings",
+      "h1": "Lost crown or filling repair in Westport, Kansas City",
+      "lede": "A crown, bridge or filling came loose? We’ll protect the tooth underneath and get it repaired or replaced.",
+      "heroPhoto": [
+        "Dental restorations being worked on in the lab",
+        "50% 55%"
+      ],
+      "answerEyebrow": "Why it can’t wait",
+      "answerH2": "The tooth underneath needs protecting.",
+      "answer": "When a crown, bridge or filling comes out, the tooth underneath is exposed. It can become sensitive, break more easily or decay faster. Keep the crown if you have it and call us. At Cosmetic & Implant Dentistry Westport, we’ll check the tooth, protect it and either re-attach the crown or make a new one.",
+      "facts": [
+        [
+          "Keep it",
+          "Bring the crown if you have it"
+        ],
+        [
+          "Same-day care",
+          "For urgent problems"
+        ],
+        [
+          "Temporary first",
+          "If you need a new crown"
+        ],
+        [
+          "Custom-made",
+          "Matched to your teeth"
+        ]
+      ],
+      "inclPhoto": "Dental restorations being worked on in the lab",
+      "inclEyebrow": "Your options",
+      "inclH2": "How we fix it.",
+      "included": [
+        [
+          "Re-attach the crown",
+          "If the crown and tooth are in good shape, we may be able to put it back.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "New crown or bridge",
+          "A custom replacement, with a temporary while yours is made.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "New filling",
+          "A tooth-colored composite filling to replace one that fell out.",
+          "/services/fillings/"
+        ],
+        [
+          "Dental implant",
+          "If the tooth underneath can’t be saved.",
+          "/services/dental-implants/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "What to expect.",
+        "intro": "It depends on the condition of the tooth and the crown. We’ll check both and recommend the best fix.",
+        "cols": [
+          "Option",
+          "When it’s used",
+          "Visits"
+        ],
+        "rows": [
+          [
+            "Re-attach the crown",
+            "The crown and tooth are still healthy",
+            "Usually one"
+          ],
+          [
+            "New crown or bridge",
+            "The crown is damaged or doesn’t fit",
+            "Usually two, with a temporary in between"
+          ],
+          [
+            "New filling",
+            "A filling fell out",
+            "Usually one"
+          ],
+          [
+            "Dental implant",
+            "The tooth can’t be saved",
+            "Several, over a few months"
+          ]
+        ]
+      },
+      "stepsH2": "What happens when you call.",
+      "steps": [
+        [
+          "Call us",
+          "Tell us what came out and we’ll find the soonest time to see you."
+        ],
+        [
+          "Exam",
+          "We check the tooth underneath and the crown or filling."
+        ],
+        [
+          "Protect the tooth",
+          "We cover it right away so it isn’t sensitive or exposed."
+        ],
+        [
+          "Repair",
+          "We re-attach, replace or rebuild it."
+        ]
+      ],
+      "faq": [
+        [
+          "What should I do if my crown falls out?",
+          "Keep the crown, avoid chewing on that side and call us. Don’t try to glue it back yourself."
+        ],
+        [
+          "Can I be seen the same day?",
+          "We offer same-day care for urgent problems. Call (816) 388-0985 as early as you can so we can fit you in."
+        ],
+        [
+          "Can my old crown be put back?",
+          "Sometimes. If the crown isn’t damaged and the tooth underneath is healthy, we may be able to re-attach it."
+        ],
+        [
+          "How long does a new crown take?",
+          "Usually two visits. We prepare the tooth and place a temporary, then swap in your permanent crown when it’s ready."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Fillings",
+          "/services/fillings/"
+        ],
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ],
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ]
+      ]
+    },
+    "/concerns/damaged-teeth/": {
+      "label": "Worn or damaged teeth",
+      "condition": "Worn, damaged or failing teeth",
+      "team": "surgical",
+      "seoTitle": "Worn or Damaged Teeth Repair in Westport, Kansas City | Full Mouth Restoration",
+      "metaDesc": "Worn, broken or failing teeth? Rebuild your smile with crowns, veneers, implants or full mouth restoration at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Worn or damaged teeth",
+      "h1": "Repair worn or damaged teeth in Westport, Kansas City",
+      "lede": "Teeth worn down, broken or patched up over the years? We’ll build a plan to restore how your smile looks and works.",
+      "heroPhoto": [
+        "An implant-supported denture",
+        "50% 50%"
+      ],
+      "answerEyebrow": "When it’s more than one tooth",
+      "answerH2": "Rebuild your smile with one plan.",
+      "answer": "Teeth can wear down from grinding or acid erosion, break from trauma, or decay across several teeth, and old dental work can fail over time. When several teeth are affected, fixing them one by one can take years. Full mouth restoration combines treatments like crowns, veneers and implants into one plan. At Cosmetic & Implant Dentistry Westport, our dental team and on-site oral surgeons plan every step together.",
+      "facts": [
+        [
+          "One plan",
+          "For several problems at once"
+        ],
+        [
+          "A few months to 18",
+          "Depending on your case"
+        ],
+        [
+          "15 to 20 years",
+          "How long most restorations last"
+        ],
+        [
+          "On-site surgeons",
+          "Implants placed here"
+        ]
+      ],
+      "inclPhoto": "Dental restorations being worked on in the lab",
+      "inclEyebrow": "Signs you may need it",
+      "inclH2": "Common reasons patients come in.",
+      "included": [
+        [
+          "Worn-down teeth",
+          "From grinding, clenching or acid erosion.",
+          "/concerns/teeth-grinding/"
+        ],
+        [
+          "Several cracked or broken teeth",
+          "Damage across the mouth from trauma or wear.",
+          "/concerns/broken-tooth/"
+        ],
+        [
+          "Decay on many teeth",
+          "Extensive decay affecting several teeth at once.",
+          "/services/fillings/"
+        ],
+        [
+          "Failing dental work",
+          "Old crowns, bridges or fillings that need replacing.",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Missing teeth",
+          "Gaps that affect how you chew and smile.",
+          "/concerns/missing-teeth/"
+        ],
+        [
+          "Bite problems or jaw pain",
+          "A bite that doesn’t line up or TMJ pain.",
+          "/concerns/jaw-pain/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "What your plan may include",
+        "h2": "Treatments we combine.",
+        "intro": "Every plan is different. These are the treatments we use most to rebuild a smile.",
+        "cols": [
+          "Treatment",
+          "What it fixes"
+        ],
+        "rows": [
+          [
+            "Crowns & bridges",
+            "Restores damaged teeth and replaces missing ones"
+          ],
+          [
+            "Porcelain veneers",
+            "Chips, stains, gaps and minor misalignment"
+          ],
+          [
+            "Dental implants",
+            "Missing teeth, with a permanent base"
+          ],
+          [
+            "All-on-X",
+            "A full arch of teeth on four to six implants"
+          ],
+          [
+            "Dentures & partials",
+            "Several or all missing teeth"
+          ],
+          [
+            "Gum treatment",
+            "Gum disease, treated first so the restoration lasts"
+          ]
+        ]
+      },
+      "results": [
+        [
+          "Full arch restoration before and after",
+          "Full arch restoration"
+        ],
+        [
+          "Veneers before and after",
+          "Veneers"
+        ],
+        [
+          "Single implant before and after",
+          "Single implant"
+        ]
+      ],
+      "video": true,
+      "stepsH2": "The restoration process.",
+      "steps": [
+        [
+          "Consultation",
+          "A full exam, X-rays and a talk about your goals and concerns."
+        ],
+        [
+          "Treatment plan",
+          "A custom plan with the procedures, timeline and cost."
+        ],
+        [
+          "Restoration",
+          "Treatment in phases that address each issue."
+        ],
+        [
+          "Maintenance",
+          "Ongoing care so your new smile lasts for years."
+        ]
+      ],
+      "faq": [
+        [
+          "How long does it take to fix several damaged teeth?",
+          "It depends on your case. Simpler restorations may take a few months, while cases with implants and bone grafting can take 12 to 18 months."
+        ],
+        [
+          "Is it painful?",
+          "We use local anesthesia during procedures and offer sedation for patients with dental anxiety. Most patients report minimal discomfort."
+        ],
+        [
+          "How long will my restoration last?",
+          "With good care and regular checkups, most restorations last 15 to 20 years or longer. Dental implants can last a lifetime."
+        ],
+        [
+          "Can I get it if I have gum disease?",
+          "Yes, but we treat the gum disease first. Healthy gums are essential for a lasting restoration."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Crowns & bridges",
+          "/services/crowns-bridges/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ]
+      ]
+    },
+    "/concerns/loose-dentures/": {
+      "label": "Loose dentures",
+      "condition": "Loose or ill-fitting dentures",
+      "team": "surgical",
+      "seoTitle": "Loose Dentures? Implant-Supported Dentures & All-on-X in Westport, Kansas City",
+      "metaDesc": "Tired of dentures that slip or rub? Implant-supported dentures and All-on-X give you a secure, stable smile, with on-site oral surgeons in Westport, Kansas City, MO.",
+      "name": "Loose dentures",
+      "h1": "Fix loose dentures in Westport, Kansas City",
+      "lede": "Dentures that slip, click or rub don’t have to be your normal. Implants can hold your teeth securely in place.",
+      "heroPhoto": [
+        "An implant-supported denture",
+        "50% 50%"
+      ],
+      "answerEyebrow": "Why dentures get loose",
+      "answerH2": "Teeth that stay put.",
+      "answer": "Traditional dentures rest on your gums, so they can slip when you eat or talk, and they often loosen over time as the jawbone underneath changes. Implant-supported dentures lock onto implants placed in the jaw, so they stay put. With All-on-X, four to six implants hold a full arch of teeth, and many patients get temporary teeth the same day. Implants are placed on site by our oral surgeons.",
+      "facts": [
+        [
+          "More stable",
+          "Locks onto implants"
+        ],
+        [
+          "4 to 6 implants",
+          "Can hold a full arch"
+        ],
+        [
+          "Same-day teeth",
+          "Often, with All-on-X"
+        ],
+        [
+          "On-site surgeons",
+          "Dr. Lonergan and Dr. Lucaci"
+        ]
+      ],
+      "inclPhoto": "An implant-supported denture",
+      "inclEyebrow": "Your options",
+      "inclH2": "Ways to get a secure smile.",
+      "included": [
+        [
+          "Implant-supported dentures",
+          "Dentures that lock onto implants for much more stability than a traditional denture.",
+          "/services/dental-implants/"
+        ],
+        [
+          "All-on-X",
+          "A fixed full arch of teeth on four to six implants.",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "New traditional dentures or partials",
+          "A fresh, better-fitting removable option.",
+          "/full-mouth-restoration/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Which one fits you?",
+        "intro": "We’ll look at your gums and jawbone and talk through what matters most to you.",
+        "pill": 2,
+        "cols": [
+          "Option",
+          "Best for",
+          "Fixed or removable",
+          "Supported by"
+        ],
+        "rows": [
+          [
+            "Implant-supported dentures",
+            "More stability without going fully fixed",
+            "Locks onto implants",
+            "Implants"
+          ],
+          [
+            "All-on-X",
+            "A full arch that feels like your own teeth",
+            "Fixed",
+            "Four to six implants"
+          ],
+          [
+            "New traditional dentures or partials",
+            "A non-surgical option",
+            "Removable",
+            "Your gums and remaining teeth"
+          ]
+        ]
+      },
+      "results": [
+        [
+          "Full arch restoration before and after",
+          "Full arch restoration"
+        ]
+      ],
+      "stepsH2": "From first visit to new smile.",
+      "steps": [
+        [
+          "Consultation",
+          "An exam, X-rays and 3D imaging to check your jawbone."
+        ],
+        [
+          "Your plan",
+          "We compare options, timeline and cost."
+        ],
+        [
+          "Placement",
+          "Our oral surgeons place the implants on site."
+        ],
+        [
+          "Your new teeth",
+          "We attach your denture or full arch and check the fit."
+        ]
+      ],
+      "faq": [
+        [
+          "Can my dentures be attached to implants?",
+          "Implant-supported dentures lock onto implants placed in your jaw. We’ll check whether your current denture can be adapted or whether you need a new one."
+        ],
+        [
+          "What is All-on-X?",
+          "A full-arch replacement that uses four to six angled implants to support a whole arch of teeth, often without bone grafting."
+        ],
+        [
+          "Can I get teeth the same day?",
+          "With All-on-X, many patients can get a set of temporary teeth the same day as their procedure."
+        ],
+        [
+          "How long do implants last?",
+          "With good oral hygiene and regular checkups, dental implants can last a lifetime."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Missing teeth",
+          "/concerns/missing-teeth/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ]
+    },
+    "/concerns/stained-teeth/": {
+      "label": "Stained or yellow teeth",
+      "condition": "Tooth discoloration (stained or yellow teeth)",
+      "team": "general",
+      "seoTitle": "Stained or Yellow Teeth? Teeth Whitening & Veneers in Westport, Kansas City",
+      "metaDesc": "Brighten stained or yellow teeth with professional Opalescence whitening, in office or at home, or veneers for stains that won’t lift. Cosmetic & Implant Dentistry Westport, Kansas City, MO.",
+      "name": "Stained teeth",
+      "h1": "Whiten stained or yellow teeth in Westport, Kansas City",
+      "lede": "Professional whitening for teeth that have yellowed or darkened, and veneers for stains that whitening can’t reach.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerEyebrow": "Why teeth get stained",
+      "answerH2": "A brighter smile is closer than you think.",
+      "answer": "Teeth naturally yellow or darken over time, and coffee, tea and other habits can add surface stains. Professional whitening is stronger than store-bought products and is done by our dentists and hygienists. Some stains don’t respond to whitening, and for those, veneers can cover the tooth with a bright, natural-looking surface.",
+      "facts": [
+        [
+          "About an hour",
+          "In-office Opalescence Boost"
+        ],
+        [
+          "At home",
+          "Custom or ready-to-use trays"
+        ],
+        [
+          "Done by pros",
+          "Our dentists and hygienists"
+        ],
+        [
+          "Stubborn stains?",
+          "Veneers can cover them"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Your options",
+      "inclH2": "Ways to brighten your smile.",
+      "included": [
+        [
+          "In-office whitening",
+          "Opalescence Boost, done in our office in about an hour.",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Take-home whitening",
+          "Opalescence PF with custom trays, or ready-to-use Opalescence Go trays.",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Porcelain veneers",
+          "Cover stains that don’t respond to whitening.",
+          "/services/veneers/"
+        ],
+        [
+          "Professional cleaning",
+          "Removes surface buildup and stains at your checkup.",
+          "/services/teeth-cleaning/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Which one fits you?",
+        "intro": "We’ll look at your teeth and the kind of staining, then help you pick.",
+        "cols": [
+          "Option",
+          "Best for",
+          "Where"
+        ],
+        "rows": [
+          [
+            "In-office whitening",
+            "Fast results in one visit",
+            "In our office"
+          ],
+          [
+            "Take-home whitening",
+            "Whitening on your own schedule",
+            "At home"
+          ],
+          [
+            "Porcelain veneers",
+            "Stains whitening can’t lift, plus chips or uneven shape",
+            "In our office, over a few visits"
+          ],
+          [
+            "Professional cleaning",
+            "Surface stains and buildup",
+            "At your regular checkup"
+          ]
+        ]
+      },
+      "results": [
+        [
+          "Veneers before and after",
+          "Veneers"
+        ]
+      ],
+      "stepsH2": "How it works.",
+      "steps": [
+        [
+          "Consultation",
+          "We look at your teeth and talk about the shade you want."
+        ],
+        [
+          "Choose your option",
+          "In office, at home, or veneers for stubborn stains."
+        ],
+        [
+          "Treatment",
+          "We whiten in office, send you home with trays, or start your veneers."
+        ],
+        [
+          "Keep it bright",
+          "Tips to help your new shade last."
+        ]
+      ],
+      "faq": [
+        [
+          "Is professional whitening better than store-bought?",
+          "Professional whitening is stronger and supervised by our team, so it works well when store-bought products aren’t enough."
+        ],
+        [
+          "How long does in-office whitening take?",
+          "Opalescence Boost is done in our office in about an hour."
+        ],
+        [
+          "Will whitening work on crowns or veneers?",
+          "Whitening works on natural teeth. Crowns, veneers and fillings won’t change color, so let us know if you have them."
+        ],
+        [
+          "What if whitening doesn’t work for my stains?",
+          "Some stains don’t respond to whitening. Veneers can cover them with a bright, natural-looking surface."
+        ],
+        [
+          "Does whitening cause sensitivity?",
+          "Some people notice temporary sensitivity. Tell us if your teeth are sensitive and we’ll recommend the best option."
+        ]
+      ],
+      "related": [
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Chips, gaps & uneven teeth",
+          "/concerns/uneven-teeth/"
+        ]
+      ]
+    },
+    "/concerns/uneven-teeth/": {
+      "label": "Chips, gaps & uneven teeth",
+      "condition": "Chipped, gapped or uneven teeth",
+      "team": "general",
+      "seoTitle": "Chipped, Gapped or Uneven Teeth? Veneers & Cosmetic Dentistry in Westport, Kansas City",
+      "metaDesc": "Fix chips, gaps and uneven teeth with porcelain veneers, tooth-colored fillings or clear braces at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Chips, gaps and uneven teeth",
+      "h1": "Fix chips, gaps & uneven teeth in Westport, Kansas City",
+      "lede": "Small things like a chip, a gap or an uneven edge can change how you feel about your smile. Most are easy to fix.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerEyebrow": "Your options at a glance",
+      "answerH2": "Small changes, big difference.",
+      "answer": "Chips, gaps and teeth that are uneven in shape or length are some of the most common reasons people come in for cosmetic dentistry. Porcelain veneers can correct chips, gaps, stains and minor misalignment in one treatment. Small chips can often be repaired with a tooth-colored filling, and clear braces can close gaps by moving the teeth themselves.",
+      "facts": [
+        [
+          "Veneers",
+          "Chips, gaps and shape at once"
+        ],
+        [
+          "Small chips",
+          "Often a one-visit repair"
+        ],
+        [
+          "Clear braces",
+          "Close gaps by moving teeth"
+        ],
+        [
+          "Natural look",
+          "Matched to your smile"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Your options",
+      "inclH2": "Ways to even out your smile.",
+      "included": [
+        [
+          "Porcelain veneers",
+          "Thin porcelain shells that correct chips, gaps, stains and minor misalignment.",
+          "/services/veneers/"
+        ],
+        [
+          "Tooth-colored filling",
+          "Repairs a small chip and restores the tooth’s shape.",
+          "/services/fillings/"
+        ],
+        [
+          "Clear braces",
+          "Close gaps and straighten teeth with braces that blend in.",
+          "/services/braces/"
+        ],
+        [
+          "Crown",
+          "Rebuilds a tooth that’s badly chipped or misshapen.",
+          "/services/crowns-bridges/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Which one fits you?",
+        "intro": "It depends on how many teeth you want to change and how. We’ll help you weigh it up.",
+        "cols": [
+          "Option",
+          "Best for",
+          "How it works"
+        ],
+        "rows": [
+          [
+            "Porcelain veneers",
+            "Several cosmetic changes at once",
+            "Covers the front of the teeth"
+          ],
+          [
+            "Tooth-colored filling",
+            "One small chip",
+            "Repairs the tooth in one visit"
+          ],
+          [
+            "Clear braces",
+            "Gaps and crooked teeth",
+            "Moves the teeth over time"
+          ],
+          [
+            "Crown",
+            "A badly chipped or misshapen tooth",
+            "Covers the whole tooth"
+          ]
+        ]
+      },
+      "results": [
+        [
+          "Veneers before and after",
+          "Veneers"
+        ]
+      ],
+      "stepsH2": "How it works.",
+      "steps": [
+        [
+          "Consultation",
+          "We look at your smile and talk about what you’d like to change."
+        ],
+        [
+          "Your plan",
+          "We recommend the option that fits your goals."
+        ],
+        [
+          "Treatment",
+          "Your filling, veneers, braces or crown, done by our team."
+        ],
+        [
+          "Show it off",
+          "We check that everything looks and feels right."
+        ]
+      ],
+      "faq": [
+        [
+          "Can veneers fix gaps?",
+          "Yes. Veneers can even out spacing and shape for a uniform smile. For larger gaps, clear braces may be a better option."
+        ],
+        [
+          "Can a chipped tooth be fixed in one visit?",
+          "Small chips can often be repaired with a tooth-colored filling in one visit."
+        ],
+        [
+          "Veneers or braces?",
+          "Veneers change how teeth look. Braces move the teeth themselves. We’ll help you decide which fits your goals."
+        ],
+        [
+          "How do I care for veneers?",
+          "Brush and floss them like natural teeth and keep up with your regular checkups."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Clear braces",
+          "/services/braces/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "Stained teeth",
+          "/concerns/stained-teeth/"
+        ]
+      ]
+    },
+    "/concerns/crooked-teeth/": {
+      "label": "Crooked or crowded teeth",
+      "condition": "Crooked or crowded teeth (malocclusion)",
+      "team": "general",
+      "seoTitle": "Crooked or Crowded Teeth? Clear Braces in Westport, Kansas City",
+      "metaDesc": "Straighten crooked or crowded teeth and correct overbites and underbites with clear braces that blend in, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Crooked teeth",
+      "h1": "Straighten crooked or crowded teeth in Westport, Kansas City",
+      "lede": "Clear braces that straighten your teeth and correct your bite, without the metal look.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 25%"
+      ],
+      "answerEyebrow": "Why straighten your teeth?",
+      "answerH2": "Straighter teeth, healthier smile.",
+      "answer": "Crooked or crowded teeth can affect how your smile looks, and they can also be harder to clean and put uneven pressure on your bite. Clear braces straighten crowded teeth, close gaps and correct overbites and underbites, using a thin, clear material that blends in with your natural teeth. At Cosmetic & Implant Dentistry Westport, we build a treatment plan around your teeth and goals.",
+      "facts": [
+        [
+          "Clear",
+          "Blends in with your teeth"
+        ],
+        [
+          "Custom plan",
+          "Made for your teeth"
+        ],
+        [
+          "Crowding & bites",
+          "Overbites, underbites and gaps"
+        ],
+        [
+          "Payment plans",
+          "Spread the cost monthly"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "What we can fix",
+      "inclH2": "Common reasons to straighten.",
+      "included": [
+        [
+          "Crowded teeth",
+          "Make room so teeth sit evenly.",
+          "/services/braces/"
+        ],
+        [
+          "Overbites & underbites",
+          "Bring your bite into better alignment.",
+          "/services/braces/"
+        ],
+        [
+          "Gaps",
+          "Close spaces between teeth.",
+          "/services/braces/"
+        ],
+        [
+          "Minor cosmetic unevenness",
+          "Veneers can even out the look of slightly uneven teeth.",
+          "/services/veneers/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Braces or veneers?",
+        "intro": "Braces move your teeth. Veneers change how they look. Here’s how they compare.",
+        "cols": [
+          "Option",
+          "Best for",
+          "How it works"
+        ],
+        "rows": [
+          [
+            "Clear braces",
+            "Crowding, gaps and bite problems",
+            "Gradually moves your teeth into place"
+          ],
+          [
+            "Porcelain veneers",
+            "Minor unevenness you want to cover",
+            "Covers the front of the teeth"
+          ]
+        ]
+      },
+      "stepsH2": "How treatment works.",
+      "steps": [
+        [
+          "Consultation",
+          "We check your teeth and talk through your goals."
+        ],
+        [
+          "Your plan",
+          "We build a custom plan for your teeth."
+        ],
+        [
+          "Treatment",
+          "Your clear braces gradually move your teeth into place."
+        ],
+        [
+          "Your new smile",
+          "Straighter, more even teeth that are easier to keep clean."
+        ]
+      ],
+      "faq": [
+        [
+          "Will people notice my braces?",
+          "Clear braces blend in with your teeth, so they’re much less noticeable than metal braces."
+        ],
+        [
+          "What can clear braces fix?",
+          "Crowded or crooked teeth, gaps, overbites and underbites."
+        ],
+        [
+          "Am I too old for braces?",
+          "We treat adults as well as younger patients. We’ll check your teeth and recommend the best option at a consultation."
+        ],
+        [
+          "Can I pay over time?",
+          "Yes. We offer flexible payment plans and work with most dental insurance providers, and we’ll go over the cost before you start."
+        ]
+      ],
+      "related": [
+        [
+          "Clear braces",
+          "/services/braces/"
+        ],
+        [
+          "Veneers",
+          "/services/veneers/"
+        ],
+        [
+          "Chips, gaps & uneven teeth",
+          "/concerns/uneven-teeth/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ]
+      ]
+    },
+    "/concerns/dental-anxiety/": {
+      "label": "Dental anxiety",
+      "condition": "Dental anxiety and fear of the dentist",
+      "team": "sedation",
+      "seoTitle": "Dental Anxiety? Sedation Dentistry in Westport, Kansas City",
+      "metaDesc": "Nervous about the dentist? Calm, unhurried care and nitrous oxide, oral or IV sedation with a Missouri sedation-certified dentist at Cosmetic & Implant Dentistry Westport, Kansas City, MO.",
+      "name": "Dental anxiety",
+      "h1": "Calm care for dental anxiety in Westport, Kansas City",
+      "lede": "Nervous about the dentist? You’re not alone. We take it slow, explain every step and offer sedation when you need it.",
+      "heroPhoto": [
+        "Large windows and natural light in a Westport treatment room",
+        "50% 50%"
+      ],
+      "answerEyebrow": "You’re not alone",
+      "answerH2": "Care that starts with listening.",
+      "answer": "Many people feel anxious about the dentist, whether it’s from a past experience, a fear of needles, a strong gag reflex or just not knowing what to expect. At Cosmetic & Implant Dentistry Westport, we explain each step before we start and go at your pace. For patients who need more help relaxing, Dr. Shaley Baker, who holds a Missouri Sedation Certification, provides sedation about one to two days a month.",
+      "facts": [
+        [
+          "Go at your pace",
+          "We explain every step"
+        ],
+        [
+          "3 sedation options",
+          "Nitrous, oral and IV"
+        ],
+        [
+          "Certified",
+          "Missouri Sedation Certification"
+        ],
+        [
+          "Book ahead",
+          "Sedation 1 to 2 days a month"
+        ]
+      ],
+      "inclPhoto": "Large windows and natural light in a Westport treatment room",
+      "inclEyebrow": "How we help",
+      "inclH2": "Ways to feel more at ease.",
+      "included": [
+        [
+          "A calm, unhurried visit",
+          "We talk you through each step before we start, and you can ask for breaks.",
+          "/#comfort"
+        ],
+        [
+          "Nitrous oxide (laughing gas)",
+          "A mild sedative through a mask that wears off fast.",
+          "/sedation/"
+        ],
+        [
+          "Oral sedation",
+          "A prescribed medication before your visit to feel deeply relaxed.",
+          "/sedation/"
+        ],
+        [
+          "IV sedation",
+          "The deepest option we offer, for severe anxiety or longer procedures.",
+          "/sedation/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare sedation options",
+        "h2": "Find the level that’s right for you.",
+        "intro": "Dr. Baker will review your health history and the care you need, then recommend the best option.",
+        "cols": [
+          "Option",
+          "Best for",
+          "Getting home"
+        ],
+        "rows": [
+          [
+            "Nitrous oxide (laughing gas)",
+            "Mild to moderate anxiety",
+            "You can drive yourself"
+          ],
+          [
+            "Oral sedation",
+            "Moderate anxiety",
+            "You’ll need a ride"
+          ],
+          [
+            "IV sedation",
+            "Severe anxiety or longer procedures",
+            "You’ll need a ride"
+          ]
+        ]
+      },
+      "stepsH2": "Your first visit.",
+      "steps": [
+        [
+          "Tell us",
+          "Let us know you’re nervous when you book. It helps us plan."
+        ],
+        [
+          "Consultation",
+          "We review your health history, concerns and the care you need."
+        ],
+        [
+          "Choose your comfort",
+          "Talk it through, take breaks, or plan a sedation visit."
+        ],
+        [
+          "Your visit",
+          "We go at your pace and check in with you throughout."
+        ]
+      ],
+      "faq": [
+        [
+          "Is sedation dentistry safe?",
+          "Yes, when it’s given by a trained professional. Dr. Baker holds a Missouri Sedation Certification, reviews your medical history and monitors you throughout."
+        ],
+        [
+          "Will I be unconscious?",
+          "With most sedation options you stay conscious but deeply relaxed, and you can still respond to instructions."
+        ],
+        [
+          "How often is sedation available?",
+          "About one to two days a month at our Westport location, so we recommend booking ahead."
+        ],
+        [
+          "Who is sedation good for?",
+          "Patients with dental anxiety, a strong gag reflex, trouble getting numb, a fear of needles, past bad experiences, or a lot of work to do in fewer visits."
+        ],
+        [
+          "Can I get help without sedation?",
+          "Yes. Many anxious patients do well when we explain each step, go slowly and take breaks. Just let us know how you feel."
+        ]
+      ],
+      "related": [
+        [
+          "Sedation",
+          "/sedation/"
+        ],
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Your experience",
+          "/#comfort"
+        ],
+        [
+          "Full mouth restoration",
+          "/full-mouth-restoration/"
+        ]
+      ]
+    },
+    "/concerns/snoring/": {
+      "label": "Snoring & sleep apnea",
+      "condition": "Snoring and obstructive sleep apnea",
+      "team": "general",
+      "seoTitle": "Snoring & Sleep Apnea Treatment in Westport, Kansas City | Oral Appliances",
+      "metaDesc": "Loud snoring or trouble breathing at night? Custom oral appliances that keep your airway open, a quiet alternative to CPAP, at Cosmetic & Implant Dentistry Westport, Kansas City, MO.",
+      "name": "Snoring and sleep apnea",
+      "h1": "Snoring & sleep apnea help in Westport, Kansas City",
+      "lede": "Custom oral appliances that reduce snoring and help you breathe better at night. Many patients find them easier than a CPAP.",
+      "heroPhoto": [
+        "A nightguard made to fit a patient’s teeth",
+        "50% 50%"
+      ],
+      "answerEyebrow": "Is it just snoring?",
+      "answerH2": "Loud snoring can be a sign of sleep apnea.",
+      "answer": "Obstructive sleep apnea happens when tissues in the throat narrow and block your airway while you sleep, which leads to loud snoring and trouble breathing. It’s common and can be dangerous, so it’s worth getting checked if you or your partner notice chronic snoring. At Cosmetic & Implant Dentistry Westport, we make custom oral appliances that gently move your jaw to keep the airway open, and we refer you to a specialist such as an ENT when you need more care.",
+      "facts": [
+        [
+          "CPAP alternative",
+          "Quiet, small and easy to wear"
+        ],
+        [
+          "Custom-fit",
+          "Made for your mouth"
+        ],
+        [
+          "Exam & X-rays",
+          "To check your airway"
+        ],
+        [
+          "Specialist referrals",
+          "An ENT when you need one"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "How we help",
+      "inclH2": "From exam to a better night’s sleep.",
+      "included": [
+        [
+          "Exam & X-rays",
+          "We examine your mouth and throat and talk through your symptoms.",
+          "/services/sleep-apnea/"
+        ],
+        [
+          "Custom oral appliance",
+          "A mouth guard that sets your jaw in a better position so your airway stays open.",
+          "/services/sleep-apnea/"
+        ],
+        [
+          "Anti-snoring guard",
+          "A custom guard worn at night to reduce heavy breathing and snoring.",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Referral when needed",
+          "We’ll connect you with specialists like ENTs if you need more care.",
+          null
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Oral appliance vs. CPAP",
+        "h2": "Compare oral appliances and CPAP.",
+        "intro": "A sleep physician diagnoses sleep apnea and recommends treatment based on your needs. These are some practical differences between the options.",
+        "cols": [
+          "Feature",
+          "Oral appliance",
+          "CPAP machine"
+        ],
+        "rows": [
+          [
+            "Noise",
+            "No powered airflow",
+            "Sound varies by machine and mask"
+          ],
+          [
+            "Size",
+            "Fits in your hand",
+            "A machine with a mask and hose"
+          ],
+          [
+            "Putting it on",
+            "Easy to put in and take out",
+            "Mask and straps"
+          ]
+        ]
+      },
+      "stepsH2": "Getting started.",
+      "steps": [
+        [
+          "Talk it through",
+          "Tell us about your snoring, sleep and breathing at night."
+        ],
+        [
+          "Exam & X-rays",
+          "We examine your throat and airway and go over the results."
+        ],
+        [
+          "Your appliance",
+          "We make a custom appliance that fits your mouth."
+        ],
+        [
+          "Referral if needed",
+          "If you need more care, we refer you to the right specialist."
+        ]
+      ],
+      "faq": [
+        [
+          "How do I know if I have sleep apnea?",
+          "Loud, chronic snoring and trouble breathing at night are common signs. Sleep apnea is diagnosed by a physician, and we can examine you and refer you if needed."
+        ],
+        [
+          "How does an oral appliance help?",
+          "A custom oral appliance gently holds the lower jaw forward to help keep the airway open during sleep."
+        ],
+        [
+          "Is it an alternative to a CPAP?",
+          "An oral appliance may be an option for adults with obstructive sleep apnea who cannot tolerate CPAP or prefer an alternative. A sleep physician and dentist can help decide whether it is suitable for you."
+        ],
+        [
+          "Is sleep apnea dangerous?",
+          "It can be. That’s why we encourage anyone with chronic snoring to get examined and treated."
+        ]
+      ],
+      "related": [
+        [
+          "Sleep apnea",
+          "/services/sleep-apnea/"
+        ],
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Teeth grinding",
+          "/concerns/teeth-grinding/"
+        ],
+        [
+          "Jaw pain & clicking",
+          "/concerns/jaw-pain/"
+        ]
+      ]
+    },
+    "/concerns/jaw-pain/": {
+      "label": "Jaw pain & clicking",
+      "condition": "Jaw pain and TMJ disorder (TMD)",
+      "team": "general",
+      "seoTitle": "Jaw Pain & Clicking Relief in Westport, Kansas City | TMJ / TMD Treatment",
+      "metaDesc": "Jaw pain, popping, clicking or headaches? Custom night guards for TMJ disorder that help your jaw relax, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Jaw pain",
+      "h1": "Jaw pain & clicking relief in Westport, Kansas City",
+      "lede": "Custom night guards that ease jaw pain, popping, clicking and headaches caused by TMJ disorder.",
+      "heroPhoto": [
+        "A nightguard made to fit a patient’s teeth",
+        "50% 50%"
+      ],
+      "answerEyebrow": "Could it be TMJ?",
+      "answerH2": "Relief for a sore, tight jaw.",
+      "answer": "Frequent jaw pain or stiffness, popping or clicking when you open your mouth, and headaches can all be signs of TMJ disorder (TMD), a problem with the joint that connects your jaw to your skull. Clenching your jaw at night is one of the biggest reasons it continues and gets worse. At Cosmetic & Implant Dentistry Westport, we treat TMD with custom night guards that take pressure off your back teeth and help your jaw relax.",
+      "facts": [
+        [
+          "Custom night guard",
+          "Made to fit your mouth"
+        ],
+        [
+          "Worn while you sleep",
+          "When clenching happens most"
+        ],
+        [
+          "Less pressure",
+          "On your jaw and back teeth"
+        ],
+        [
+          "Exam first",
+          "We check your jaw and bite"
+        ]
+      ],
+      "inclPhoto": "A consultation at our Westport office",
+      "inclEyebrow": "Common signs",
+      "inclH2": "What TMJ pain can feel like.",
+      "included": [
+        [
+          "Jaw pain or stiffness",
+          "Frequent or intense pain in the jaw.",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Popping or clicking",
+          "Sounds when you open or close your mouth.",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Headaches",
+          "Frequent headaches or migraines.",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Clenching or grinding",
+          "Often at night, when you can’t control it.",
+          "/concerns/teeth-grinding/"
+        ],
+        [
+          "Trouble chewing",
+          "Discomfort when you chew, swallow or speak.",
+          "/services/tmj-tmd/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "How we treat it",
+        "h2": "How a night guard helps.",
+        "intro": "A custom night guard works while you sleep, when clenching does the most damage.",
+        "cols": [
+          "What it does",
+          "Why it helps"
+        ],
+        "rows": [
+          [
+            "Realigns the jaw joint",
+            "Eases pressure on the joint"
+          ],
+          [
+            "Takes pressure off your back teeth",
+            "So your jaw can relax"
+          ],
+          [
+            "Reduces nighttime clenching",
+            "One of the biggest reasons TMD gets worse"
+          ],
+          [
+            "Protects your teeth",
+            "From wear caused by grinding"
+          ]
+        ]
+      },
+      "stepsH2": "How we treat jaw pain.",
+      "steps": [
+        [
+          "Talk it through",
+          "We ask about your pain, headaches and when they happen."
+        ],
+        [
+          "Jaw exam",
+          "We check your jaw and bite to find the best next steps."
+        ],
+        [
+          "Night guard",
+          "We make a custom guard to wear while you sleep."
+        ],
+        [
+          "Follow up",
+          "We check how you’re feeling and adjust if needed."
+        ]
+      ],
+      "faq": [
+        [
+          "What is TMJ disorder?",
+          "TMJ disorder, or TMD, is a problem with the joint that connects your jaw to your skull. It often causes pain, clicking and headaches."
+        ],
+        [
+          "How does a night guard help?",
+          "It realigns the jaw joint and takes pressure off your back teeth, so your jaw can relax and stop clenching while you sleep."
+        ],
+        [
+          "Why does my jaw hurt more in the morning?",
+          "You have little control over your movements while you sleep, so nighttime clenching is a common cause of morning jaw pain."
+        ],
+        [
+          "How soon will I feel better?",
+          "Many patients notice relief soon after they start wearing their guard. We’ll check in and adjust it if needed."
+        ]
+      ],
+      "related": [
+        [
+          "TMJ / TMD",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "Teeth grinding",
+          "/concerns/teeth-grinding/"
+        ],
+        [
+          "Snoring & sleep apnea",
+          "/concerns/snoring/"
+        ]
+      ]
+    },
+    "/concerns/teeth-grinding/": {
+      "label": "Teeth grinding",
+      "condition": "Teeth grinding and clenching (bruxism)",
+      "team": "general",
+      "seoTitle": "Teeth Grinding & Clenching? Custom Night Guards in Westport, Kansas City",
+      "metaDesc": "Grinding or clenching your teeth at night? Custom night guards protect your teeth and ease jaw tightness, at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Teeth grinding",
+      "h1": "Stop teeth grinding damage in Westport, Kansas City",
+      "lede": "A custom night guard protects your teeth from grinding and clenching and helps your jaw relax while you sleep.",
+      "heroPhoto": [
+        "A nightguard made to fit a patient’s teeth",
+        "50% 50%"
+      ],
+      "answerEyebrow": "Why it matters",
+      "answerH2": "Protect your teeth while you sleep.",
+      "answer": "Many people grind or clench their teeth at night without knowing it. Over time it can wear teeth down, cause chips and cracks, and leave your jaw tight or sore, and it’s one of the most common causes of TMJ pain. At Cosmetic & Implant Dentistry Westport, we make custom night guards shaped to your teeth, so they’re more comfortable and protective than a store-bought guard.",
+      "facts": [
+        [
+          "Custom-fit",
+          "Shaped to your teeth"
+        ],
+        [
+          "Worn at night",
+          "When grinding happens most"
+        ],
+        [
+          "Less jaw tightness",
+          "Eases clenching"
+        ],
+        [
+          "Saves on repairs",
+          "Helps prevent chips and wear"
+        ]
+      ],
+      "inclPhoto": "A nightguard made to fit a patient’s teeth",
+      "inclEyebrow": "Signs you may grind",
+      "inclH2": "What to look out for.",
+      "included": [
+        [
+          "Sore jaw in the morning",
+          "Tightness or pain when you wake up.",
+          "/concerns/jaw-pain/"
+        ],
+        [
+          "Worn or flattened teeth",
+          "Edges that look shorter or flat.",
+          "/concerns/damaged-teeth/"
+        ],
+        [
+          "Chips or cracks",
+          "Small damage you can’t explain.",
+          "/concerns/broken-tooth/"
+        ],
+        [
+          "Headaches",
+          "Especially first thing in the morning.",
+          "/services/tmj-tmd/"
+        ]
+      ],
+      "compare": {
+        "eyebrow": "Compare your options",
+        "h2": "Custom guard vs. store-bought.",
+        "intro": "Both go over your teeth at night. The fit is what makes the difference.",
+        "cols": [
+          "",
+          "Custom night guard",
+          "Store-bought guard"
+        ],
+        "rows": [
+          [
+            "Fit",
+            "Shaped to your teeth",
+            "One size, or boil-and-bite"
+          ],
+          [
+            "Comfort",
+            "Comfortable enough to wear every night",
+            "Often bulky"
+          ],
+          [
+            "Made for",
+            "Your mouth only",
+            "Anyone"
+          ]
+        ]
+      },
+      "stepsH2": "Getting your guard.",
+      "steps": [
+        [
+          "Talk it through",
+          "We ask about your sleep, jaw pain and any damage you’ve noticed."
+        ],
+        [
+          "Exam",
+          "We check your teeth and bite for signs of grinding."
+        ],
+        [
+          "Your guard",
+          "We make a custom guard shaped to your teeth."
+        ],
+        [
+          "Check the fit",
+          "We make sure it’s comfortable and show you how to care for it."
+        ]
+      ],
+      "faq": [
+        [
+          "How do I know if I grind my teeth?",
+          "A sore jaw or headache in the morning, worn or chipped teeth, or a partner hearing you grind at night are all common signs."
+        ],
+        [
+          "Why choose a custom guard?",
+          "A custom guard is shaped to your mouth, so it fits better, feels more comfortable and stays in place, which makes it more likely you’ll wear it."
+        ],
+        [
+          "Can grinding cause TMJ pain?",
+          "Yes. Clenching and grinding are common causes of jaw tightness and TMJ pain."
+        ],
+        [
+          "Is a night guard worth the cost?",
+          "A guard helps prevent damage that could need a bigger repair later, which can save you time and money."
+        ]
+      ],
+      "related": [
+        [
+          "Mouth guards",
+          "/services/mouth-guards/"
+        ],
+        [
+          "TMJ / TMD",
+          "/services/tmj-tmd/"
+        ],
+        [
+          "Jaw pain & clicking",
+          "/concerns/jaw-pain/"
+        ],
+        [
+          "Worn or damaged teeth",
+          "/concerns/damaged-teeth/"
+        ]
+      ]
+    }
+  },
+  "patientPages": {
+    "/about/specials/": {
+      "kind": "special",
+      "label": "New patient special",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "About",
+          "/about/"
+        ],
+        [
+          "New patient special",
+          null
+        ]
+      ],
+      "seoTitle": "$99 New Patient Special | Dentist in Westport, Kansas City",
+      "metaDesc": "New to Cosmetic & Implant Dentistry Westport? Get an exam, X-rays and a cleaning for $99 at 638 W 39th St, Kansas City, MO. Call (816) 388-0985 to book.",
+      "name": "New patient special",
+      "h1": "$99 new patient special in Westport, Kansas City",
+      "lede": "Your first exam, X-rays and cleaning for $99. An easy way to meet our team and get a clear picture of your smile.",
+      "heroPhoto": [
+        "A woman smiling at our Westport practice",
+        "50% 30%"
+      ],
+      "answerEyebrow": "How it works",
+      "answerH2": "Everything a first visit needs, for $99.",
+      "answer": "Our new patient special covers a full exam, the X-rays your dentist needs and a professional cleaning for $99. It’s for patients visiting Cosmetic & Implant Dentistry Westport for the first time, at our office at 638 W 39th St in Kansas City. Call (816) 388-0985 for details and to book your visit.",
+      "facts": [
+        [
+          "$99",
+          "Exam, X-rays and cleaning"
+        ],
+        [
+          "New patients",
+          "For your first visit with us"
+        ],
+        [
+          "Mon to Thu",
+          "Appointments at our Westport office"
+        ],
+        [
+          "Private parking",
+          "Private lot on site"
+        ]
+      ],
+      "inclPhoto": "A member of the dental team caring for a patient",
+      "inclEyebrow": "What’s included",
+      "inclH2": "x",
+      "included": [],
+      "offer": [
+        [
+          "Exam",
+          "A full check of your teeth, gums and bite, looking for early signs of decay or gum disease."
+        ],
+        [
+          "X-rays",
+          "So your dentist can see what an exam alone can’t."
+        ],
+        [
+          "Cleaning",
+          "Your hygienist removes the plaque and tartar that brushing and flossing miss."
+        ]
+      ],
+      "stepsH2": "Your first visit, step by step.",
+      "steps": [
+        [
+          "Call or book",
+          "Call (816) 388-0985 or book online and mention the new patient special."
+        ],
+        [
+          "Check in",
+          "We go over your health history and anything you’d like us to look at."
+        ],
+        [
+          "Exam, X-rays & cleaning",
+          "Your dentist checks your teeth and gums, then your hygienist cleans and polishes."
+        ],
+        [
+          "Your plan",
+          "We walk you through what we found and answer your questions before you leave."
+        ]
+      ],
+      "faq": [
+        [
+          "What does the $99 new patient special include?",
+          "A full exam, X-rays and a professional cleaning at our Westport office."
+        ],
+        [
+          "Who can use the new patient special?",
+          "It’s for patients visiting our office for the first time. Call us at (816) 388-0985 for details before you book."
+        ],
+        [
+          "What if I need more treatment after my visit?",
+          "We’ll explain what we found and your options before anything else is done. If you don’t have insurance, our Smile Club membership and payment plans can help with the cost."
+        ],
+        [
+          "Where is your office?",
+          "638 W 39th St, Kansas City, MO 64111, in the Westport neighborhood, with private parking on site."
+        ],
+        [
+          "What if I feel nervous about the dentist?",
+          "Let us know when you book. We’ll explain each step before we start and can talk through sedation options that may be right for you."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Smile Club",
+          "/smile-club/"
+        ],
+        [
+          "Payment plans",
+          "/payment-plans/"
+        ]
+      ],
+      "opts": [
+        [
+          "a",
+          "A · Coupon"
+        ],
+        [
+          "b",
+          "B · Checklist"
+        ]
+      ]
+    },
+    "/smile-club/": {
+      "kind": "club",
+      "label": "Smile Club",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Smile Club",
+          null
+        ]
+      ],
+      "seoTitle": "Smile Club Dental Membership | No Insurance Dentist in Kansas City",
+      "metaDesc": "No dental insurance? Smile Club plans start at $349 a year with exams, X-rays and cleanings included, plus member savings on treatment. Westport, Kansas City.",
+      "name": "Smile Club",
+      "h1": "Smile Club dental membership in Westport, Kansas City",
+      "lede": "Dental care without insurance. Your preventive care is included, and members save on everything from fillings to implants.",
+      "heroPhoto": [
+        "Large windows and natural light in a Westport treatment room",
+        "50% 50%"
+      ],
+      "answerEyebrow": "What is Smile Club?",
+      "answerH2": "Affordable dental care, with or without insurance.",
+      "answer": "Smile Club is our in-office dental membership. For one yearly fee, your exams, X-rays and cleanings are covered at 100%, and you save on other care: 20% on general dentistry, 10% on specialty dentistry and 20% at 816 MedSpa. Plans start at $349 a year at Cosmetic & Implant Dentistry Westport, 638 W 39th St in Kansas City.",
+      "facts": [
+        [
+          "From $349/yr",
+          "Child plan. Adult plan is $399/yr"
+        ],
+        [
+          "100% covered",
+          "Exams, X-rays and cleanings"
+        ],
+        [
+          "20% off",
+          "General dentistry and 816 MedSpa"
+        ],
+        [
+          "10% off",
+          "Crowns, bridges, veneers, implants and dentures"
+        ]
+      ],
+      "inclPhoto": "A member of the dental team caring for a patient",
+      "inclEyebrow": "What’s included",
+      "inclH2": "x",
+      "included": [],
+      "plans": [
+        [
+          "Adult",
+          399,
+          "For adults who want their regular care covered.",
+          [
+            "2 cleanings",
+            "2 exams",
+            "X-rays",
+            "Fluoride",
+            "Custom whitening trays, first tube of gel included"
+          ]
+        ],
+        [
+          "Child",
+          349,
+          "Preventive care made for kids.",
+          [
+            "2 cleanings",
+            "2 exams",
+            "X-rays",
+            "Fluoride"
+          ]
+        ],
+        [
+          "Perio",
+          499,
+          "For patients who need an extra cleaning each year.",
+          [
+            "3 cleanings",
+            "2 exams",
+            "X-rays",
+            "Fluoride",
+            "Custom whitening trays"
+          ]
+        ]
+      ],
+      "savings": [
+        [
+          "20%",
+          "General dentistry",
+          [
+            "Emergency exams",
+            "Fillings",
+            "Simple extractions",
+            "Custom mouth guards",
+            "In-office whitening",
+            "TMJ treatment and SRP"
+          ]
+        ],
+        [
+          "10%",
+          "Specialty dentistry",
+          [
+            "Crowns",
+            "Bridges",
+            "Veneers",
+            "Implants and dentures"
+          ]
+        ],
+        [
+          "10%",
+          "Oral surgery centers",
+          [
+            "Priority pricing at OSII, ECare and CAPI",
+            "Complex extractions and wisdom teeth",
+            "Implants and bone grafts",
+            "Jaw surgery and biopsies"
+          ]
+        ],
+        [
+          "20%",
+          "816 MedSpa",
+          [
+            "All 816 MedSpa services"
+          ]
+        ]
+      ],
+      "stepsH2": "How to join.",
+      "steps": [
+        [
+          "Pick a plan",
+          "Adult, Child or Perio, based on how many cleanings you need each year."
+        ],
+        [
+          "Sign up",
+          "Continue to our Smile Club signup page or call us at (816) 388-0985."
+        ],
+        [
+          "Schedule your visit",
+          "Your membership starts when you schedule your first visit."
+        ],
+        [
+          "Save all year",
+          "Your preventive care is covered and member savings apply to other care."
+        ]
+      ],
+      "faq": [
+        [
+          "How much does Smile Club cost?",
+          "The Adult plan is $399 a year, the Child plan is $349 a year and the Perio plan is $499 a year."
+        ],
+        [
+          "What’s included in the membership?",
+          "The Adult plan includes 2 cleanings, 2 exams, X-rays, fluoride and custom whitening trays with the first tube of gel. The Child plan includes 2 cleanings, 2 exams, X-rays and fluoride. The Perio plan includes 3 cleanings, 2 exams, X-rays, fluoride and custom whitening trays."
+        ],
+        [
+          "Do I need dental insurance to join?",
+          "No. Smile Club is for anyone, with or without insurance."
+        ],
+        [
+          "What do members save on other treatment?",
+          "20% on general dentistry like emergency exams, fillings, simple extractions, custom mouth guards, in-office whitening, TMJ treatment and scaling and root planing. 10% on crowns, bridges, veneers, implants and dentures. 10% priority pricing at OSII, ECare and CAPI for oral surgery, and 20% on all 816 MedSpa services."
+        ],
+        [
+          "How do I sign up?",
+          "Use our Smile Club signup page or call us at (816) 388-0985. Your membership starts when you schedule your first visit."
+        ]
+      ],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Teeth whitening",
+          "/services/teeth-whitening/"
+        ],
+        [
+          "New patient special",
+          "/about/specials/"
+        ],
+        [
+          "Payment plans",
+          "/payment-plans/"
+        ]
+      ],
+      "opts": [
+        [
+          "a",
+          "A · Cards"
+        ],
+        [
+          "b",
+          "B · Table"
+        ]
+      ]
+    },
+    "/review/": {
+      "kind": "review",
+      "label": "Leave a review",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Leave a review",
+          null
+        ]
+      ],
+      "seoTitle": "Leave a Review | Cosmetic & Implant Dentistry Westport",
+      "metaDesc": "Visited Cosmetic & Implant Dentistry Westport? Leave us a review on Google or Facebook. It takes about a minute and helps Kansas City neighbors find a dentist they trust.",
+      "name": "Reviews",
+      "h1": "Leave us a review",
+      "lede": "Thank you for choosing our Westport office. A quick review helps other Kansas City families find a dentist they can trust.",
+      "heroPhoto": [
+        "The welcoming lobby at our Westport location",
+        "50% 50%"
+      ],
+      "answerH2": "x",
+      "answer": "",
+      "facts": [],
+      "inclPhoto": "A member of the dental team caring for a patient",
+      "inclEyebrow": "What’s included",
+      "inclH2": "x",
+      "included": [],
+      "stepsH2": "x",
+      "steps": [],
+      "faq": [],
+      "related": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "New patient special",
+          "/about/specials/"
+        ],
+        [
+          "Smile Club",
+          "/smile-club/"
+        ],
+        [
+          "Contact",
+          "/contact/"
+        ]
+      ],
+      "opts": [
+        [
+          "a",
+          "A · Two cards"
+        ],
+        [
+          "b",
+          "B · Google first"
+        ]
+      ]
+    },
+    "links": {
+      "googleReview": "https://g.page/r/CaFeRbRQKltwEBM/review",
+      "facebookReview": "https://www.facebook.com/profile.php?id=61567353295741&sk=reviews"
+    }
+  },
+  "aboutContact": {
+    "/about/": {
+      "kind": "about",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "About",
+          null
+        ]
+      ],
+      "seoTitle": "About Us | Dentist in Westport, Kansas City",
+      "metaDesc": "Meet Cosmetic & Implant Dentistry Westport: Dr. Hunter McAreavy, our on-site oral surgeons and a team that takes the time to explain your options. 638 W 39th St, Kansas City, MO.",
+      "name": "About",
+      "h1": "About Cosmetic & Implant Dentistry Westport",
+      "lede": "General, cosmetic, implant and emergency dentistry in Kansas City, with oral surgeons on site and a team that takes the time to explain your options.",
+      "heroPhoto": [
+        "The welcoming lobby at our Westport location",
+        "50% 50%"
+      ],
+      "answerEyebrow": "Who we are",
+      "answerH2": "A dental office that does more.",
+      "answer": "Cosmetic & Implant Dentistry Westport is a general, cosmetic, restorative and emergency dental office at 638 W 39th St in Kansas City, MO. Dr. Hunter McAreavy leads general dentistry, and oral surgeons Dr. Owen Lonergan and Dr. Patrick Lucaci treat patients on site, so checkups, implants and surgery happen under one roof. We care for individuals and families of all ages in a warm, welcoming office.",
+      "facts": [
+        [
+          "All ages",
+          "Care for individuals and families"
+        ],
+        [
+          "Surgeons on site",
+          "Implants and oral surgery under one roof"
+        ],
+        [
+          "Sedation on select days",
+          "With Dr. Shaley Baker"
+        ],
+        [
+          "Patient experiences",
+          "Read our patients’ reviews on Google"
+        ]
+      ],
+      "opts": [
+        [
+          "doc",
+          "Doctors",
+          [
+            [
+              "a",
+              "A · Feature"
+            ],
+            [
+              "b",
+              "B · Grid"
+            ]
+          ]
+        ],
+        [
+          "gal",
+          "Office",
+          [
+            [
+              "a",
+              "A · Mosaic"
+            ],
+            [
+              "b",
+              "B · Strip"
+            ]
+          ]
+        ]
+      ]
+    },
+    "/contact/": {
+      "kind": "contact",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "Contact",
+          null
+        ]
+      ],
+      "seoTitle": "Contact Us | Dentist in Westport, Kansas City",
+      "metaDesc": "Call (816) 388-0985 or visit Cosmetic & Implant Dentistry Westport at 638 W 39th St, Kansas City, MO 64111. Open Monday to Thursday, 9 AM to 4 PM, with private parking.",
+      "name": "Contact",
+      "h1": "Contact our dentist in Westport, Kansas City",
+      "lede": "Call, stop by or book online. We’re at 638 W 39th St in Kansas City, with private parking on site.",
+      "heroPhoto": [
+        "The front desk at our Westport location",
+        "50% 50%"
+      ],
+      "opts": [
+        [
+          "ct",
+          "Contact",
+          [
+            [
+              "a",
+              "A · Info + map"
+            ],
+            [
+              "b",
+              "B · Form"
+            ]
+          ]
+        ]
+      ]
+    }
+  },
+  "doctorsTeamPages": {
+    "/about/meet-the-doctors/": {
+      "kind": "docs",
+      "label": "Meet the doctors",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "About",
+          "/about/"
+        ],
+        [
+          "Meet the doctors",
+          null
+        ]
+      ],
+      "seoTitle": "Meet Our Dentists & Oral Surgeons | Westport, Kansas City",
+      "metaDesc": "Meet Dr. Hunter McAreavy, board-certified oral surgeons Dr. Owen Lonergan and Dr. Patrick Lucaci, and sedation dentist Dr. Shaley Baker at Cosmetic & Implant Dentistry Westport.",
+      "name": "Meet the doctors",
+      "h1": "Meet our dentists and oral surgeons in Westport, Kansas City",
+      "lede": "A general dentist for everyday care, two board-certified oral surgeons on site and a sedation dentist on select days.",
+      "heroPhoto": [
+        "A consultation at our Westport office",
+        "35% 40%"
+      ],
+      "answerEyebrow": "Our doctors",
+      "answerH2": "Everyday care and surgery, under one roof.",
+      "answer": "Dr. Hunter McAreavy, DDS, leads general dentistry at Cosmetic & Implant Dentistry Westport. Oral surgeons Dr. Owen Lonergan and Dr. Patrick Lucaci, both certified by the American Board of Oral and Maxillofacial Surgery, treat implant and surgery patients on site at 638 W 39th St in Kansas City. Dr. Shaley Baker provides sedation about 1 to 2 days a month.",
+      "facts": [
+        [
+          "4 doctors",
+          "General, surgical and sedation care"
+        ],
+        [
+          "Board certified",
+          "Both of our oral surgeons"
+        ],
+        [
+          "On site",
+          "Implants and surgery at our Westport office"
+        ],
+        [
+          "UMKC trained",
+          "Dr. Hunter, Dr. Lonergan and Dr. Lucaci"
+        ]
+      ],
+      "faq": [
+        [
+          "Who is the dentist at Cosmetic & Implant Dentistry Westport?",
+          "Dr. Hunter McAreavy, DDS, leads general dentistry at our office. She earned her Doctor of Dental Surgery from the UMKC School of Dentistry and has a passion for helping patients with dental anxiety."
+        ],
+        [
+          "Are your oral surgeons board certified?",
+          "Yes. Dr. Owen Lonergan and Dr. Patrick Lucaci are both certified by the American Board of Oral and Maxillofacial Surgery, and both hold dental and medical degrees."
+        ],
+        [
+          "Do I need to go to another office for implant surgery?",
+          "No. Our oral surgeons treat implant and surgery patients on site at 638 W 39th St, so your checkups and surgery happen at the same office."
+        ],
+        [
+          "When is sedation available?",
+          "Dr. Shaley Baker provides sedation at our Westport office about 1 to 2 days a month. Call us at (816) 388-0985 to find the next available day."
+        ],
+        [
+          "Can I book with a specific doctor?",
+          "Yes. Call (816) 388-0985 and let us know who you’d like to see."
+        ]
+      ],
+      "opts": [
+        [
+          "dv",
+          "Profiles",
+          [
+            [
+              "a",
+              "A · Stacked"
+            ],
+            [
+              "b",
+              "B · Tabs"
+            ]
+          ]
+        ]
+      ]
+    },
+    "/about/meet-the-team/": {
+      "kind": "team",
+      "label": "Meet the team",
+      "crumbs": [
+        [
+          "Home",
+          "/"
+        ],
+        [
+          "About",
+          "/about/"
+        ],
+        [
+          "Meet the team",
+          null
+        ]
+      ],
+      "seoTitle": "Meet Our Dental Team | Westport, Kansas City",
+      "metaDesc": "Meet the patient care coordinators, hygienist and assistants at Cosmetic & Implant Dentistry Westport, 638 W 39th St, Kansas City, MO.",
+      "name": "Meet the team",
+      "h1": "Meet our dental team in Westport, Kansas City",
+      "lede": "The friendly faces who answer your calls, check you in and care for you chairside.",
+      "heroPhoto": [
+        "A member of the dental team caring for a patient",
+        "50% 40%"
+      ],
+      "answerEyebrow": "Our team",
+      "answerH2": "Familiar faces at every visit.",
+      "answer": "Our patient care coordinators answer your calls, book your visits and get you checked in. Our registered dental hygienist and dental assistants care for you chairside, and our oral surgery assistant supports Dr. Lonergan and Dr. Lucaci during implant and surgery visits at our office at 638 W 39th St in Kansas City.",
+      "facts": [
+        [
+          "Front desk",
+          "Konner and Nichole, patient care coordinators"
+        ],
+        [
+          "Hygiene",
+          "Rachel, registered dental hygienist"
+        ],
+        [
+          "Chairside",
+          "Chrissy, dental assistant"
+        ],
+        [
+          "Oral surgery",
+          "Jen, oral surgery assistant"
+        ]
+      ],
+      "faq": [],
+      "opts": [
+        [
+          "tv",
+          "Team",
+          [
+            [
+              "a",
+              "A · By role"
+            ],
+            [
+              "b",
+              "B · Filter"
+            ]
+          ]
+        ]
+      ]
+    }
+  },
+  "doctors": [
+    {
+      "k": "hunter",
+      "full": "Dr. Hunter McAreavy, DDS",
+      "role": "General Dentist",
+      "short": "Leads general dentistry, with a passion for nervous patients.",
+      "bio": "Dr. Hunter leads general dentistry at our Westport office. She enjoys every part of general dentistry and has a passion for helping patients with dental anxiety, so she explains each step before she starts. She’s from a small town in Missouri and moved back from Colorado after seven years there.",
+      "creds": [
+        [
+          "Education",
+          "Bachelor of Science, University of Missouri. Doctor of Dental Surgery, UMKC School of Dentistry"
+        ],
+        [
+          "Focus",
+          "General dentistry and patients who feel nervous about the dentist"
+        ],
+        [
+          "Outside the office",
+          "Hiking with her Bernese Mountain Dog, Moose, skiing and the outdoors"
+        ]
+      ],
+      "treats": [
+        [
+          "General dentistry",
+          "/services/general-dentistry/"
+        ],
+        [
+          "Teeth cleaning",
+          "/services/teeth-cleaning/"
+        ],
+        [
+          "Fillings",
+          "/services/fillings/"
+        ],
+        [
+          "Emergency dentistry",
+          "/services/emergency-dentist/"
+        ]
+      ],
+      "cta": [
+        "Book with Dr. Hunter",
+        null
+      ]
+    },
+    {
+      "k": "owen",
+      "full": "Dr. Owen Lonergan, MPH, DMD, MD",
+      "role": "Oral Surgeon",
+      "short": "Board-certified oral surgeon and former UMKC clinical faculty.",
+      "bio": "Dr. Lonergan is a board-certified oral and maxillofacial surgeon who treats implant and oral surgery patients at our Westport office. After residency he joined the UMKC School of Dentistry as clinical faculty, teaching oral surgery to dental students. He grew up in Texas and lives in Kansas City with his wife and daughter.",
+      "creds": [
+        [
+          "Education",
+          "B.S. in Biology, UC San Diego. DMD and Master of Public Health, Arizona School of Dentistry & Oral Health. MD, UMKC School of Medicine"
+        ],
+        [
+          "Training",
+          "Oral and Maxillofacial Surgery residency, UMKC"
+        ],
+        [
+          "Board certified",
+          "Diplomate, American Board of Oral and Maxillofacial Surgery"
+        ],
+        [
+          "Memberships",
+          "American Association of Oral and Maxillofacial Surgeons, Greater Kansas City Society of Oral and Maxillofacial Surgeons"
+        ]
+      ],
+      "treats": [
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Full-mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ],
+      "cta": [
+        "Book a surgical consult",
+        null
+      ]
+    },
+    {
+      "k": "patrick",
+      "full": "Dr. Patrick Lucaci, DDS, MD",
+      "role": "Oral Surgeon",
+      "short": "Board-certified oral surgeon for implants, grafting and jaw surgery.",
+      "bio": "Dr. Lucaci is a board-certified oral and maxillofacial surgeon. He performs implant surgery, bone grafting, wisdom teeth extractions and jaw surgery, and offers IV sedation for a more relaxed procedure. He became an oral surgeon because it’s a cross between medicine and dentistry. Born and raised in Kampala, Uganda, he enjoys golf and travel.",
+      "creds": [
+        [
+          "Education",
+          "Bachelor of Dental Surgery, Makerere University. DDS with honors, UMKC School of Dentistry. MD, University of Missouri"
+        ],
+        [
+          "Training",
+          "Oral and Maxillofacial Surgery residency, UMKC"
+        ],
+        [
+          "Board certified",
+          "American Board of Oral and Maxillofacial Surgery"
+        ],
+        [
+          "Memberships",
+          "American Dental Association, American Association of Oral and Maxillofacial Surgeons, American College of Oral and Maxillofacial Surgeons, Missouri and Kansas Dental Associations"
+        ]
+      ],
+      "treats": [
+        [
+          "Dental implants",
+          "/services/dental-implants/"
+        ],
+        [
+          "Full-mouth restoration",
+          "/full-mouth-restoration/"
+        ],
+        [
+          "Sedation",
+          "/sedation/"
+        ]
+      ],
+      "cta": [
+        "Book a surgical consult",
+        null
+      ],
+      "video": true
+    },
+    {
+      "k": "baker",
+      "full": "Dr. Shaley Baker",
+      "role": "Sedation Dentist",
+      "short": "Sedation certified, at our Westport office 1 to 2 days a month.",
+      "bio": "Dr. Baker is the primary dentist at ECare and holds her sedation certification for Missouri. She brings her sedation expertise to our Westport office about 1 to 2 days a month, with a gentle approach that helps even the most anxious patients get the care they need.",
+      "creds": [
+        [
+          "Certification",
+          "Missouri Sedation Certification"
+        ],
+        [
+          "At Westport",
+          "About 1 to 2 days a month"
+        ],
+        [
+          "Focus",
+          "A calm, supportive visit for patients who feel anxious"
+        ]
+      ],
+      "treats": [
+        [
+          "Sedation",
+          "/sedation/"
+        ],
+        [
+          "Dental anxiety",
+          "/concerns/dental-anxiety/"
+        ]
+      ],
+      "cta": [
+        "Learn about sedation",
+        "/sedation/"
+      ]
+    }
+  ],
+  "people": {
+    "hunter": [
+      "Hunter McAreavy",
+      "Dr. Hunter McAreavy",
+      "General Dentist",
+      null
+    ],
+    "rachel": [
+      "Rachel Converse, Registered Dental Hygienist",
+      "Rachel Converse",
+      "Registered Dental Hygienist",
+      null
+    ],
+    "chrissy": [
+      "Chrissy, Dental Assistant",
+      "Chrissy",
+      "Dental Assistant",
+      null
+    ],
+    "konner": [
+      "Konner Lawson, Patient Care Coordinator",
+      "Konner Lawson",
+      "Patient Care Coordinator",
+      "inset(9% 20% 44% 20%)"
+    ],
+    "nichole": [
+      "Nichole, Patient Care Coordinator",
+      "Nichole",
+      "Patient Care Coordinator",
+      "inset(9% 20% 44% 20%)"
+    ],
+    "jen": [
+      "Jen, Oral Surgery Assistant",
+      "Jen",
+      "Oral Surgery Assistant",
+      "inset(9% 20% 44% 20%)"
+    ],
+    "owen": [
+      "Dr. Owen Lonergan, Oral Surgeon",
+      "Dr. Owen Lonergan",
+      "Oral Surgeon",
+      null
+    ],
+    "patrick": [
+      "Dr. Patrick Lucaci, Oral Surgeon",
+      "Dr. Patrick Lucaci",
+      "Oral Surgeon",
+      "inset(0% 24% 34% 24%)"
+    ],
+    "baker": [
+      "Dr. Shaley Baker",
+      "Dr. Shaley Baker",
+      "Sedation Dentist",
+      null
+    ]
+  },
+  "teamSets": {
+    "general": {
+      "people": [
+        "hunter",
+        "rachel",
+        "chrissy",
+        "konner",
+        "nichole"
+      ],
+      "h2": "The team you’ll meet here.",
+      "p": "Dr. Hunter McAreavy leads general dentistry at our Westport office and has a passion for helping patients who feel nervous about the dentist. Whoever you see that day, our hygienists, assistants and care coordinators take the time to explain each step.",
+      "quote": true
+    },
+    "surgical": {
+      "people": [
+        "owen",
+        "patrick",
+        "jen",
+        "konner",
+        "nichole"
+      ],
+      "h2": "Your surgical team, on site.",
+      "p": "Dr. Owen Lonergan and Dr. Patrick Lucaci are the oral surgeons at our Westport location, so your surgery happens in the same place as the rest of your care. Our surgical assistant and care coordinators guide you from your consultation to your follow-up visits.",
+      "quote": false
+    },
+    "sedation": {
+      "people": [
+        "baker",
+        "hunter",
+        "rachel",
+        "konner",
+        "nichole"
+      ],
+      "h2": "Calm care from a team that gets it.",
+      "p": "Dr. Shaley Baker holds a Missouri Sedation Certification and provides sedation at our Westport location about one to two days a month. Dr. Hunter McAreavy and our team know many patients feel nervous, so we explain every step and never rush you.",
+      "quote": true
+    }
+  },
+  "teamSetByPage": {
+    "/services/dental-implants/": "surgical",
+    "/full-mouth-restoration/": "surgical",
+    "/sedation/": "sedation"
+  },
+  "nav": {
+    "TREAT": [
+      [
+        "Everyday care",
+        [
+          [
+            "General dentistry",
+            "/services/general-dentistry/",
+            "Checkups and everyday care"
+          ],
+          [
+            "Teeth cleaning",
+            "/services/teeth-cleaning/",
+            "Routine cleanings and checkups"
+          ],
+          [
+            "Fillings",
+            "/services/fillings/",
+            "Tooth-colored composite"
+          ],
+          [
+            "Mouth guards",
+            "/services/mouth-guards/",
+            "Sports, grinding and snoring"
+          ],
+          [
+            "Emergency dentistry",
+            "/services/emergency-dentist/",
+            "Same-day care"
+          ]
+        ]
+      ],
+      [
+        "Restorative",
+        [
+          [
+            "Dental implants",
+            "/services/dental-implants/",
+            "Placed by on-site oral surgeons"
+          ],
+          [
+            "Crowns & bridges",
+            "/services/crowns-bridges/",
+            "Repair or replace teeth"
+          ],
+          [
+            "Full mouth restoration",
+            "/full-mouth-restoration/",
+            "All-on-X and full smile rebuilds"
+          ]
+        ]
+      ],
+      [
+        "Cosmetic",
+        [
+          [
+            "Veneers",
+            "/services/veneers/",
+            "Porcelain smile makeovers"
+          ],
+          [
+            "Teeth whitening",
+            "/services/teeth-whitening/",
+            "In office or at home"
+          ],
+          [
+            "Clear braces",
+            "/services/braces/",
+            "Straighten without the metal look"
+          ]
+        ]
+      ],
+      [
+        "Sleep & comfort",
+        [
+          [
+            "Sleep apnea",
+            "/services/sleep-apnea/",
+            "Oral appliances for better sleep"
+          ],
+          [
+            "TMJ / TMD",
+            "/services/tmj-tmd/",
+            "Relief for jaw pain"
+          ],
+          [
+            "Sedation",
+            "/sedation/",
+            "Calm, anxiety-free care"
+          ]
+        ]
+      ]
+    ],
+    "CONCERNS": [
+      [
+        "Pain & urgent",
+        [
+          [
+            "Toothache or tooth pain",
+            "/concerns/toothache/"
+          ],
+          [
+            "Broken or chipped tooth",
+            "/concerns/broken-tooth/"
+          ],
+          [
+            "Lost crown or filling",
+            "/concerns/lost-crown-or-filling/"
+          ]
+        ]
+      ],
+      [
+        "Missing & damaged teeth",
+        [
+          [
+            "Missing teeth",
+            "/concerns/missing-teeth/"
+          ],
+          [
+            "Worn or damaged teeth",
+            "/concerns/damaged-teeth/"
+          ],
+          [
+            "Loose dentures",
+            "/concerns/loose-dentures/"
+          ]
+        ]
+      ],
+      [
+        "Your smile’s look",
+        [
+          [
+            "Stained or yellow teeth",
+            "/concerns/stained-teeth/"
+          ],
+          [
+            "Chips, gaps & uneven teeth",
+            "/concerns/uneven-teeth/"
+          ],
+          [
+            "Crooked or crowded teeth",
+            "/concerns/crooked-teeth/"
+          ]
+        ]
+      ],
+      [
+        "Comfort & sleep",
+        [
+          [
+            "Dental anxiety",
+            "/concerns/dental-anxiety/"
+          ],
+          [
+            "Snoring & sleep apnea",
+            "/concerns/snoring/"
+          ],
+          [
+            "Jaw pain & clicking",
+            "/concerns/jaw-pain/"
+          ],
+          [
+            "Teeth grinding",
+            "/concerns/teeth-grinding/"
+          ]
+        ]
+      ]
+    ],
+    "ABOUT": [
+      [
+        "About us",
+        "/about/"
+      ],
+      [
+        "Meet the doctors",
+        "/about/meet-the-doctors/"
+      ],
+      [
+        "Meet the team",
+        "/about/meet-the-team/"
+      ],
+      [
+        "Contact us",
+        "/contact/"
+      ]
+    ],
+    "PATIENTS": [
+      [
+        "New patient special",
+        "/about/specials/"
+      ],
+      [
+        "Smile Club",
+        "/smile-club/"
+      ],
+      [
+        "Payment plans",
+        "/payment-plans/"
+      ],
+      [
+        "Your experience",
+        "/#comfort"
+      ],
+      [
+        "Leave a review",
+        "/review/"
+      ]
+    ],
+    "WANT": [
+      [
+        "Get help today",
+        "/services/emergency-dentist/"
+      ],
+      [
+        "Replace missing teeth",
+        "/services/dental-implants/"
+      ],
+      [
+        "Fix a broken or damaged tooth",
+        "/services/crowns-bridges/"
+      ],
+      [
+        "Rebuild my whole smile",
+        "/full-mouth-restoration/"
+      ],
+      [
+        "Whiten my smile",
+        "/services/teeth-whitening/"
+      ],
+      [
+        "Straighten my teeth",
+        "/services/braces/"
+      ],
+      [
+        "Stop snoring",
+        "/services/sleep-apnea/"
+      ],
+      [
+        "Ease jaw pain",
+        "/services/tmj-tmd/"
+      ],
+      [
+        "Feel calm at the dentist",
+        "/sedation/"
+      ]
+    ],
+    "note": "Smile Club links go to /smile-club/ everywhere. Payment Plans uses whichever provider is confirmed."
+  }
+}

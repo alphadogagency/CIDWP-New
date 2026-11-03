@@ -1,4 +1,5 @@
 import type { GoogleReviewsResponse, LivePatientReview } from "../lib/reviews";
+import { getGoogleReviews } from './google-reviews-client';
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "long", day: "numeric", year: "numeric", timeZone: "UTC",
@@ -56,28 +57,33 @@ export function initializeReviewCarousels() {
     let slides = [...container.querySelectorAll<HTMLElement>("[data-slide]")];
     let active = 0;
 
-    const show = (index: number) => {
-      controls.hidden = slides.length < 2;
+    const previous = carousel.querySelector<HTMLButtonElement>("[data-previous]")!;
+    const next = carousel.querySelector<HTMLButtonElement>("[data-next]")!;
+    const stepSize = () => slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : container.clientWidth;
+    const visibleCount = () => Math.max(1, Math.round(container.clientWidth / stepSize()));
+    const updateControls = () => {
       if (!slides.length) return;
-      if (container.contains(document.activeElement)) carousel.focus({ preventScroll: true });
-      active = (index + slides.length) % slides.length;
-      slides.forEach((slide, i) => {
-        slide.setAttribute("aria-label", `${i + 1} of ${slides.length}`);
-        slide.setAttribute("aria-hidden", String(i !== active));
-        slide.inert = i !== active;
-        if (i !== active) {
-          slide.querySelector("[data-review-text]")?.classList.add("is-collapsed");
-          const expand = slide.querySelector<HTMLButtonElement>("[data-expand]");
-          if (expand) { expand.setAttribute("aria-expanded", "false"); expand.textContent = "Read More"; }
-        }
-      });
-      counter.textContent = `${active + 1} / ${slides.length}`;
+      active = Math.round(container.scrollLeft / stepSize());
+      const visible = visibleCount();
+      controls.hidden = slides.length <= visible;
+      previous.disabled = container.scrollLeft <= 2;
+      next.disabled = container.scrollLeft + container.clientWidth >= container.scrollWidth - 2;
+      const last = Math.min(active + visible, slides.length);
+      counter.textContent = visible > 1 ? `${active + 1}–${last} of ${slides.length}` : `${active + 1} of ${slides.length}`;
+      slides.forEach((slide, i) => slide.setAttribute("aria-label", `${i + 1} of ${slides.length}`));
     };
-    show(0);
-    carousel.querySelector("[data-previous]")?.addEventListener("click", () => show(active - 1));
-    carousel.querySelector("[data-next]")?.addEventListener("click", () => show(active + 1));
+    const show = (index: number) => {
+      const target = Math.max(0, Math.min(index, slides.length - visibleCount()));
+      container.scrollTo({ left: target * stepSize(), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+      updateControls();
+    };
+    updateControls();
+    container.addEventListener("scroll", updateControls, { passive: true });
+    new ResizeObserver(updateControls).observe(container);
+    previous.addEventListener("click", () => show(active - 1));
+    next.addEventListener("click", () => show(active + 1));
     carousel.addEventListener("keydown", event => {
-      if (event.target instanceof Element && event.target.closest("a")) return;
+      if (event.target instanceof Element && event.target.closest("a, button")) return;
       if (["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) {
         event.preventDefault();
         if (event.key === "Home") show(0);
@@ -122,7 +128,7 @@ export function initializeReviewCarousels() {
         button.addEventListener("click", () => {
           const expanded = button.getAttribute("aria-expanded") !== "true";
           button.setAttribute("aria-expanded", String(expanded));
-          button.textContent = expanded ? "Show Less" : "Read More";
+          button.textContent = expanded ? "Show less" : "Read more";
           words.classList.toggle("is-collapsed", !expanded);
           if (!expanded) button.scrollIntoView({ block: "nearest", behavior: "instant" });
         });
@@ -132,11 +138,7 @@ export function initializeReviewCarousels() {
     const load = async () => {
       section.dataset.reviewState = "loading";
       try {
-        const result = await fetch(section.dataset.reviewsEndpoint!, {
-          cache: "no-store", credentials: "same-origin", signal: AbortSignal.timeout(9000),
-        });
-        if (!result.ok || !result.headers.get("content-type")?.includes("application/json")) throw new Error("Unavailable");
-        const body: GoogleReviewsResponse = await result.json();
+        const body = await getGoogleReviews();
         if (!Array.isArray(body.reviews) || !body.reviews.length || !Array.isArray(body.attributions)) throw new Error("No reviews");
         applyReviews(body);
       } catch {

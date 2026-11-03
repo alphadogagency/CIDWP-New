@@ -1,8 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import lightLogo from "../assets/logo.png";
 import colorLogo from "../assets/round2/logo-color.png";
-import { site, navigation } from "../lib/site";
+import { site } from "../lib/site";
+import { packageData } from "../lib/page-package";
+import PagePhoto from './PagePhoto.astro';
+import '../styles/navigation.css';
 import Icon from "./Icon.astro";
 interface Props { interior?: boolean }
 const { interior = false } = Astro.props;
@@ -10,15 +12,18 @@ const { interior = false } = Astro.props;
 <header class:list={["site-header", { 'is-interior': interior }]} id="siteHeader">
   <nav class="header-inner" aria-label="Main navigation">
     <a class="brand" href="/" aria-label={site.name + " home"}>
-      <Image class="brand-light" src={lightLogo} alt={site.name} widths={[220, 440]} sizes="(max-width: 700px) 150px, 210px" loading="eager" />
-      <Image class="brand-color" src={colorLogo} alt="" aria-hidden="true" widths={[220, 440]} sizes="(max-width: 700px) 150px, 210px" loading="eager" />
+      <Image class="brand-color" src={colorLogo} alt={site.name} widths={[220, 440]} sizes="(max-width: 700px) 150px, 210px" loading="eager" />
     </a>
     <button class="menu-toggle" type="button" id="menuButton" aria-expanded="false" aria-controls="navigationMenu"><span>Menu</span><Icon name="menu" class="menu-icon-open" /><Icon name="close" class="menu-icon-close" /></button>
     <div class="navigation-menu" id="navigationMenu">
       <div class="nav-groups">
-        {navigation.map(group => <details class="nav-group"><summary>{group.label}<Icon name="chevron" /></summary><div class="nav-dropdown">{group.links.map(link => <a href={link.href}>{link.label}</a>)}</div></details>)}
+        <details class="nav-group"><summary>About<Icon name="chevron" /></summary><div class="nav-dropdown">{packageData.nav.ABOUT.map(([label, href]) => <a href={href}>{label}</a>)}</div></details>
+        <details class="nav-group nav-mega"><summary>Treatments<Icon name="chevron" /></summary><div class="nav-dropdown mega-panel"><div class="mega-columns">{packageData.nav.TREAT.map(([title, links]) => <div class="mega-column"><h2>{title}</h2>{Array.isArray(links) && links.map(([label, href, description]) => <a href={href}><span>{label}</span><small>{description}</small></a>)}</div>)}</div><a class="mega-feature" href="/about/specials/"><PagePhoto alt="A consultation at our Westport office" sizes="250px" /><strong>New to our office?</strong><span>See our new patient special →</span></a><a class="mega-bottom" href="/services/">All services →</a></div></details>
+        <details class="nav-group nav-mega"><summary>Concerns<Icon name="chevron" /></summary><div class="nav-dropdown mega-panel"><div class="mega-columns">{packageData.nav.CONCERNS.map(([title, links]) => <div class="mega-column"><h2>{title}</h2>{Array.isArray(links) && links.map(([label, href]) => <a href={href}>{label}</a>)}</div>)}</div><a class="mega-feature mega-help" href={site.phoneUrl}><strong>Not sure what you need?</strong><span>Talk with our Westport team.</span><span>Call {site.phone} →</span></a></div></details>
+        <a class="nav-direct" href="/smile-club/">Smile Club</a>
+        <details class="nav-group"><summary>Patients<Icon name="chevron" /></summary><div class="nav-dropdown">{packageData.nav.PATIENTS.map(([label, href]) => <a href={href === '/payment-plans/' ? site.paymentPlansUrl : href}>{label}</a>)}</div></details>
       </div>
-      <div class="header-actions"><a class="header-phone" href={site.phoneUrl}><Icon name="phone" /><span>{site.phone}</span></a><a class="button button-brand" href={site.bookingUrl}>Schedule Now <Icon /></a></div>
+      <div class="header-actions"><a class="header-phone" href={site.phoneUrl} aria-label={"Call " + site.phone}><Icon name="phone" /><span>{site.phone}</span></a><a class="button button-brand" href={site.bookingUrl}>Schedule now <Icon /></a></div>
     </div>
   </nav>
 </header>
@@ -45,6 +50,20 @@ const { interior = false } = Astro.props;
     groups.forEach(group => group.addEventListener("toggle", () => {
       if (group.open) groups.forEach(other => { if (other !== group) other.open = false; });
     }));
+    groups.forEach(group => {
+      group.querySelector('summary')?.addEventListener('click', event => {
+        // Hover already opened this disclosure before the mouse click arrives.
+        // Keep that click from immediately undoing the open state; keyboard
+        // activation still uses the native details toggle.
+        if (!mobile.matches && event.detail > 0 && group.open && group.matches(':hover')) event.preventDefault();
+      });
+      group.addEventListener('pointerenter', event => {
+        if (!mobile.matches && event.pointerType === 'mouse') { closeGroups(); group.open = true; }
+      });
+      group.addEventListener('pointerleave', event => {
+        if (!mobile.matches && event.pointerType === 'mouse' && !group.contains(document.activeElement)) group.open = false;
+      });
+    });
     menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
     document.addEventListener("click", event => { if (event.target instanceof Node && !header.contains(event.target)) setMenu(false); });
     document.addEventListener("keydown", event => {

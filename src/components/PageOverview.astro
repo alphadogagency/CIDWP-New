@@ -1,0 +1,6 @@
+---
+import type { PageContent } from '../lib/page-package';
+interface Props { page: PageContent }
+const { page } = Astro.props;
+---
+{page.answer && <section class="page-section"><div class="shell page-overview"><div><p class="eyebrow">{page.answerEyebrow || `What is ${page.name.toLowerCase()}?`}</p><h2>{page.answerH2}</h2><p>{page.answer}</p></div><dl class="page-facts">{page.facts?.map(([title, detail]) => <div><dt>{title}</dt><dd>{detail}</dd></div>)}</dl></div></section>}

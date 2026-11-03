@@ -1,0 +1,156 @@
+{
+  "desktop": [
+    {
+      "broken": [],
+      "h1": "Replace missing teeth in Westport, Kansas City",
+      "overflow": false,
+      "path": "/concerns/missing-teeth/"
+    },
+    {
+      "broken": [],
+      "h1": "$99 new patient special in Westport, Kansas City",
+      "overflow": false,
+      "path": "/about/specials/"
+    },
+    {
+      "broken": [],
+      "h1": "Smile Club dental membership in Westport, Kansas City",
+      "overflow": false,
+      "path": "/smile-club/"
+    },
+    {
+      "broken": [],
+      "h1": "Leave us a review",
+      "overflow": false,
+      "path": "/review/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/contact/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/meet-the-doctors/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/meet-the-team/"
+    },
+    {
+      "overflow": false,
+      "path": "/services/"
+    }
+  ],
+  "mobile": [
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/services/general-dentistry/",
+      "qrVisible": null
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/concerns/missing-teeth/",
+      "qrVisible": null
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/specials/",
+      "qrVisible": null
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/smile-club/",
+      "qrVisible": null
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/review/",
+      "qrVisible": "none"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/contact/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/meet-the-doctors/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/about/meet-the-team/"
+    },
+    {
+      "broken": [],
+      "overflow": false,
+      "path": "/services/"
+    }
+  ],
+  "finalCareVariants": [
+    {
+      "careBackground": "rgb(43, 46, 51)",
+      "careColor": "rgb(255, 255, 255)",
+      "overflow": false,
+      "path": "/services/general-dentistry/"
+    },
+    {
+      "careBackground": "rgb(43, 46, 51)",
+      "careColor": "rgb(255, 255, 255)",
+      "overflow": false,
+      "path": "/services/dental-implants/"
+    },
+    {
+      "careBackground": "rgb(43, 46, 51)",
+      "careColor": "rgb(255, 255, 255)",
+      "overflow": false,
+      "path": "/sedation/"
+    },
+    {
+      "careBackground": "rgb(43, 46, 51)",
+      "careColor": "rgb(255, 255, 255)",
+      "overflow": false,
+      "path": "/concerns/snoring/"
+    },
+    {
+      "careBackground": "rgb(43, 46, 51)",
+      "careColor": "rgb(255, 255, 255)",
+      "overflow": false,
+      "path": "/services/veneers/"
+    }
+  ],
+  "verifiedInteractions": [
+    "Desktop hover/click/keyboard menus and Escape",
+    "Mobile accordion/menu navigation and Escape focus return",
+    "Team filters and doctor anchors",
+    "FAQ expansion",
+    "Review carousel and read more with live reviews",
+    "Smile Club signup reaches existing hosted form; no submission",
+    "Mobile plan and results scrolling",
+    "Google Maps exact address pin",
+    "YouTube embed title and player loaded"
+  ],
+  "limitations": [
+    "New aggregate rating/count backend is not deployed; current endpoint supplies individual reviews only.",
+    "Hosted Smile Club form retained; no local backend invented."
+  ]
+}

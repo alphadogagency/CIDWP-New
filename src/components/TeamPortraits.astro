@@ -5,13 +5,13 @@ import Icon from "./Icon.astro";
 interface Props { people: TeamMember[]; interior?: boolean }
 const { people, interior = false } = Astro.props;
 ---
-<div class:list={["team-portraits", { "team-portraits-interior": interior }]}>
+<div tabindex={interior ? undefined : "0"} aria-label={interior ? undefined : "Our team; scroll to explore"} class:list={["team-portraits", { "team-portraits-interior": interior }]}>
   {people.map(person => <figure>
-    <Image src={person.image} alt={person.name + ", " + person.role} widths={[300, 500, 750]} sizes={interior && people.length === 2 ? "(min-width: 900px) 28vw, 44vw" : "(min-width: 900px) 23vw, 44vw"} loading="lazy" style={{ objectPosition: person.position || "50% 35%" }} />
+    <Image src={person.image} alt={person.name + ", " + person.role} widths={[300, 500, 750]} sizes={interior && people.length === 2 ? "(min-width: 900px) 28vw, 44vw" : "(min-width: 900px) 23vw, 44vw"} loading="lazy" style={{ objectPosition: person.position || "50% 18%" }} />
     <figcaption>
       <strong>{person.name}</strong>
       <span>{person.role}</span>
-      {person.href && <a class="provider-link" href={person.href} aria-label={"View Provider Profile For " + person.name}>View Provider Profile <Icon /></a>}
+      {person.href && <a class="provider-link" href={person.href} aria-label={"View provider profile for " + person.name}>View provider profile <Icon /></a>}
     </figcaption>
   </figure>)}
 </div>

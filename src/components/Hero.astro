@@ -1,29 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import { photos } from "../lib/homepage";
-import { site } from "../lib/site";
+import clinical from "../assets/round2/clinical-care.jpg";
 import ActionPair from "./ActionPair.astro";
 ---
 <section class="hero" aria-labelledby="hero-title" data-section="hero">
-  <div class="hero-media">
-    <Image src={photos.hero} alt="The welcoming lobby at our Westport location" widths={[750, 1200, 1800, 2400]} sizes="100vw" loading="eager" fetchpriority="high" />
-    {site.heroVideoUrl && <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src={site.heroVideoUrl} type="video/mp4" /></video>}
-  </div>
+  <div class="hero-media"><Image src={clinical} alt="A member of our Westport dental team caring for a patient" widths={[600, 900, 1200]} sizes="(min-width: 901px) 66vw, 100vw" loading="eager" fetchpriority="high" /></div>
   <div class="hero-shade"></div>
-  <div class="shell hero-content">
-    <div class="hero-copy">
-      <p class="hero-location">Your Dentist In Westport, Kansas City</p>
-      <h1 id="hero-title">Feel At Home<br /><strong>In Our Care.</strong></h1>
-      <p class="hero-description">Everyday care. Caring Experience. A team that takes the time to get to know you.</p>
-    </div>
+  <div class="shell hero-content"><div class="hero-copy">
+    <p class="hero-location eyebrow">Your dentist in Westport, Kansas City</p>
+    <h1 id="hero-title">Feel at home<br /><em>in our care.</em></h1>
+    <p class="hero-description">Everyday dentistry. A familiar team. Time to get to know you.</p>
     <ActionPair light />
-  </div>
+  </div></div>
 </section>
-<script>
-  const video = document.querySelector<HTMLVideoElement>(".hero-video");
-  if (video) {
-    const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-    const update = () => { if (reducedMotion.matches) video.pause(); else video.play().catch(() => {}); };
-    reducedMotion.addEventListener("change", update); update();
-  }
-</script>

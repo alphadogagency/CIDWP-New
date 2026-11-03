@@ -9,13 +9,19 @@ import OnsiteCare from "./OnsiteCare.astro";
 ---
 <section class="comfort-section section-space" id="comfort" aria-labelledby="comfort-title" data-section="comfort">
   <div class="shell">
-    <div class="comfort-intro"><h2 id="comfort-title">Make Yourself<br /><strong>Comfortable.</strong></h2><p>Get to know the people and the place before you arrive. At our Westport office, we make room for questions, take time to listen, and help you feel more at ease with your care.</p></div>
+    <div class="comfort-intro"><div><p class="eyebrow">Our office</p><h2 id="comfort-title">Make yourself<br />comfortable.</h2></div><p>Get to know the people and the place before you arrive. At our Westport office, we make room for questions, take time to listen, and help you feel more at ease with your care.</p></div>
     <div class="office-gallery">
-      {gallery.map((photo, index) => <button class="gallery-photo" type="button" data-photo-src={photo.image.src} data-photo-alt={photo.alt} aria-label={"View photo: " + photo.alt}><Image src={photo.image} alt={photo.alt} widths={[450, 800, 1200]} sizes={index === 0 ? "(min-width: 900px) 48vw, 100vw" : "(min-width: 900px) 24vw, 50vw"} loading="lazy" /><span aria-hidden="true"><Icon name="plus" /></span></button>)}
+      {gallery.map((photo, index) => <div class:list={["gallery-frame", { "photo-block": index === 0 }]}><button class="gallery-photo" type="button" data-photo-src={photo.image.src} data-photo-alt={photo.alt} aria-label={"View photo: " + photo.alt}><Image src={photo.image} alt={photo.alt} widths={[450, 800, 1200]} sizes={index === 0 ? "(min-width: 900px) 48vw, 100vw" : "(min-width: 900px) 24vw, 50vw"} loading="lazy" /><span class="photo-chip">{photo.label}</span></button></div>)}
+    </div>
+    <div class="amenities">
+      <div><span class="amenity-icon" aria-hidden="true">P</span><strong>Private parking</strong><p>Right at the building</p></div>
+      <div><Icon name="sun" /><strong>Natural light</strong><p>Bright, welcoming spaces</p></div>
+      <div><Icon name="sparkle" /><strong>816 Med Spa</strong><p>Onsite, same location</p></div>
+      <div><Icon name="tooth" /><strong>Oral surgery onsite</strong><p>Care at our shared location</p></div>
     </div>
     <OnsiteCare />
     <TeamPortraits people={teamPortraits} />
-    <div class="section-action"><a class="button button-outline" href={site.teamUrl}>Get To Know Our Team <Icon /></a></div>
+    <div class="section-action"><a class="button button-outline" href={site.teamUrl}>Meet the whole team <Icon /></a></div>
   </div>
 </section>
 <dialog class="photo-dialog" id="photoDialog" aria-label="Practice photo">

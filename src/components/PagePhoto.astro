@@ -1,0 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import { photoFor } from '../lib/page-photos';
+interface Props { alt: string; class?: string; position?: string; eager?: boolean; sizes?: string }
+const { alt, class: className, position = '50% 50%', eager = false, sizes = '(min-width: 900px) 45vw, 92vw' } = Astro.props;
+---
+<Image src={photoFor(alt)} alt={alt} class={className} widths={[480, 800, 1200]} sizes={sizes} loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} style={{ objectPosition: position }} />

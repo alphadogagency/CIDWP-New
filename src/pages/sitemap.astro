@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { packagePages, practiceLinks } from '../lib/page-package';
+---
+<Layout title="Sitemap | Cosmetic & Implant Dentistry Westport" description="Find dental services, common concerns, patient information and practice pages."><Header interior /><main id="main" tabindex="-1" class="sitemap-page"><div class="shell"><p class="eyebrow">Find your way</p><h1>Explore our website.</h1><div class="sitemap-groups">{[['Treatments', packagePages.filter(p=>p.kind==='service').map(p=>[p.name,p.path])],['Concerns', packagePages.filter(p=>p.kind==='concern').map(p=>[p.name,p.path])],['Patients', [['New patient special','/about/specials/'],['Smile Club','/smile-club/'],['Payment plans','/payment-plans/'],['Leave a review','/review/']]],['Our practice', practiceLinks]].map(([title, links])=><section><h2>{title}</h2><ul>{Array.isArray(links) && links.map(([label, href])=><li><a href={href!}>{label}</a></li>)}</ul></section>)}</div></div></main><Footer /></Layout>
+<style>.sitemap-page{padding:160px 0 80px}.sitemap-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}.sitemap-groups h2{font-size:36px}.sitemap-groups ul{list-style:none;padding:0}.sitemap-groups a{display:block;padding-block:10px;min-height:44px;text-decoration:underline;text-underline-offset:5px;font-size:15px}@media(max-width:800px){.sitemap-groups{grid-template-columns:1fr 1fr}}</style>

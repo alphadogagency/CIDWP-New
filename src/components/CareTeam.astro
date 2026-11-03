@@ -1,0 +1,12 @@
+---
+import { packageData } from '../lib/page-package';
+import { peopleByKey } from '../lib/team';
+import { patientReviews } from '../lib/reviews';
+import { site } from '../lib/site';
+import PersonPortrait from './PersonPortrait.astro';
+interface Props { set?: 'general' | 'surgical' | 'sedation' }
+const { set = 'general' } = Astro.props;
+const team = packageData.teamSets[set];
+const quote = patientReviews[0];
+---
+<section class="page-section care-team"><div class="shell care-team-layout"><div><p class="eyebrow">Your care team</p><h2>{team.h2}</h2><p>{team.p}</p>{team.quote && <figure class="care-team-quote"><p class="gold-stars" aria-label="5 out of 5 stars">★★★★★</p><blockquote cite={quote.sourceUrl}>“{quote.text}”</blockquote><figcaption><a href={quote.sourceUrl}>{quote.name}, Google review excerpt</a></figcaption></figure>}<a class="button button-brand" href={site.bookingUrl}>Book a visit →</a></div><div class="care-team-grid">{team.people.map(key => {const person = peopleByKey[key]; return <article><PersonPortrait person={person} /><h3>{person.doctor ? <a href={`${site.doctorsUrl}#dr-${key}`}>{person.name}</a> : person.name}</h3><p>{person.role}</p></article>;})}<a class="care-team-link" href={site.teamUrl}><h3>Meet the whole team</h3><span>See everyone →</span></a></div></div></section>

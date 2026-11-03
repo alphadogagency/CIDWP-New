@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactCta from '../../components/ContactCta.astro';
+import PageHero from '../../components/PageHero.astro';
+import { packageData, packagePages, type PageContent } from '../../lib/page-package';
+import '../../styles/page-package.css';
+const page: PageContent = { path: '/services/', kind: 'service', name: 'Treatments', seoTitle: 'Dental Services in Westport, Kansas City | CIDWP', metaDesc: 'Explore all 14 dental services at Cosmetic & Implant Dentistry Westport, from checkups and cosmetic care to dental implants, sedation and full-mouth restoration.', h1: 'Dental care in Westport, Kansas City', lede: 'From your regular checkup to a complete smile restoration, find the care that fits your needs.', heroPhoto: ['A consultation at our Westport office', '35% 40%'], crumbs: [['Home', '/'], ['Treatments', null]] };
+---
+<Layout title={page.seoTitle} description={page.metaDesc}><Header interior /><main id="main" tabindex="-1" class="package-main"><PageHero page={page} /><div class="package-sections">{packageData.nav.TREAT.map(([title, items]) => <section class="page-section"><div class="shell"><p class="eyebrow">Our services</p><h2>{title}</h2><div class="service-index-grid">{Array.isArray(items) && items.map(([label, href, description]) => <a href={href}><h3>{label}</h3><p>{description}</p><span>Explore →</span></a>)}</div></div></section>)}</div><ContactCta /></main><Footer /><script type="application/ld+json" is:inline set:html={JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: packagePages.filter(p => p.kind === 'service').map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: new URL(p.path, 'https://cosmeticimplantdentistrywp.com/').href })) })} /></Layout>
+<style>.service-index-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.service-index-grid a{padding:30px;border:1px solid var(--line);background:var(--card-background);border-radius:24px}.service-index-grid p{font-size:15px}.service-index-grid span{font-size:13px;color:var(--color-brand)}@media(max-width:700px){.service-index-grid{grid-template-columns:1fr 1fr;gap:14px}.service-index-grid a{padding:22px 18px}.service-index-grid h3{font-size:28px}}</style>

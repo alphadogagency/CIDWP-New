@@ -78,7 +78,7 @@ export async function onRequest({ request, env }: Context): Promise<Response> {
     const options = {
       headers: {
         "X-Goog-Api-Key": apiKey,
-        "X-Goog-FieldMask": "reviews,attributions",
+        "X-Goog-FieldMask": "reviews,attributions,rating,userRatingCount",
         "Cache-Control": "no-store",
         "Pragma": "no-cache",
       },
@@ -121,6 +121,11 @@ export async function onRequest({ request, env }: Context): Promise<Response> {
       return name ? [{ name, uri: httpsUrl(attribution.providerUri) }] : [];
     });
     const body: GoogleReviewsResponse = { reviews, attributions };
+    // The aggregate covers all Google ratings, not our five-star review subset.
+    if (typeof place.rating === 'number' && Number.isFinite(place.rating) && place.rating >= 1 && place.rating <= 5
+      && typeof place.userRatingCount === 'number' && Number.isSafeInteger(place.userRatingCount) && place.userRatingCount > 0) {
+      body.aggregate = { rating: place.rating, count: place.userRatingCount };
+    }
     return json(body);
   } catch {
     console.warn("Google reviews unavailable: upstream request failed or timed out.");

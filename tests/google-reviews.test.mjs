@@ -31,7 +31,7 @@ test("uses only configured place and headers; preserves original text, dates and
   mock.method(globalThis, "fetch", async (url, options) => {
     assert.equal(url, `https://places.googleapis.com/v1/places/${env.GOOGLE_PLACE_ID}?languageCode=en`);
     assert.equal(options.headers["X-Goog-Api-Key"], env.GOOGLE_PLACES_API_KEY);
-    assert.equal(options.headers["X-Goog-FieldMask"], "reviews,attributions");
+    assert.equal(options.headers["X-Goog-FieldMask"], "reviews,attributions,rating,userRatingCount");
     assert.equal(options.redirect, "manual");
     assert.equal(options.cache, undefined);
     assert.equal(options.headers["Cache-Control"], "no-store");
@@ -101,6 +101,22 @@ test("empty Google response allows the client to keep its static fallback", asyn
   mock.method(globalThis, "fetch", async () => Response.json({}));
   const body = await (await onRequest({ request: request(), env })).json();
   assert.deepEqual(body, { reviews: [], attributions: [] });
+});
+
+test('aggregate rating is independent of the selected five-star written reviews', async () => {
+  mock.method(globalThis, 'fetch', async () => Response.json({ rating: 4.8, userRatingCount: 241, reviews: [review({ rating: 4 })] }));
+  const body = await (await onRequest({ request: request(), env })).json();
+  assert.deepEqual(body.aggregate, { rating: 4.8, count: 241 });
+  assert.deepEqual(body.reviews, []);
+});
+
+test('missing or malformed aggregate fields never become a fabricated score', async () => {
+  for (const aggregate of [{ rating: 5 }, { rating: '5', userRatingCount: 100 }, { rating: 6, userRatingCount: 100 }, { rating: 5, userRatingCount: -2 }, { rating: 5, userRatingCount: 1.5 }]) {
+    mock.method(globalThis, 'fetch', async () => Response.json(aggregate));
+    const body = await (await onRequest({ request: request(), env })).json();
+    assert.equal(body.aggregate, undefined);
+    mock.restoreAll();
+  }
 });
 
 test("API errors never expose upstream bodies or credentials", async () => {

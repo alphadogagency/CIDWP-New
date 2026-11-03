@@ -1,0 +1,23 @@
+---
+import type { PageContent } from '../lib/page-package';
+import { packageData } from '../lib/page-package';
+import PageOverview from './PageOverview.astro';
+import PagePhoto from './PagePhoto.astro';
+import PageResults from './PageResults.astro';
+import PageSteps from './PageSteps.astro';
+import CareTeam from './CareTeam.astro';
+import PageFaq from './PageFaq.astro';
+import PageRelated from './PageRelated.astro';
+interface Props { page: PageContent }
+const { page } = Astro.props;
+const team = page.team || packageData.teamSetByPage[page.path as keyof typeof packageData.teamSetByPage] as 'surgical' | 'sedation' | undefined || 'general';
+---
+<PageOverview page={page} />
+<section class="page-section"><div class="shell page-included"><div class="page-feature-photo"><PagePhoto alt={page.inclPhoto!} /></div><div><p class="eyebrow">{page.inclEyebrow}</p><h2>{page.inclH2}</h2><ol class="page-included-list">{page.included?.map(([title, description, href], i) => <li><span class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{description}</p></div>{href && <a href={href} aria-label={`Learn more about ${title.toLowerCase()}`}>Learn more →</a>}</li>)}</ol>{page.also?.length && <p class="page-also">{page.alsoLead || 'We also offer'} {page.also.map(([label, href], index) => <>{index > 0 && (index === page.also!.length - 1 ? ' and ' : ', ')}<a href={href!}>{label}</a></>)}.</p>}</div></div></section>
+{page.compare && <section class="page-section"><div class="shell"><p class="eyebrow">{page.compare.eyebrow}</p><h2>{page.compare.h2}</h2><p class="page-intro">{page.compare.intro}</p><table class="page-comparison" role="table"><caption class="sr-only">{page.name}: compare treatment options</caption><thead role="rowgroup"><tr role="row">{page.compare.cols.map(col => <th scope="col" role="columnheader">{col}</th>)}</tr></thead><tbody role="rowgroup">{page.compare.rows.map(row => <tr role="row">{row.map((value, i) => i === 0 ? <th scope="row" role="rowheader">{value}</th> : <td role="cell" data-label={page.compare!.cols[i]}><span class:list={{ 'comparison-pill': i === page.compare!.pill, 'is-removable': value === 'Removable' }}>{value}</span></td>)}</tr>)}</tbody></table></div></section>}
+<PageResults page={page} />
+<PageSteps title={page.stepsH2!} steps={page.steps!} />
+<section class="page-section"><div class="shell"><p class="eyebrow">Cost & insurance</p><h2>Care that fits your budget.</h2><div class="page-cards page-swipe" tabindex="0" aria-label="Payment options; scroll to explore"><a href="/contact/"><p class="eyebrow">Have insurance?</p><h3>We’ll help you use your benefits</h3><p>Call us with your plan details and we’ll check your coverage before your visit.</p><span>Contact us →</span></a><a href="/smile-club/"><p class="eyebrow">No insurance?</p><h3>Join our Smile Club</h3><p>A membership with preventive care included and savings on other treatments.</p><span>Explore Smile Club →</span></a><a href="/payment-plans/"><p class="eyebrow">Bigger treatment?</p><h3>Flexible payment plans</h3><p>Ask about options for spreading the cost of your care into monthly payments.</p><span>See payment plans →</span></a></div></div></section>
+<CareTeam set={team} />
+<PageFaq questions={page.faq!} name={page.name} />
+<PageRelated links={page.related!} eyebrow={page.path === '/concerns/missing-teeth/' ? 'Treatments for missing teeth' : undefined} />

@@ -17,6 +17,7 @@ export interface LivePatientReview extends PatientReview {
 export interface GoogleReviewsResponse {
   reviews: LivePatientReview[];
   attributions: { name: string; uri: string | null }[];
+  aggregate?: { rating: number; count: number };
 }
 
 // Manually checked on the practice's Google Maps listing on September 22, 2026.

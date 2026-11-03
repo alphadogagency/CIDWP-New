@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-03T22:00:47.803Z",
+  "pageCount": 34,
+  "copyChecks": 1062,
+  "schemaChecks": 135,
+  "routes": [
+    {
+      "route": "/services/general-dentistry/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/emergency-dentist/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/teeth-cleaning/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/fillings/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/mouth-guards/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/dental-implants/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/crowns-bridges/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/veneers/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/teeth-whitening/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/sleep-apnea/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/tmj-tmd/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/services/braces/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/full-mouth-restoration/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/sedation/",
+      "template": "service",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/missing-teeth/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/toothache/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/broken-tooth/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/lost-crown-or-filling/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/damaged-teeth/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/loose-dentures/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/stained-teeth/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/uneven-teeth/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/crooked-teeth/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/dental-anxiety/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/snoring/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/jaw-pain/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/concerns/teeth-grinding/",
+      "template": "concern",
+      "result": "passed"
+    },
+    {
+      "route": "/about/specials/",
+      "template": "special",
+      "result": "passed"
+    },
+    {
+      "route": "/smile-club/",
+      "template": "club",
+      "result": "passed"
+    },
+    {
+      "route": "/review/",
+      "template": "review",
+      "result": "passed"
+    },
+    {
+      "route": "/about/",
+      "template": "about",
+      "result": "passed"
+    },
+    {
+      "route": "/contact/",
+      "template": "contact",
+      "result": "passed"
+    },
+    {
+      "route": "/about/meet-the-doctors/",
+      "template": "docs",
+      "result": "passed"
+    },
+    {
+      "route": "/about/meet-the-team/",
+      "template": "team",
+      "result": "passed"
+    }
+  ],
+  "issues": []
+}

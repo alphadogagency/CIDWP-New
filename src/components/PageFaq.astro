@@ -1,0 +1,7 @@
+---
+import type { Pair } from '../lib/page-package';
+import { site } from '../lib/site';
+interface Props { questions: Pair[]; name: string }
+const { questions, name } = Astro.props;
+---
+{questions.length > 0 && <section class="page-section" id="questions"><div class="shell page-faq"><div><p class="eyebrow">Questions</p><h2>{name} FAQ.</h2><p>Still have a question? Call our Westport team at <a href={site.phoneUrl}>{site.phone}</a>.</p></div><div>{questions.map(([question, answer], i) => <details open={i === 0}><summary>{question}<span aria-hidden="true">+</span></summary><p>{answer}</p></details>)}</div></div></section>}

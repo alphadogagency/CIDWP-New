@@ -1,6 +1,9 @@
 ---
 import Header from "./Header.astro";
 import Hero from "./Hero.astro";
+import ReviewStrip from "./ReviewStrip.astro";
+import Motion from "./Motion.astro";
+import "../styles/homepage.css";
 import DoctorsSection from "./DoctorsSection.astro";
 import CareSection from "./CareSection.astro";
 import MembershipBand from "./MembershipBand.astro";
@@ -21,22 +24,23 @@ interface Props { reviewMode?: boolean }
 const { reviewMode = false } = Astro.props;
 ---
 <Header />
-<main id="main" tabindex="-1">
+<main id="main" tabindex="-1" class="homepage">
   <Hero />
+  <ReviewStrip />
   <DoctorsSection />
+  <ExpertiseGrid />
   <CareSection />
-  <MembershipBand />
   <TransformSection />
+  <MembershipBand />
   <TechnologySection />
   <ServicesDirectory />
-  <ExpertiseGrid />
-  <ComfortSection />
   <ReviewsBand reviews={patientReviews} reviewMode={reviewMode} />
-  <ContactCta />
+  <ComfortSection />
   <FaqSection />
   <OfficeSection reviewMode={reviewMode} />
   <TrustBadges reviewMode={reviewMode} />
-  <ContactCta final />
+  <ContactCta />
 </main>
 <Footer reviewMode={reviewMode} />
-{reviewMode && <><a class="review-dock" href="#review-checklist">October Photo Update · {reviewNeeds.length} Follow-Ups ↓</a><section class="review-checklist section-space" id="review-checklist" aria-labelledby="review-title"><div class="shell"><p class="review-kicker">Internal Preview · Prepared For KO</p><h2 id="review-title">One List For The<br /><strong>Finishing Details.</strong></h2><p class="review-intro">The approved homepage layout and light blue palette are retained. Google reviews now load through Cloudflare, with the manually checked excerpts available as a fallback. Pam’s October photo selections and staff updates are in place, along with the onsite medspa and oral surgery links. The remaining pages have been built from the current site’s copy. Jotform integration is pending.</p><p><a class="text-link" href="/migration-review/">Review The Interior Pages</a></p><div class="review-request-grid">{reviewNeeds.map(item => <article><h3><a href={"#" + item.section}>{item.title} ↗</a></h3><p>{item.detail}</p></article>)}</div><a class="button button-outline" href="/">View Without Review Notes</a></div></section></>}
+<Motion />
+{reviewMode && <><a class="review-dock" href="#review-checklist">November design review · {reviewNeeds.length} Follow-Ups ↓</a><section class="review-checklist section-space" id="review-checklist" aria-labelledby="review-title"><div class="shell"><p class="review-kicker">Local review · William’s November brief</p><h2 id="review-title">Homepage and shared styling</h2><p class="review-intro">William’s charcoal palette, brand typefaces, Pair photos, Cards technology and Tiles treatments are implemented for local review. Existing interior copy and integrations are preserved. The later page package and publication await review. Google review totals are omitted until aggregate data is available; the lab photo is the supplied stand-in for a clearer 3D printer photo.</p><p><a class="text-link" href="/migration-review/">Review The Interior Pages</a></p><div class="review-request-grid">{reviewNeeds.map(item => <article><h3><a href={"#" + item.section}>{item.title} ↗</a></h3><p>{item.detail}</p></article>)}</div><a class="button button-outline" href="/">View Without Review Notes</a></div></section></>}

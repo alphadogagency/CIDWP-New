@@ -1,0 +1,21 @@
+---
+import type { PageContent } from '../lib/page-package';
+import { breadcrumbs } from '../lib/page-package';
+import { site } from '../lib/site';
+import PagePhoto from './PagePhoto.astro';
+interface Props { page: PageContent }
+const { page } = Astro.props;
+---
+<section class="page-hero" aria-labelledby="page-title">
+  <PagePhoto alt={page.heroPhoto[0]} position={page.heroPhoto[1]} class="page-hero-photo" eager sizes="(min-width: 900px) 65vw, 100vw" />
+  <div class="shell page-hero-content">
+    <nav class="page-breadcrumbs" aria-label="Breadcrumb"><ol>{breadcrumbs(page).map(([label, href]) => <li>{href ? <a href={href}>{label}</a> : <span aria-current="page">{label}</span>}</li>)}</ol></nav>
+    <h1 id="page-title">{page.h1}</h1><p>{page.lede}</p>
+    <div class="page-actions on-dark"><a class="button button-brand" href={site.phoneUrl}>{page.kind === 'special' ? 'Call to claim' : 'Call'} {site.phone}</a><a class="button button-white" href={site.bookingUrl}>Book a visit <span aria-hidden="true">→</span></a></div>
+    <a class="page-rating" href={site.reviewsUrl} data-google-rating><span aria-hidden="true">★★★★★</span> <span data-rating-label>Read our patient reviews on Google</span><span class="rating-attribution">Google Maps</span></a>
+  </div>
+</section>
+<script>
+  import { initializeGoogleRatings } from '../scripts/google-reviews-client';
+  initializeGoogleRatings();
+</script>

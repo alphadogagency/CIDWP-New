@@ -1,0 +1,14 @@
+---
+import Icon from "./Icon.astro";
+---
+<aside class="review-strip" aria-label="Patient reviews on Google">
+  <a class="review-proof" href="#reviews" data-google-rating>
+    <img src="/google-maps-attribution.svg" alt="Google Maps" width="98" height="18" />
+    <span><span class="proof-stars" aria-hidden="true">★★★★★</span><strong data-rating-label>Words from our patients</strong><small data-rating-fallback>Selected five-star Google reviews</small></span>
+    <span class="proof-link">Read reviews <Icon /></span>
+  </a>
+</aside>
+<script>
+  import { initializeGoogleRatings } from '../scripts/google-reviews-client';
+  initializeGoogleRatings();
+</script>

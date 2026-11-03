@@ -1,0 +1,14 @@
+---
+import type { PageContent } from '../lib/page-package';
+import { packageData, videoUrl } from '../lib/page-package';
+import { site } from '../lib/site';
+import { patientReviews } from '../lib/reviews';
+import PagePhoto from './PagePhoto.astro';
+interface Props { page: PageContent }
+const { page } = Astro.props;
+const hasVideo = [...packageData.choices.resultsLayout.video, ...packageData.choices.resultsLayout.full].includes(page.path);
+const full = packageData.choices.resultsLayout.full.includes(page.path);
+const results = page.results || [];
+const caseLinks: Record<string, string> = {'Single implant': '/services/dental-implants/', 'Veneers': '/services/veneers/', 'Full arch restoration': '/full-mouth-restoration/'};
+---
+{results.length > 0 && <section class="page-section"><div class:list={['shell page-results', { 'results-video': hasVideo, 'results-full': full, 'results-one-case': results.length === 1 }]}><div class="results-intro"><p class="eyebrow">Real results</p><h2>Before and after, from our Westport patients.</h2><p>Real cases treated at our office. Every smile and treatment plan is different.</p>{!hasVideo && <><ul>{results.map(([, name]) => <li><a href={caseLinks[name] || '/full-mouth-restoration/'}>{name} →</a></li>)}</ul><a class="button button-brand" href={site.bookingUrl}>Book a consultation →</a></>}</div><div class="results-media" tabindex={hasVideo ? '0' : undefined} aria-label={hasVideo ? 'Patient results; scroll to explore' : undefined}>{hasVideo && <div class="results-film"><iframe src={videoUrl} title="Dr. Patrick Lucaci discusses dental implants" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen /></div>}{results.map(([alt, caption]) => <figure><PagePhoto alt={alt} sizes="(min-width: 900px) 30vw, 85vw" /><figcaption>{caption}</figcaption></figure>)}{hasVideo && results.length === 1 && <div class="results-review"><p class="gold-stars" aria-label="Five-star patient review">★★★★★</p><blockquote cite={patientReviews[3].sourceUrl}>“{patientReviews[3].text}”</blockquote><a href={patientReviews[3].sourceUrl}>{patientReviews[3].name} · Google review excerpt</a><hr /><p class="eyebrow">Your smile next</p><h3>Want results like these?</h3><a class="button button-brand" href={site.bookingUrl}>Book a consultation →</a></div>}</div></div></section>}

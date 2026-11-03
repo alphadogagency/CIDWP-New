@@ -1,0 +1,7 @@
+---
+import { Image } from 'astro:assets';
+import type { PracticePerson } from '../lib/team';
+interface Props { person: PracticePerson; sizes?: string }
+const { person, sizes = '(min-width: 900px) 20vw, 44vw' } = Astro.props;
+---
+<div class:list={['person-portrait', person.crop && `person-portrait-${person.crop}`]}><Image src={person.image} alt={person.name} widths={[300, 500, 750]} sizes={sizes} loading="lazy" /></div>

@@ -1,0 +1,23 @@
+---
+import type { PageContent } from '../lib/page-package';
+import { packageData, signupUrl } from '../lib/page-package';
+import { site } from '../lib/site';
+import { patientReviews } from '../lib/reviews';
+import PageOverview from './PageOverview.astro';
+import PagePhoto from './PagePhoto.astro';
+import PageSteps from './PageSteps.astro';
+import CareTeam from './CareTeam.astro';
+import PageFaq from './PageFaq.astro';
+import PageRelated from './PageRelated.astro';
+import ReviewsBand from './ReviewsBand.astro';
+interface Props { page: PageContent }
+const { page } = Astro.props;
+---
+<PageOverview page={page} />
+{page.kind === 'special' && <section class="page-section"><div class="shell"><div class="special-coupon"><div class="coupon-copy"><p class="eyebrow">Your new patient offer</p><p class="coupon-price"><span>$</span>99</p><h2>Exam, X-rays and cleaning.</h2><ul>{page.offer?.map(([title, description]) => <li><span aria-hidden="true">✓</span><div><h3>{title}</h3><p>{description}</p></div></li>)}</ul><div class="page-actions on-dark"><a class="button button-brand" href={site.phoneUrl}>Call to claim</a><a class="button button-white" href={site.bookingUrl}>Book online →</a></div><p class="coupon-fine-print">For new patients. Call for details.</p></div><PagePhoto class="coupon-photo" alt="A member of the dental team caring for a patient" /></div></div></section>}
+{page.kind === 'club' && <><section class="page-section"><div class="shell"><p class="eyebrow">Membership plans</p><h2>Choose the care that fits you.</h2><div class="club-plans page-swipe" tabindex="0" aria-label="Membership plans; scroll to explore">{page.plans?.map(([name, price, description, included], i) => <article class:list={['club-plan', { 'club-featured': i === 0 }]}><p class="eyebrow">Smile Club {name}</p><p class="plan-price">${price}<span>/year</span></p><p>{description}</p><ul class="check-list">{included.map(item => <li>{item}</li>)}</ul><a class="button button-brand" href={signupUrl}>Choose {name} →</a></article>)}</div></div></section><section class="page-section"><div class="shell"><p class="eyebrow">Member savings</p><h2>Your membership goes further.</h2><div class="club-savings">{page.savings?.map(([amount, name, included]) => <article><p class="saving-amount">{amount}</p><h3>{name}</h3><ul>{included.map(item => <li>{item}</li>)}</ul></article>)}</div></div></section></>}
+{page.kind === 'review' && <><section class="page-section"><div class="shell"><div class="review-invitation"><div class="review-primary"><p class="gold-stars" aria-hidden="true">★★★★★</p><h2>Review us on Google.</h2><p>Your honest experience helps our Westport neighbors choose their care.</p><ol><li>Open our Google review page.</li><li>Sign in to your Google account.</li><li>Choose your rating and share your experience.</li></ol><a class="button button-brand" href={packageData.patientPages.links.googleReview} target="_blank" rel="noopener noreferrer">Leave a Google review →</a></div><div class="review-qr"><img src="/images/google-review-qr.svg" width="240" height="240" alt="QR code for the practice’s Google review page" /><h3>In the office?</h3><p>Scan with your phone camera.</p></div></div><div class="facebook-review"><div><h3>Prefer Facebook?</h3><p>You can share your experience there, too.</p></div><a class="button button-outline" href={packageData.patientPages.links.facebookReview} target="_blank" rel="noopener noreferrer">Review us on Facebook →</a></div></div></section><ReviewsBand reviews={patientReviews.slice(0, 3)} /><section class="page-section"><div class="shell review-feedback"><h2>Something we could have done better?</h2><p>We welcome your feedback. Call our team at <a href={site.phoneUrl}>{site.phone}</a>.</p></div></section></>}
+{page.steps?.length ? <PageSteps title={page.stepsH2!} steps={page.steps} /> : null}
+{page.kind === 'club' && <section class="page-section" id="join"><div class="shell club-join"><div><p class="eyebrow">Join Smile Club</p><h2>Ready to start saving?</h2><p>Sign up through our Smile Club membership page, or call our team to choose a plan and schedule your first visit.</p></div><div class="page-actions"><a class="button button-brand" href={signupUrl}>Continue to Smile Club signup →</a><a class="button button-outline" href={site.phoneUrl}>Call {site.phone}</a></div></div></section>}
+{page.kind !== 'review' && <><CareTeam /><PageFaq questions={page.faq || []} name={page.name} /></>}
+<PageRelated links={page.related || []} practice={page.kind === 'review'} />

@@ -1,0 +1,18 @@
+---
+import type { PageContent } from '../lib/page-package';
+import { pageSchema } from '../lib/page-package';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import ContactCta from './ContactCta.astro';
+import PageHero from './PageHero.astro';
+import TreatmentPage from './TreatmentPage.astro';
+import PatientPage from './PatientPage.astro';
+import PracticePage from './PracticePage.astro';
+import '../styles/page-package.css';
+interface Props { page: PageContent }
+const { page } = Astro.props;
+---
+<script type="application/ld+json" is:inline set:html={JSON.stringify(pageSchema(page)).replaceAll('<', '\\u003c')} />
+<Header interior />
+<main id="main" tabindex="-1" class="package-main"><PageHero page={page} /><div class="package-sections">{['service', 'concern'].includes(page.kind) ? <TreatmentPage page={page} /> : ['special', 'club', 'review'].includes(page.kind) ? <PatientPage page={page} /> : <PracticePage page={page} />}</div><ContactCta /></main>
+<Footer />

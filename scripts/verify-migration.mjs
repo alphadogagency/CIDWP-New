@@ -13,6 +13,9 @@ const redirects = Object.fromEntries(fs.readFileSync('public/_redirects', 'utf8'
 const issues = [];
 let copyChecks = 0, linkChecks = 0, assetChecks = 0, pageChecks = 0;
 const fail = (route, kind, value) => issues.push({route, kind, value});
+const november = JSON.parse(fs.readFileSync('src/data/november-pages.json', 'utf8'));
+const replacedRoutes = new Set(['/services/', '/sitemap/', ...['services', 'concerns', 'patientPages', 'aboutContact', 'doctorsTeamPages'].flatMap(group => Object.keys(november[group]).filter(route => route.startsWith('/')))]);
+let approvedReplacementChecks = 0;
 const assetOwners = new Map();
 // Approved October 19–20 roster changes. Keep the dated captures immutable;
 // compare retained content and the specifically authorized replacements.
@@ -41,6 +44,9 @@ for (const source of snapshots) {
   if (route === '/') continue; // The previously approved homepage is intentionally retained.
   const output = `dist${route}index.html`;
   if (!fs.existsSync(output)) { fail(route, 'Missing Page', output); continue; }
+  // Bryan's November 3 approval authorizes the new package instead of October
+  // copy on these exact routes. verify-page-package.mjs checks their new content.
+  if (replacedRoutes.has(route)) { approvedReplacementChecks++; continue; }
   pageChecks++;
   const built = parseHTML(fs.readFileSync(output, 'utf8')).document;
   const imported = built.querySelector('[data-original-content]');
@@ -85,6 +91,7 @@ for (const source of snapshots) {
 function files(dir) { return fs.readdirSync(dir, {withFileTypes:true}).flatMap(item => item.isDirectory() ? files(path.join(dir,item.name)) : [path.join(dir,item.name)]); }
 const documents = new Map(files('dist').filter(file => file.endsWith('.html')).map(file => [file, parseHTML(fs.readFileSync(file,'utf8')).document]));
 for (const route of ['/', teamRoute, '/about/meet-the-doctors/']) {
+  if (replacedRoutes.has(route)) continue;
   const doc = documents.get(`dist${route}index.html`);
   if (!doc) continue;
   const people = route === '/about/meet-the-doctors/' ? ['Dr. Owen Lonergan', 'Dr. Patrick Lucaci'] : ['Konner Lawson', 'Nichole', 'Chrissy', 'Rachel Converse', 'Jen', 'Dr. Owen Lonergan', 'Dr. Patrick Lucaci'];
@@ -112,7 +119,7 @@ for (const [file, doc] of documents) {
     if (src?.startsWith('/') && !fs.existsSync(`dist${src.split('?')[0]}`)) fail(route, 'Missing Local Asset', src);
   }
 }
-const report = {date:'2026-10-20',sourceCaptureDate:'2026-10-06',approvedUpdates:'docs/october-client-updates.md',pageChecks,copyChecks,linkChecks,assetChecks,issues};
+const report = {date:new Date().toISOString().slice(0,10),sourceCaptureDate:'2026-10-06',approvedUpdates:['docs/october-client-updates.md','docs/november-homepage-continuation.md'],pageChecks,approvedReplacementChecks,copyChecks,linkChecks,assetChecks,issues};
 fs.writeFileSync('docs/migration/verification.json', JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));
 if (issues.length) process.exitCode = 1;

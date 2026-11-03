@@ -1,24 +1,19 @@
-/**
- * Brand palette for the Round 2 homepage.
- * #0D8AAA is sampled from CIDWP's official logo.
- * #CCFFFF, #E3FBFF, #F5FFFF and #0E3647 are in the official Smile Club site.
- * Mirrored in src/styles/global.css; see docs/round2-review.md for sources.
- */
+/** William’s November 3 charcoal selection; mirrored in global.css. */
 export const theme = {
   colors: {
-    primary: "#CCFFFF",
-    secondary: "#0D8AAA",
-    accent: "#E3FBFF",
+    primary: "#2B2E33",
+    secondary: "#137A93",
+    accent: "#C6A767",
     background: "#FFFFFF",
-    foreground: "#0E3647",
-    muted: "#50636C",
-    brand: "#0D8AAA",
-    blue: "#CCFFFF",
-    pale: "#E3FBFF",
-    mist: "#F5FFFF",
-    ink: "#0E3647",
+    foreground: "#2B2E33",
+    muted: "#515459",
+    brand: "#137A93",
+    blue: "#C6A767",
+    pale: "#F7F5F1",
+    mist: "#F7F5F1",
+    ink: "#2B2E33",
   },
-  fonts: { heading: "'Work Sans', sans-serif", body: "'Work Sans', sans-serif" },
-  radius: { sm: "0px", md: "4px", lg: "999px" },
+  fonts: { heading: "'Cormorant Garamond', Georgia, serif", body: "'Manrope', sans-serif" },
+  radius: { sm: "16px", md: "24px", lg: "999px" },
 } as const;
 export type Theme = typeof theme;

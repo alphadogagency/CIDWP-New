@@ -1,12 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import { photos } from "../lib/homepage";
 import ActionPair from "./ActionPair.astro";
-interface Props { final?: boolean }
-const { final = false } = Astro.props;
-const titleId = final ? "final-cta-title" : "schedule-title";
 ---
-<section class:list={["contact-cta", { "final-cta": final }]} aria-labelledby={titleId} data-section={final ? "final-cta" : "schedule"}>
-  {!final && <Image src={photos.office} alt="" aria-hidden="true" widths={[750, 1400, 2000]} sizes="100vw" loading="lazy" class="cta-backdrop" />}
-  <div class="shell cta-content"><div><h2 id={titleId}>{final ? <>We’re Ready<br /><strong>When You Are.</strong></> : <>Let’s Plan<br /><strong>Your First Visit.</strong></>}</h2>{final && <p>Find a time that works for you and get to know our Westport team.</p>}</div><ActionPair /></div>
+<section class="contact-cta final-cta" aria-labelledby="final-cta-title" data-section="final-cta">
+  <div class="shell cta-content"><div><p class="eyebrow">Your next chapter starts here</p><h2 id="final-cta-title">We’re ready when you are.</h2><p>Find a time that works for you and get to know our Westport team.</p></div><ActionPair light /></div>
 </section>

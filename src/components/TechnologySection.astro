@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import { technology } from "../lib/homepage";
 ---
 <section class="technology-section section-space" id="technology" aria-labelledby="technology-title" data-section="technology"><div class="shell">
-  <h2 class="section-heading" id="technology-title">A Closer Look<br /><strong>At Your Dental Health.</strong></h2>
-  <div class="technology-grid">{technology.map(item => <article class="technology-card"><div class="technology-photo"><Image src={item.image} alt={item.alt} widths={[400, 700, 1000]} sizes="(min-width: 900px) 30vw, 100vw" loading="lazy" /></div><h3>{item.title}</h3><p>{item.description}</p></article>)}</div>
+  <p class="eyebrow">Technology</p><h2 class="section-heading" id="technology-title">A closer look at<br />your dental health.</h2>
+  <div class="technology-grid swipe-row" tabindex="0" aria-label="Our dental technology; scroll to explore">{technology.map((item, index) => <article class="technology-card"><div class="technology-photo"><Image src={item.image} alt={item.alt} widths={[400, 700, 1000]} sizes="(min-width: 901px) 30vw, 75vw" loading="lazy" /></div><div class="technology-copy"><span class="card-number">0{index + 1}</span><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div>
+  <p class="swipe-hint">Swipe to explore our technology →</p>
 </div></section>

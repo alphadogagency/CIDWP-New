@@ -2,12 +2,17 @@
 import Layout from '../layouts/Layout.astro';
 import InteriorPage from '../components/InteriorPage.astro';
 import pages from '../data/pages.json';
+import PackagePage from '../components/PackagePage.astro';
+import { packagePages, packageByPath } from '../lib/page-package';
 
 export function getStaticPaths() {
-  return pages.map(page => ({ params: { path: page.path.replace(/^\/+|\/+$/g, '') }, props: { page } }));
+  return [...pages.filter(page => !packageByPath.has(page.path) && !['/services/', '/sitemap/'].includes(page.path)), ...packagePages].map(page => ({ params: { path: page.path.replace(/^\/+|\/+$/g, '') }, props: { page } }));
 }
 const { page } = Astro.props;
+const replacement = 'kind' in page ? page : undefined;
+const legacy = 'sections' in page ? page : undefined;
 ---
-<Layout title={page.titleTag} description={page.description} robots={page.robots}>
-  <InteriorPage page={page} />
+<Layout title={replacement?.seoTitle || legacy?.titleTag} description={replacement?.metaDesc || legacy?.description} robots={legacy?.robots}>
+  {replacement && <PackagePage page={replacement} />}
+  {legacy && <InteriorPage page={legacy} />}
 </Layout>
