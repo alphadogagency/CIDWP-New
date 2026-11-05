@@ -219,3 +219,10 @@ The selected files are `src/assets/nov2026/generated-veneers-new-smile.png`, `ge
 Verification: Astro check passed (69 files, zero errors/warnings/hints), production build passed (61 pages), and whitespace check passed. Browser review at 1440×1000 and 390×844 confirmed the three new source files loaded, matching card proportions, readable labels and no horizontal overflow. Evidence: `docs/verification/november-5-edits/new-smiles-desktop.jpg`, `new-smiles-mobile.jpg`, and `new-smiles-checks.json`. Temporary viewport override reset; the local Treatments preview remains open.
 
 Bryan approved this final local revision (“I love it!”) and explicitly requested committing, pushing to main and deployment on November 5. This supersedes the local-only hold for the three selected new smile images and the colorful Google wordmark with discreet Maps text. Publication uses the existing `cidwp-new` Cloudflare Pages site. Earlier generated candidates are excluded from the publication commit.
+
+### Approved photo and branding publication — November 5
+
+- Application commit `3015a9a` (**Update treatment imagery and Google review branding**) pushed to main.
+- Published to the existing Cloudflare Pages production project, deployment `6adef70f-4d3d-4298-9ce2-485f4f26ded6`, branch main/source `3015a9a`. Stable URL: https://cidwp-new.pages.dev/#expertise ; immutable deployment: https://6adef70f.cidwp-new.pages.dev/ . Functions compiled and 80 assets uploaded successfully.
+- Existing Astro diagnostics/build checks passed; all 13 Google review tests passed before publication. Public browser verification confirmed all three new smile assets loaded, no horizontal overflow, the colorful wordmark and live “5.0 from 121 reviews” with discreet “Maps” text. No rating values were hard-coded.
+- Evidence: `docs/verification/november-5-edits/published-new-smiles.jpg` and `published-new-smiles-checks.json`. Public preview left open and temporary viewport override reset. This publication record is a documentation-only follow-up; unused generated candidates remain local and untracked.
