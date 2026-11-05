@@ -189,3 +189,33 @@ Bryan reviewed the assessment of Pam's November 5 “CIDWP Website Improvement U
 - Published through the existing Cloudflare Pages project: deployment `14153ea5-5334-457f-8fa1-7aac1357d71c`, production/main/source `f0f6977`. Stable URL: https://cidwp-new.pages.dev/ ; immutable URL: https://14153ea5.cidwp-new.pages.dev/ . Functions compiled successfully; 15 assets uploaded and 304 reused.
 - Public desktop/mobile browser checks passed with HTTP 200, correct team copy, all three supplied tile images, restored printer, no photo tags/denture inset, no affected broken images or horizontal overflow, and working gallery open/Escape close. No page errors. Published screenshots and `published-checks.json` are in the November 5 evidence folder.
 - This completes the authorized round. Pam's later implants before-and-after remains deferred. The following documentation/evidence commit does not change the deployed application.
+
+## Local photo-framing review — November 5, after publication
+
+Bryan requested zooming out the teeth photographs in the homepage Treatments tiles, explicitly local-only until he reviews and approves pushing. This hold applies to this new framing pass; the earlier November 5 email edits remain published.
+
+Veneers, dental implants and full-mouth restoration now show the full width of their existing after-only photos using contained image sizing with a neutral tile background. Other treatment photos and routes remain unchanged. Hover no longer enlarges those three photos. No image pixels or patient results were generated or altered.
+
+Local preview: http://127.0.0.1:4338/#expertise (Astro background server). Astro check passed with zero errors/warnings/hints; desktop/mobile browser checks confirmed all three full-photo tiles loaded and no horizontal overflow. The preview is open for Bryan. Nothing from this framing pass has been committed, pushed or deployed.
+
+### Generated card images and colorful Google wordmark — local only
+
+Bryan requested generated teeth images with the same card proportions, then rejected the first set as too similar. The local preview now uses three synthetic, illustrative smiles: the first veneers image, a distinct angled masculine smile for implants, and a mature frontal smile for full-mouth restoration. These replace only homepage treatment-navigation imagery; real patient results and original photos remain unchanged. This supersedes the contained-photo experiment above, returning the cards to edge-to-edge cover sizing (16:10 desktop, existing 4:3 mobile).
+
+Final assets: `src/assets/nov2026/generated-veneers-card.png`, `generated-implants-card-v2.png`, and `generated-restoration-card-v2.png`. Built-in image_gen was used; complete prompts and source paths are recorded in `docs/verification/november-5-edits/generated-card-prompts.json`. The earlier unselected generated variants remain local only.
+
+Bryan also requested replacing the homepage review-strip wordmark with colorful Google branding. Added `public/google-wordmark.png` (unmodified existing full-color wordmark from the Flores project), used at its native aspect ratio. Kept a small 12px non-translated Google Maps credit within the same rating container, following current official Places attribution guidance: https://developers.google.com/maps/documentation/places/web-service/policies . Review carousel and interior-page attribution remain unchanged.
+
+Verification: Astro diagnostics (69 files, zero errors/warnings/hints), build (61 pages), whitespace check, and desktop/mobile browser review passed. All three generated assets loaded, the full-color logo loaded, no horizontal overflow, and local live aggregate displayed 5.0 from 121 Google reviews during verification. No review values were hard-coded. Preview stays at http://127.0.0.1:4338/ . Not committed, pushed or deployed; awaiting Bryan's review.
+
+Bryan's subsequent local-review direction: keep only a discreet “Maps” label and avoid repeating Google. The homepage strip now shows the colorful Google wordmark, live “[rating] from [count] reviews” and small “Maps” text. `data-rating-compact` scopes the abbreviated count to this strip; other rating displays remain unchanged. This direct display preference supersedes the full “Google Maps” credit described above for this local draft. Astro diagnostics and whitespace checks passed; browser confirmed the live abbreviated count and requested label. Still local only.
+
+### Fresh smile subjects — local review, November 5
+
+Bryan requested more natural teeth and then explicitly rejected reusing the same people. Generated three completely new subjects from scratch, without reference images: an angled feminine smile for veneers, a relaxed clean-shaven masculine smile for implants, and a mature feminine smile with a different angle and complexion for full-mouth restoration. Wider lower-face compositions, soft daylight, natural ivory enamel and individually shaped teeth replace the prior selections. These remain synthetic treatment-navigation illustrations, not patient results.
+
+The selected files are `src/assets/nov2026/generated-veneers-new-smile.png`, `generated-implants-new-smile.png`, and `generated-restoration-new-smile.png`. All are 1586×992 and fill the existing 16:10 desktop / 4:3 mobile cards. The built-in image generation tool, prompts, source files and current selections are recorded in `docs/verification/november-5-edits/generated-card-prompts.json`. Earlier variants remain unselected. The discreet Maps/Google wordmark refinement remains in place. Local preview: http://127.0.0.1:4338/#expertise . No commit, push or deployment is authorized for this revision until Bryan reviews it.
+
+Verification: Astro check passed (69 files, zero errors/warnings/hints), production build passed (61 pages), and whitespace check passed. Browser review at 1440×1000 and 390×844 confirmed the three new source files loaded, matching card proportions, readable labels and no horizontal overflow. Evidence: `docs/verification/november-5-edits/new-smiles-desktop.jpg`, `new-smiles-mobile.jpg`, and `new-smiles-checks.json`. Temporary viewport override reset; the local Treatments preview remains open.
+
+Bryan approved this final local revision (“I love it!”) and explicitly requested committing, pushing to main and deployment on November 5. This supersedes the local-only hold for the three selected new smile images and the colorful Google wordmark with discreet Maps text. Publication uses the existing `cidwp-new` Cloudflare Pages site. Earlier generated candidates are excluded from the publication commit.

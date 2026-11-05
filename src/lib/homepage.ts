@@ -13,12 +13,12 @@ import frontDesk from "../assets/oct2026/front-desk2.webp";
 import parking from "../assets/oct2026/parking-lot2.webp";
 import office from "../assets/practice-interior.jpg";
 import clinical from "../assets/round2/clinical-care.jpg";
-import veneers from "../assets/nov2026/veneers-after.webp";
-import implants from "../assets/nov2026/implant-after.webp";
+import veneers from "../assets/nov2026/generated-veneers-new-smile.png";
+import implants from "../assets/nov2026/generated-implants-new-smile.png";
 
 
 import aligners from "../assets/expertise/aligners.png";
-import restoration from "../assets/nov2026/full-arch-after.webp";
+import restoration from "../assets/nov2026/generated-restoration-new-smile.png";
 import emergency from "../assets/nov2026/emergency-dentistry-supplies.jpg";
 import generalDentistry from "../assets/nov2026/general-dentistry-supplies.jpg";
 import whitening from "../assets/nov2026/whitening-opalescence.webp";
@@ -42,7 +42,7 @@ export const services = [
 ];
 
 // Pam’s November 5 replacements keep the general, emergency and whitening tiles focused on dental care.
-// Cropped after-only cases follow William’s brief; original comparison images are unchanged.
+// Generated smile illustrations are used only as treatment navigation imagery, never patient results.
 export const expertise: { label: string; href: string; image: ImageMetadata; position: string }[] = [
   { label: "Veneers", href: serviceLinks.veneers, image: veneers, position: "50% 50%" },
   { label: "Dental implants", href: serviceLinks.implants, image: implants, position: "50% 50%" },

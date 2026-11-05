@@ -1,0 +1,56 @@
+{
+  "desktop": {
+    "images": [
+      {
+        "cardRatio": "16 / 10",
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4338/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgenerated-veneers-new-smile.png%3ForigWidth%3D1586%26origHeight%3D992%26origFormat%3Dpng&w=700&h=438&f=webp"
+      },
+      {
+        "cardRatio": "16 / 10",
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4338/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgenerated-implants-new-smile.png%3ForigWidth%3D1586%26origHeight%3D992%26origFormat%3Dpng&w=700&h=438&f=webp"
+      },
+      {
+        "cardRatio": "16 / 10",
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4338/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgenerated-restoration-new-smile.png%3ForigWidth%3D1586%26origHeight%3D992%26origFormat%3Dpng&w=700&h=438&f=webp"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 1000,
+      "width": 1440
+    }
+  },
+  "mobile": {
+    "images": [
+      {
+        "cardRatio": "4 / 3",
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4338/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgenerated-veneers-new-smile.png%3ForigWidth%3D1586%26origHeight%3D992%26origFormat%3Dpng&w=700&h=438&f=webp"
+      },
+      {
+        "cardRatio": "4 / 3",
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4338/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgenerated-implants-new-smile.png%3ForigWidth%3D1586%26origHeight%3D992%26origFormat%3Dpng&w=700&h=438&f=webp"
+      },
+      {
+        "cardRatio": "4 / 3",
+        "fit": "cover",
+        "loaded": true,
+        "source": "http://127.0.0.1:4338/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgenerated-restoration-new-smile.png%3ForigWidth%3D1586%26origHeight%3D992%26origFormat%3Dpng&w=700&h=438&f=webp"
+      }
+    ],
+    "overflow": false,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  }
+}

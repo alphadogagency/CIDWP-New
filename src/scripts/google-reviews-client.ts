@@ -19,7 +19,7 @@ export function initializeGoogleRatings() {
     const label = `${aggregate.rating.toFixed(1)} from ${aggregate.count.toLocaleString('en-US')} Google reviews`;
     nodes.forEach(node => {
       const text = node.querySelector('[data-rating-label]');
-      if (text) text.textContent = label;
+      if (text) text.textContent = node.hasAttribute('data-rating-compact') ? label.replace(' Google reviews', ' reviews') : label;
       node.querySelector('[data-rating-fallback]')?.setAttribute('hidden', '');
       node.dataset.ratingState = 'live';
     });
