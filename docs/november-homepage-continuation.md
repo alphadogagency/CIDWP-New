@@ -182,3 +182,10 @@ Bryan reviewed the assessment of Pam's November 5 “CIDWP Website Improvement U
 - Local verification: Astro check (69 files, zero errors/warnings/hints), production build (61 pages), package verification (34 pages, 1,062 copy checks, 135 schema checks, zero issues), and whitespace check passed.
 - Browser checks at 1440×1000 and 390×844 confirmed updated copy, all three image replacements, printer photo, absent photo tags/inset, no broken affected images or horizontal overflow, and gallery open/Escape close. No page errors. Screenshots and machine-readable checks: `docs/verification/november-5-edits/`.
 - Publication pending at this checkpoint; record the deployed commit and public verification below after completion. No domain cutover, stakeholder messages or calendar changes are included.
+
+### November 5 publication result
+
+- Application commit `f0f6977` (**Apply November 5 client homepage edits**) pushed to `main` successfully.
+- Published through the existing Cloudflare Pages project: deployment `14153ea5-5334-457f-8fa1-7aac1357d71c`, production/main/source `f0f6977`. Stable URL: https://cidwp-new.pages.dev/ ; immutable URL: https://14153ea5.cidwp-new.pages.dev/ . Functions compiled successfully; 15 assets uploaded and 304 reused.
+- Public desktop/mobile browser checks passed with HTTP 200, correct team copy, all three supplied tile images, restored printer, no photo tags/denture inset, no affected broken images or horizontal overflow, and working gallery open/Escape close. No page errors. Published screenshots and `published-checks.json` are in the November 5 evidence folder.
+- This completes the authorized round. Pam's later implants before-and-after remains deferred. The following documentation/evidence commit does not change the deployed application.

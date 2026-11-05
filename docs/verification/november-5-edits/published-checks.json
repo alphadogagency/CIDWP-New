@@ -1,0 +1,114 @@
+[
+  {
+    "name": "desktop",
+    "status": 200,
+    "copy": true,
+    "photoTags": 0,
+    "dentureInset": 0,
+    "printer": true,
+    "replacements": [
+      "https://cidwp-new.pages.dev/_astro/whitening-opalescence.DbFcKsX3_A6trj.webp",
+      "https://cidwp-new.pages.dev/_astro/general-dentistry-supplies.D9S5Q_3b_LaC6t.webp",
+      "https://cidwp-new.pages.dev/_astro/emergency-dentistry-supplies.DT0Q0I1C_Z27Nmqx.webp"
+    ],
+    "overflow": false,
+    "broken": [],
+    "tileLinks": [
+      {
+        "label": "Veneers",
+        "href": "/services/veneers/"
+      },
+      {
+        "label": "Dental implants",
+        "href": "/services/dental-implants/"
+      },
+      {
+        "label": "Crowns & bridges",
+        "href": "/services/crowns-bridges/"
+      },
+      {
+        "label": "Teeth whitening",
+        "href": "/services/teeth-whitening/"
+      },
+      {
+        "label": "Clear braces",
+        "href": "/services/braces/"
+      },
+      {
+        "label": "Full-mouth restoration",
+        "href": "/full-mouth-restoration/"
+      },
+      {
+        "label": "General dentistry",
+        "href": "/services/general-dentistry/"
+      },
+      {
+        "label": "Sedation options",
+        "href": "/sedation/"
+      },
+      {
+        "label": "Emergency dentistry",
+        "href": "/services/emergency-dentist/"
+      }
+    ],
+    "galleryOpens": true,
+    "galleryCloses": true,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "status": 200,
+    "copy": true,
+    "photoTags": 0,
+    "dentureInset": 0,
+    "printer": true,
+    "replacements": [
+      "https://cidwp-new.pages.dev/_astro/whitening-opalescence.DbFcKsX3_A6trj.webp",
+      "https://cidwp-new.pages.dev/_astro/general-dentistry-supplies.D9S5Q_3b_LaC6t.webp",
+      "https://cidwp-new.pages.dev/_astro/emergency-dentistry-supplies.DT0Q0I1C_Z27Nmqx.webp"
+    ],
+    "overflow": false,
+    "broken": [],
+    "tileLinks": [
+      {
+        "label": "Veneers",
+        "href": "/services/veneers/"
+      },
+      {
+        "label": "Dental implants",
+        "href": "/services/dental-implants/"
+      },
+      {
+        "label": "Crowns & bridges",
+        "href": "/services/crowns-bridges/"
+      },
+      {
+        "label": "Teeth whitening",
+        "href": "/services/teeth-whitening/"
+      },
+      {
+        "label": "Clear braces",
+        "href": "/services/braces/"
+      },
+      {
+        "label": "Full-mouth restoration",
+        "href": "/full-mouth-restoration/"
+      },
+      {
+        "label": "General dentistry",
+        "href": "/services/general-dentistry/"
+      },
+      {
+        "label": "Sedation options",
+        "href": "/sedation/"
+      },
+      {
+        "label": "Emergency dentistry",
+        "href": "/services/emergency-dentist/"
+      }
+    ],
+    "galleryOpens": true,
+    "galleryCloses": true,
+    "errors": []
+  }
+]
