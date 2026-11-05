@@ -1,0 +1,114 @@
+[
+  {
+    "name": "desktop",
+    "status": 200,
+    "copy": true,
+    "photoTags": 0,
+    "dentureInset": 0,
+    "printer": true,
+    "replacements": [
+      "http://127.0.0.1:4337/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fwhitening-opalescence.webp%3ForigWidth%3D1946%26origHeight%3D1946%26origFormat%3Dwebp&w=1946&h=1946&f=webp",
+      "http://127.0.0.1:4337/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgeneral-dentistry-supplies.jpg%3ForigWidth%3D1920%26origHeight%3D1440%26origFormat%3Djpg&w=1920&h=1440&f=webp",
+      "http://127.0.0.1:4337/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Femergency-dentistry-supplies.jpg%3ForigWidth%3D1920%26origHeight%3D1074%26origFormat%3Djpg&w=1920&h=1074&f=webp"
+    ],
+    "overflow": false,
+    "broken": [],
+    "tileLinks": [
+      {
+        "label": "Veneers",
+        "href": "/services/veneers/"
+      },
+      {
+        "label": "Dental implants",
+        "href": "/services/dental-implants/"
+      },
+      {
+        "label": "Crowns & bridges",
+        "href": "/services/crowns-bridges/"
+      },
+      {
+        "label": "Teeth whitening",
+        "href": "/services/teeth-whitening/"
+      },
+      {
+        "label": "Clear braces",
+        "href": "/services/braces/"
+      },
+      {
+        "label": "Full-mouth restoration",
+        "href": "/full-mouth-restoration/"
+      },
+      {
+        "label": "General dentistry",
+        "href": "/services/general-dentistry/"
+      },
+      {
+        "label": "Sedation options",
+        "href": "/sedation/"
+      },
+      {
+        "label": "Emergency dentistry",
+        "href": "/services/emergency-dentist/"
+      }
+    ],
+    "galleryOpens": true,
+    "galleryCloses": true,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "status": 200,
+    "copy": true,
+    "photoTags": 0,
+    "dentureInset": 0,
+    "printer": true,
+    "replacements": [
+      "http://127.0.0.1:4337/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fwhitening-opalescence.webp%3ForigWidth%3D1946%26origHeight%3D1946%26origFormat%3Dwebp&w=1946&h=1946&f=webp",
+      "http://127.0.0.1:4337/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Fgeneral-dentistry-supplies.jpg%3ForigWidth%3D1920%26origHeight%3D1440%26origFormat%3Djpg&w=1920&h=1440&f=webp",
+      "http://127.0.0.1:4337/_image?href=%2F%40fs%2FUsers%2Fbryanarambula%2FProjects%2Fcosmetic-and-implant-dentistry-westport%2Fsrc%2Fassets%2Fnov2026%2Femergency-dentistry-supplies.jpg%3ForigWidth%3D1920%26origHeight%3D1074%26origFormat%3Djpg&w=1920&h=1074&f=webp"
+    ],
+    "overflow": false,
+    "broken": [],
+    "tileLinks": [
+      {
+        "label": "Veneers",
+        "href": "/services/veneers/"
+      },
+      {
+        "label": "Dental implants",
+        "href": "/services/dental-implants/"
+      },
+      {
+        "label": "Crowns & bridges",
+        "href": "/services/crowns-bridges/"
+      },
+      {
+        "label": "Teeth whitening",
+        "href": "/services/teeth-whitening/"
+      },
+      {
+        "label": "Clear braces",
+        "href": "/services/braces/"
+      },
+      {
+        "label": "Full-mouth restoration",
+        "href": "/full-mouth-restoration/"
+      },
+      {
+        "label": "General dentistry",
+        "href": "/services/general-dentistry/"
+      },
+      {
+        "label": "Sedation options",
+        "href": "/sedation/"
+      },
+      {
+        "label": "Emergency dentistry",
+        "href": "/services/emergency-dentist/"
+      }
+    ],
+    "galleryOpens": true,
+    "galleryCloses": true,
+    "errors": []
+  }
+]

@@ -11,7 +11,7 @@ import OnsiteCare from "./OnsiteCare.astro";
   <div class="shell">
     <div class="comfort-intro"><div><p class="eyebrow">Our office</p><h2 id="comfort-title">Make yourself<br />comfortable.</h2></div><p>Get to know the people and the place before you arrive. At our Westport office, we make room for questions, take time to listen, and help you feel more at ease with your care.</p></div>
     <div class="office-gallery">
-      {gallery.map((photo, index) => <div class:list={["gallery-frame", { "photo-block": index === 0 }]}><button class="gallery-photo" type="button" data-photo-src={photo.image.src} data-photo-alt={photo.alt} aria-label={"View photo: " + photo.alt}><Image src={photo.image} alt={photo.alt} widths={[450, 800, 1200]} sizes={index === 0 ? "(min-width: 900px) 48vw, 100vw" : "(min-width: 900px) 24vw, 50vw"} loading="lazy" /><span class="photo-chip">{photo.label}</span></button></div>)}
+      {gallery.map((photo, index) => <div class:list={["gallery-frame", { "photo-block": index === 0 }]}><button class="gallery-photo" type="button" data-photo-src={photo.image.src} data-photo-alt={photo.alt} aria-label={"View photo: " + photo.alt}><Image src={photo.image} alt={photo.alt} widths={[450, 800, 1200]} sizes={index === 0 ? "(min-width: 900px) 48vw, 100vw" : "(min-width: 900px) 24vw, 50vw"} loading="lazy" /></button></div>)}
     </div>
     <div class="amenities">
       <div><span class="amenity-icon" aria-hidden="true">P</span><strong>Private parking</strong><p>Right at the building</p></div>

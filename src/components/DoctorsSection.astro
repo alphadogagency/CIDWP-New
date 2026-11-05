@@ -10,10 +10,10 @@ const avatars = [hunter, ...staff.slice(0, 4).map(person => person.image)];
 <section class="doctors-section section-space" id="doctors" aria-labelledby="doctors-title" data-section="doctors">
   <div class="shell doctors-grid">
     <div class="doctor-portraits photo-block" data-reveal>
-      <figure><Image src={photos.osiiFrontDesk} alt="The Oral Surgery and Implant Institute front desk" widths={[450, 750, 1200]} sizes="(min-width: 901px) 28vw, 46vw" loading="lazy" style={{ objectPosition: "80% center" }} /><figcaption class="photo-chip">Oral Surgery &amp; Implant Institute</figcaption></figure>
-      <figure><Image src={photos.cidwpFrontDesk} alt="The Cosmetic & Implant Dentistry Westport front desk" widths={[450, 750, 1200]} sizes="(min-width: 901px) 28vw, 46vw" loading="lazy" /><figcaption class="photo-chip">Cosmetic &amp; Implant Dentistry Westport</figcaption></figure>
+      <figure><Image src={photos.osiiFrontDesk} alt="The Oral Surgery and Implant Institute front desk" widths={[450, 750, 1200]} sizes="(min-width: 901px) 28vw, 46vw" loading="lazy" style={{ objectPosition: "80% center" }} /></figure>
+      <figure><Image src={photos.cidwpFrontDesk} alt="The Cosmetic & Implant Dentistry Westport front desk" widths={[450, 750, 1200]} sizes="(min-width: 901px) 28vw, 46vw" loading="lazy" /></figure>
     </div>
-    <div class="section-copy" data-reveal><p class="eyebrow">Meet your team</p><h2 id="doctors-title">Get to know<br /><em>your dental team.</em></h2><p>Dr. Hunter McAreavy and our Westport team take the time to hear what matters to you. Whether you’re visiting for a checkup or considering a change to your smile, you’ll have people to talk it through with.</p>
+    <div class="section-copy" data-reveal><p class="eyebrow">Meet your team</p><h2 id="doctors-title">Get to know<br /><em>your dental team.</em></h2><p>Our Westport team takes the time to hear what matters to you. Whether you’re visiting for a checkup or considering a change to your smile, you’ll have people to talk it through with.</p>
       <div class="team-introduction"><div class="avatar-row" aria-hidden="true">{avatars.map(photo => <Image src={photo} alt="" widths={[150, 300]} sizes="48px" loading="lazy" />)}</div><p><strong>Dr. Hunter McAreavy</strong><br />and the Westport team</p></div>
       <a href={site.doctorsUrl} class="button button-brand">Meet us <Icon /></a>
     </div>

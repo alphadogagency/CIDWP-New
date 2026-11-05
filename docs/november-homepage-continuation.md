@@ -168,3 +168,17 @@ Bryan explicitly approved the complete November work and requested commit, push 
 - These publication notes and evidence are a documentation-only follow-up to the deployed application commit; they do not alter the built website or Function.
 
 Financing remains exactly as Bryan requested: Eve in the navigation and Cherry on Payment Plans, pending William's answer. Existing hosted Smile Club signup and CareStack booking remain in place. This publishes the existing Pages site; no custom-domain cutover, external Smile Club retirement, stakeholder email or calendar changes were performed.
+
+## November 5 client edits — authorized for publication
+
+Bryan reviewed the assessment of Pam's November 5 “CIDWP Website Improvement Update” email and Denea's follow-up, then explicitly requested implementation, commit and push to main for deployment. This is the current scoped assignment; the November 3 package remains the baseline.
+
+- Source: Gmail thread `1a1ac1bf012349c5`; Pam message `1a1ad0435eaa1694`, Denea message `1a1ad1f5cda486a0`.
+- Removed decorative photo tags from the paired front-desk images and homepage office gallery; retained accessible descriptions and the gallery lightbox.
+- Added Pam's supplied general dentistry (`Outlook-oa14hmbg.jpg`), emergency dentistry (`Outlook-lxjrmdqz.jpg`) and whitening (`Outlook-h0hv0un3`) images to `src/assets/nov2026/` and replaced those three treatment tiles. Treatment links/labels remain intact.
+- Updated the team introduction to begin “Our Westport team takes the time…” and restored the existing `oct2026/3d-print.webp` image to the 3D printing card.
+- Removed the small denture inset identified by Denea. The main implants photo remains pending Pam's promised before-and-after image; that future image is explicitly deferred.
+- Removed unused homepage photo-tag/inset styles. Preserved the remaining approved design, sentence-case source copy, Eve/Cherry destinations, booking and existing deployment target.
+- Local verification: Astro check (69 files, zero errors/warnings/hints), production build (61 pages), package verification (34 pages, 1,062 copy checks, 135 schema checks, zero issues), and whitespace check passed.
+- Browser checks at 1440×1000 and 390×844 confirmed updated copy, all three image replacements, printer photo, absent photo tags/inset, no broken affected images or horizontal overflow, and gallery open/Escape close. No page errors. Screenshots and machine-readable checks: `docs/verification/november-5-edits/`.
+- Publication pending at this checkpoint; record the deployed commit and public verification below after completion. No domain cutover, stakeholder messages or calendar changes are included.

@@ -19,7 +19,10 @@ import implants from "../assets/nov2026/implant-after.webp";
 
 import aligners from "../assets/expertise/aligners.png";
 import restoration from "../assets/nov2026/full-arch-after.webp";
-import emergency from "../assets/expertise/emergency.png";
+import emergency from "../assets/nov2026/emergency-dentistry-supplies.jpg";
+import generalDentistry from "../assets/nov2026/general-dentistry-supplies.jpg";
+import whitening from "../assets/nov2026/whitening-opalescence.webp";
+import printer from "../assets/oct2026/3d-print.webp";
 import { serviceLinks, site } from "./site";
 
 export const photos = { hero, osiiFrontDesk, cidwpFrontDesk, office, consult, implantDenture, smile };
@@ -29,7 +32,7 @@ export const photos = { hero, osiiFrontDesk, cidwpFrontDesk, office, consult, im
 export const technology = [
   { title: "Digital X-rays & 3D imaging", description: "Digital X-rays and cone beam CT help us look beyond what we can see during an exam. Three-dimensional images provide another perspective as we talk through your dental health and the care you may need.", image: cbct, alt: "CBCT imaging equipment at the Westport practice", source: site.smileClubUrl },
   { title: "Intraoral cameras", description: "Small cameras let us take a closer look inside your mouth. Images can help make conversations about your teeth and treatment easier to follow.", image: clinical, alt: "A member of the dental team caring for a patient", source: site.smileClubUrl },
-  { title: "3D printing", description: "Our practice also uses 3D printing. Ask our team how this technology fits into the care we provide and what it could mean for your treatment.", image: lab, alt: "Dental restorations being worked on in the lab" },
+  { title: "3D printing", description: "Our practice also uses 3D printing. Ask our team how this technology fits into the care we provide and what it could mean for your treatment.", image: printer, alt: "3D printer at our Westport practice" },
 ];
 
 export const services = [
@@ -38,16 +41,16 @@ export const services = [
   { id: "cosmetic-care", title: "Make your smile feel more like you", label: "Cosmetic dentistry", description: "Tell us what you’d like to change about your smile. We’ll walk through options such as veneers and whitening, with your preferences and goals in mind.", image: smile, alt: "A woman smiling at our Westport practice", href: serviceLinks.veneers, cta: "Explore cosmetic care" },
 ];
 
-// Seven real practice/case images; the two remaining illustrations retain their provenance.
+// Pam’s November 5 replacements keep the general, emergency and whitening tiles focused on dental care.
 // Cropped after-only cases follow William’s brief; original comparison images are unchanged.
 export const expertise: { label: string; href: string; image: ImageMetadata; position: string }[] = [
   { label: "Veneers", href: serviceLinks.veneers, image: veneers, position: "50% 50%" },
   { label: "Dental implants", href: serviceLinks.implants, image: implants, position: "50% 50%" },
   { label: "Crowns & bridges", href: serviceLinks.crowns, image: lab, position: "50% 50%" },
-  { label: "Teeth whitening", href: serviceLinks.whitening, image: smile, position: "50% 50%" },
+  { label: "Teeth whitening", href: serviceLinks.whitening, image: whitening, position: "50% 50%" },
   { label: "Clear braces", href: serviceLinks.clearBraces, image: aligners, position: "50% 50%" },
   { label: "Full-mouth restoration", href: serviceLinks.restoration, image: restoration, position: "50% 50%" },
-  { label: "General dentistry", href: serviceLinks.general, image: consult, position: "50% 44%" },
+  { label: "General dentistry", href: serviceLinks.general, image: generalDentistry, position: "50% 50%" },
   { label: "Sedation options", href: serviceLinks.sedation, image: office, position: "50% 50%" },
   { label: "Emergency dentistry", href: serviceLinks.emergency, image: emergency, position: "50% 45%" },
 ];

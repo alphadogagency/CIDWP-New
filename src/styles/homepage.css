@@ -18,8 +18,6 @@
 .proof-link .icon { width: 16px; }
 .photo-block { position: relative; isolation: isolate; }
 .photo-block::before { content: ""; position: absolute; z-index: -1; width: 55%; height: 55%; bottom: -40px; left: -40px; border-radius: 24px; background: rgb(198 167 103 / .2); }
-.photo-chip { position: absolute; display: flex; justify-content: center; align-items: center; gap: 8px; bottom: 16px; left: 14px; width: calc(100% - 28px); padding: 12px 14px; background: rgb(255 255 255 / .94); color: var(--dark); border-radius: 999px; font-size: 12px; font-weight: 600; line-height: 1.4; text-align: center; box-shadow: 0 8px 24px -14px rgb(43 46 51 / .4); }
-.photo-chip::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: var(--gold); }
 .doctors-section { background: white; padding-block: 96px 120px; }
 .doctors-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
 .doctor-portraits { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 64px; }
@@ -40,9 +38,6 @@
 .care-checklist .icon { color: var(--gold-ink); width: 18px; height: 18px; margin-top: 4px; }
 .implant-section { background: white; }
 .feature-photo > img { aspect-ratio: 4/3; object-position: 50% 25%; }
-.implant-detail { position: absolute; width: 150px; right: 20px; bottom: -24px; padding: 7px; border: 1px solid var(--line); border-radius: 16px; background: white; }
-.implant-detail img { aspect-ratio: 4/3; width: 100%; object-fit: cover; border-radius: 10px; }
-.implant-detail figcaption { padding: 8px 2px 4px; font-size: 12px; text-align: center; }
 .membership-band { padding-block: 62px; background: linear-gradient(135deg, var(--dark), var(--dark-deep)); color: white; text-align: center; }
 .membership-band .eyebrow { color: var(--gold); }
 .membership-band h2 { font-size: clamp(36px, 3.7vw, 50px); }
@@ -90,7 +85,6 @@
 .gallery-frame:first-child .gallery-photo { border-radius: 24px; }
 .gallery-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
 .gallery-photo:hover img { transform: scale(1.04); }
-.gallery-photo .photo-chip { width: fit-content; max-width: calc(100% - 28px); }
 .amenities { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-block: 1px solid var(--line); margin-top: 70px; padding-block: 26px; }
 .amenities > div { padding: 6px 24px; border-right: 1px solid var(--line); }
 .amenities > div:first-child { padding-left: 0; } .amenities > div:last-child { border: 0; }
@@ -147,7 +141,6 @@
 @media (max-width: 1100px) {
  .hero-copy { width: 60%; } .hero h1 { font-size: 64px; }
  .office-grid { gap: 40px; } .office-gallery { grid-auto-rows: 180px; }
- .photo-chip { font-size: 11px; padding: 10px; }
 }
 @media (max-width: 900px) {
  .hero { height: auto; min-height: 0; max-height: none; }
@@ -163,7 +156,6 @@
  .doctor-portraits { max-width: 650px; width: 100%; padding-bottom: 36px; gap: 16px; }
  .doctor-portraits figure:nth-child(2) { transform: translateY(36px); }
  .photo-block::before { bottom: -12px; left: -12px; } .details-photo::before { left: auto; right: -12px; }
- .photo-chip { font-size: 12px; }
  .technology-grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; padding-bottom: 14px; scrollbar-width: thin; }
  .technology-card { scroll-snap-align: start; } .technology-card h3 { font-size: 26px; }
  .swipe-hint { display: block; margin: 14px 0 0; color: var(--color-muted); font-size: 12px; }
@@ -187,19 +179,17 @@
  .cta-content .action-pair { flex-direction: row; }
 }
 @media (max-width: 500px) {
+ .doctor-portraits { gap: 12px; }
  .hero-location { font-size: 12px; max-width: 260px; }
  .hero-content { padding-top: 380px; } .hero h1 { font-size: 54px; }
  .review-proof { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; }
  .review-proof img { width: 85px; } .review-proof > span:nth-child(2) { gap: 2px; }
  .proof-link { grid-column: 1/-1; justify-content: center; }
  .review-proof small { font-size: 11px; }
- .doctor-portraits { gap: 12px; } .doctor-portraits .photo-chip { font-size: 12px; width: calc(100% - 16px); left: 8px; padding: 8px; bottom: 10px; gap: 5px; }
- .doctor-portraits .photo-chip::before { display: none; }
  .membership-band { padding-block: 48px; }
  .expertise-tile { aspect-ratio: 4/3; } .expertise-label { font-size: 12px; padding: 8px 10px; left: 8px; bottom: 8px; max-width: calc(100% - 16px); gap: 5px; }
  .expertise-label .icon { width: 12px; height: 12px; }
  .office-gallery { grid-auto-rows: 160px; gap: 12px; } .gallery-frame:first-child { grid-row: span 2; }
- .gallery-photo .photo-chip { font-size: 12px; padding: 9px 12px; }
  .onsite-care { grid-template-columns: 1fr; }
  .amenities > div { padding: 20px 14px; } .amenities > div:first-child { padding-left: 14px; }
  .amenities strong { font-size: 14px; }
