@@ -13,9 +13,9 @@
 .review-proof { display: flex; align-items: center; gap: 26px; font-size: 14px; }
 .review-proof > span:nth-child(2) { display: grid; grid-template-columns: auto auto; align-items: center; gap: 0 12px; }
 .review-proof small { grid-column: 1 / -1; font-size: 12px; color: var(--color-muted); }
-.review-proof .proof-attribution { color: #5e5e5e; font-weight: 400; font-style: normal; letter-spacing: normal; white-space: nowrap; }
+.review-proof > img { display: block; height: auto; flex-shrink: 0; }
 .proof-stars { color: var(--gold-ink); letter-spacing: .08em; font-size: 20px; }
-.proof-link { display: flex; gap: 10px; align-items: center; min-height: 44px; color: var(--color-brand); font-weight: 600; }
+.proof-link { display: flex; gap: 10px; align-items: center; min-height: 44px; color: var(--color-brand); font-weight: 600; white-space: nowrap; }
 .proof-link .icon { width: 16px; }
 .photo-block { position: relative; isolation: isolate; }
 .photo-block::before { content: ""; position: absolute; z-index: -1; width: 55%; height: 55%; bottom: -40px; left: -40px; border-radius: 24px; background: rgb(198 167 103 / .2); }

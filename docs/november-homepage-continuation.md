@@ -226,3 +226,7 @@ Bryan approved this final local revision (“I love it!”) and explicitly reque
 - Published to the existing Cloudflare Pages production project, deployment `6adef70f-4d3d-4298-9ce2-485f4f26ded6`, branch main/source `3015a9a`. Stable URL: https://cidwp-new.pages.dev/#expertise ; immutable deployment: https://6adef70f.cidwp-new.pages.dev/ . Functions compiled and 80 assets uploaded successfully.
 - Existing Astro diagnostics/build checks passed; all 13 Google review tests passed before publication. Public browser verification confirmed all three new smile assets loaded, no horizontal overflow, the colorful wordmark and live “5.0 from 121 reviews” with discreet “Maps” text. No rating values were hard-coded.
 - Evidence: `docs/verification/november-5-edits/published-new-smiles.jpg` and `published-new-smiles-checks.json`. Public preview left open and temporary viewport override reset. This publication record is a documentation-only follow-up; unused generated candidates remain local and untracked.
+
+## November 6 review-strip alignment
+
+Bryan authorized Willian's screenshot request and explicitly requested commit, push to main and deployment. Restored the original Google Maps wordmark, removed the separate Maps line, retained the compact live rating text, preserved the logo proportions and kept “Read reviews” on one line. Desktop browser verification confirms the logo, rating group and link share the same vertical center without page overflow. This is a narrow homepage strip fix; the approved smile images remain unchanged.
