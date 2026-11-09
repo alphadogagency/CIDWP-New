@@ -130,12 +130,6 @@
 .map-fallback strong { font-size: 25px; } .map-fallback span { font-size: 15px; }
 .map-open { display: flex; justify-content: center; align-items: center; gap: 14px; padding: 15px 20px; min-height: 60px; background: var(--line); font-size: 14px; font-weight: 600; }
 .map-open:hover { background: #dadbde; }
-.contact-cta { margin: 40px; border-radius: 24px; padding-block: 70px; background: var(--dark); color: white; }
-.cta-content { display: flex; gap: 40px; justify-content: space-between; align-items: center; }
-.cta-content h2 { max-width: 650px; margin-bottom: 20px; }
-.cta-content p:last-child { max-width: 500px; margin: 0; color: rgb(255 255 255 / .85); }
-.cta-content .eyebrow { color: var(--gold); }
-.cta-content .action-pair { flex: 0 0 auto; flex-direction: column; align-items: stretch; }
 @media (min-width: 901px) {
  .technology-card { transition: transform .2s; } .technology-card:hover { transform: translateY(-3px); }
 }
@@ -176,8 +170,8 @@
  .faq-list { grid-template-columns: 1fr; } .faq-item summary { min-height: 80px; font-size: 25px; }
  .office-grid { grid-template-columns: 1fr; } .office-section { padding-block: 56px; }
  .office-map { min-height: 380px; } .map-stage { min-height: 320px; }
- .contact-cta { margin: 24px; padding-block: 52px; } .cta-content { flex-direction: column; align-items: flex-start; gap: 30px; }
- .cta-content .action-pair { flex-direction: row; }
+
+
 }
 @media (max-width: 500px) {
  .doctor-portraits { gap: 12px; }
@@ -194,6 +188,6 @@
  .onsite-care { grid-template-columns: 1fr; }
  .amenities > div { padding: 20px 14px; } .amenities > div:first-child { padding-left: 14px; }
  .amenities strong { font-size: 14px; }
- .contact-cta { margin: 16px; } .cta-content { width: calc(100% - 48px); }
+
  .faq-answer { padding-right: 0; }
 }

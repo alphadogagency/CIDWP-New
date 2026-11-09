@@ -1,0 +1,13 @@
+.contact-cta { margin: 40px; border-radius: 24px; padding-block: 70px; background: var(--dark); color: white; }
+.cta-content { display: flex; gap: 40px; justify-content: space-between; align-items: center; }
+.cta-content h2 { max-width: 650px; margin-bottom: 20px; }
+.cta-content p:last-child { max-width: 500px; margin: 0; color: rgb(255 255 255 / .85); }
+.cta-content .eyebrow { color: var(--gold); }
+.cta-content .action-pair { flex: 0 0 auto; flex-direction: column; align-items: stretch; }
+@media (max-width: 900px) {
+ .contact-cta { margin: 24px; padding-block: 52px; } .cta-content { flex-direction: column; align-items: flex-start; gap: 30px; }
+ .cta-content .action-pair { flex-direction: row; }
+}
+@media (max-width: 500px) {
+ .contact-cta { margin: 16px; } .cta-content { width: calc(100% - 48px); }
+}
