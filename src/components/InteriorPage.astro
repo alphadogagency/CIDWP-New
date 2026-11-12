@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import AppointmentForm from './AppointmentForm.astro';
+import InquiryForm from './InquiryForm.astro';
 import FinancingWidget from './FinancingWidget.astro';
 import InteriorCta from './InteriorCta.astro';
 import TeamPortraits from './TeamPortraits.astro';
@@ -20,6 +21,7 @@ const presentSection = (section: Section, index: number) => index === firstPhoto
   ? section.html.replace(/<img\b[^>]*>/, '<span class="interior-feature-photo">$&</span>')
   : section.html;
 const isProfile = page.path.includes('meet-the-');
+const inquiryTopic = page.path === '/ppc-dentures/' ? 'Dentures' : page.path === '/ppc-family/' ? 'Family dentistry' : null;
 ---
 <Header interior />
 <main id="main" tabindex="-1" class:list={['interior-page', { 'interior-policy': isPolicy, 'interior-profiles': isProfile }]} data-source-page={page.path}>
@@ -37,7 +39,7 @@ const isProfile = page.path.includes('meet-the-');
       <div class="shell interior-content">
         {page.path === '/about/meet-the-team/' && section.kind === 'profiles'
           ? <TeamPortraits people={teamPortraits} interior />
-          : presentSection(section, index).split(/(<!--APPOINTMENT_FORM-->|<!--FINANCING_WIDGET-->)/).map(part => part === '<!--APPOINTMENT_FORM-->' ? <AppointmentForm /> : part === '<!--FINANCING_WIDGET-->' ? <FinancingWidget /> : <Fragment set:html={part} />)}
+          : presentSection(section, index).split(/(<!--APPOINTMENT_FORM-->|<!--FINANCING_WIDGET-->)/).map(part => part === '<!--APPOINTMENT_FORM-->' ? (inquiryTopic ? (page.path === '/ppc-dentures/' && index === 0 ? <a class="button button-brand" href="#my-contact">Send us a message →</a> : <InquiryForm topic={inquiryTopic} />) : <AppointmentForm />) : part === '<!--FINANCING_WIDGET-->' ? <FinancingWidget /> : <Fragment set:html={part} />)}
         {page.path === '/about/meet-the-doctors/' && section.kind === 'profiles' && <div class="onsite-surgeons"><h2>Our Onsite Oral Surgeons</h2><TeamPortraits people={surgeons} interior /></div>}
       </div>
     </section>)}

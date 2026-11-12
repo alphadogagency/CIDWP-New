@@ -1,0 +1,28 @@
+---
+interface Props {
+  topic?: 'General inquiry' | 'Dentures' | 'Family dentistry';
+}
+const { topic = 'General inquiry' } = Astro.props;
+const formUrl = `https://form.jotform.com/263154183122045?q5_dropdown3=${encodeURIComponent(topic)}`;
+---
+<div class="inquiry-form">
+  <iframe
+    id="JotFormIFrame-263154183122045"
+    title="Contact Cosmetic & Implant Dentistry Westport"
+    src={formUrl}
+    loading="lazy"
+    scrolling="no"
+    style="width:100%;height:1150px;border:0;"
+  ></iframe>
+  <p class="inquiry-form-fallback"><a href={formUrl} target="_blank" rel="noopener noreferrer">Open the contact form in a new tab →</a></p>
+</div>
+<script is:inline src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script is:inline>
+  window.jotformEmbedHandler?.("iframe[id='JotFormIFrame-263154183122045']", "https://form.jotform.com/");
+</script>
+<style>
+  .inquiry-form { width: 100%; max-width: 780px; min-width: 0; margin-inline: auto; }
+  .inquiry-form iframe { display: block; max-width: 100%; aspect-ratio: auto; margin: 0; border-radius: 16px; background: white; }
+  .inquiry-form-fallback { margin: 16px 0 0; font: 400 14px/1.6 var(--font-body); }
+  .inquiry-form-fallback a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 4px; }
+</style>
