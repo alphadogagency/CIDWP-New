@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { site } from "../lib/site";
 import socialImage from "../assets/round2/clinical-care.jpg";
 import pageData from '../data/november-pages.json';
+import ExistingTracking from '../components/ExistingTracking.astro';
 
 interface Props {
   title?: string;
@@ -26,6 +27,8 @@ const practiceSchema = { '@context': 'https://schema.org', '@type': 'Dentist', '
     <script is:inline type="application/ld+json" set:html={JSON.stringify(practiceSchema)} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="google-site-verification" content="QBUcFF4Hw2NKe2INxYwYN5auo0TV0gINUPIFLIETeF4" />
+    <meta name="ahrefs-site-verification" content="2eea2e65fd898b8fd3d6f08d77092a3c0c09e5cc182f6cf32858f74400cce9c1" />
     {(noindex || robots) && <meta name="robots" content={noindex ? 'noindex, nofollow' : robots} />}
 
     <title>{title}</title>
@@ -48,6 +51,7 @@ const practiceSchema = { '@context': 'https://schema.org', '@type': 'Dentist', '
 
     <link rel="preload" href="/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin />
+    <ExistingTracking />
   </head>
   <body>
     <a

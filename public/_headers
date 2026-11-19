@@ -1,0 +1,6 @@
+# Keep the preview hosts out of search without blocking the production domain.
+https://cidwp-new.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:deployment.cidwp-new.pages.dev/*
+  X-Robots-Tag: noindex

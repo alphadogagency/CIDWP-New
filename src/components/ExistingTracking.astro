@@ -1,0 +1,18 @@
+<!-- Preserve the three integrations observed on the existing production site.
+     Do not send preview/local visits to the practice's production accounts. -->
+<script is:inline>
+  if (['cosmeticimplantdentistrywp.com', 'www.cosmeticimplantdentistrywp.com'].includes(window.location.hostname)) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    for (const src of [
+      'https://www.googletagmanager.com/gtm.js?id=GTM-KT983DG6',
+      'https://next-api.patientprism.com/v1/snippet/9df5cbed-479e-43c7-8e3e-1930df88f792',
+      'https://cdn.rlets.com/capture_configs/205/6fb/b05/0274530962761e02b420b7d.js',
+    ]) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = src;
+      document.head.appendChild(script);
+    }
+  }
+</script>
