@@ -6,6 +6,7 @@ import owen from "../assets/oct2026/owen-lonergan.webp";
 import patrick from "../assets/oct2026/patrick-lucaci.webp";
 import rachel from "../assets/round2/rachel-converse.jpg";
 import chrissy from "../assets/round2/chrissy.jpg";
+import dynasty from "../assets/nov2026/dynasty.webp";
 import hunter from "../assets/nov2026/hunter-mcareavy.jpg";
 import baker from "../../public/images/migrated/sedation-unnamed.png";
 import { site } from "./site";
@@ -44,6 +45,7 @@ export const practicePeople: PracticePerson[] = [
   { key: 'hunter', image: hunter, name: 'Dr. Hunter McAreavy', role: 'General dentist', group: 'doctors', doctor: true },
   { key: 'rachel', image: rachel, name: 'Rachel Converse', role: 'Registered dental hygienist', group: 'chairside', doctor: false },
   { key: 'chrissy', image: chrissy, name: 'Chrissy', role: 'Dental assistant', group: 'chairside', doctor: false },
+  { key: 'dynasty', image: dynasty, name: 'Dynasty', role: 'Dental assistant', group: 'chairside', doctor: false },
   { key: 'konner', image: konner, name: 'Konner Lawson', role: 'Patient care coordinator', group: 'front', doctor: false, crop: 'tall' },
   { key: 'nichole', image: nichole, name: 'Nichole', role: 'Patient care coordinator', group: 'front', doctor: false, crop: 'tall' },
   { key: 'jen', image: jen, name: 'Jen', role: 'Oral surgery assistant', group: 'surgery', doctor: false, crop: 'tall' },

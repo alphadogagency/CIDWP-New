@@ -38,7 +38,7 @@ for (const group of groups) {
       if (page.kind === 'special') assert.equal(schema.find(item => item['@type'] === 'Offer').price, 99);
       if (page.kind === 'club') assert.equal(schema.find(item => item['@type'] === 'OfferCatalog').itemListElement.length, 3);
       if (page.kind === 'docs') assert.equal(types.filter(type => type === 'Person').length, 4);
-      if (page.kind === 'team') assert.equal(doc.querySelectorAll('.all-team-grid article').length, 9);
+      if (page.kind === 'team') assert.equal(doc.querySelectorAll('.all-team-grid article').length, 10);
       if (page.kind === 'club') assert.ok(doc.querySelector('a[href="https://smileclub.cosmeticimplantdentistrywp.com/#getintouch"]'));
       assert.ok(doc.querySelector('a[href="https://onlineappointment.carestack.com/?dn=acts&ln=1"]'), 'booking retained');
       assert.ok(doc.querySelector('a[href="tel:+18163880985"]'), 'telephone retained');
