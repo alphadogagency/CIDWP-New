@@ -33,7 +33,7 @@ Jotform is deliberately pending. `src/components/AppointmentForm.astro` is the s
 
 The existing Cherry financing widget is retained on `/payment-plans/` with its original practice slug. It renders live information and retains its own application destinations. Only the existing `all` mount is initialized. Its typeface and container fit the new design. No financing application or appointment was submitted during verification.
 
-The office-tour video on neighborhood pages retains its exact original WordPress media URL. Its local download timed out; it is not bundled. Keep that media URL available at cutover, or migrate the file and update the asset mapping before retiring WordPress. Google Maps and YouTube embeds continue to use their original external sources.
+Updated November 19: the authentic office-tour video is now bundled at `public/wp-content/uploads/2026/08/cidwp-tour-video.mp4`, and all ten neighborhood pages use its root-relative path. The original 161.24-second, 720×1280 video was optimized to 22,307,190 bytes with its original audio retained, within Cloudflare Pages limits. `images.json` records the source-to-local mapping. Browser playback was verified on the new host independently of WordPress. Google Maps and YouTube embeds continue to use their original external sources.
 
 ## Source Content To Review Before Launch
 
